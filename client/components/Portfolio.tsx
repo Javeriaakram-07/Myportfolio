@@ -167,14 +167,14 @@ export default function Portfolio() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
           <h2 className="text-4xl md:text-5xl font-bold mb-4">
-            My <span className="gradient-text">Portfolio</span>
+            My <span className="gradient-text">Projects</span>
           </h2>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto mb-6">
             A collection of projects showcasing my skills in web development, C++ programming, and problem-solving
           </p>
 
           {/* Category Filter */}
-          <div className="flex flex-wrap justify-center gap-4">
+          <div className="flex flex-wrap justify-center gap-3 md:gap-4 pt-1 pb-2">
             {categories.map((category) => (
               <button
                 key={category}
@@ -191,7 +191,7 @@ export default function Portfolio() {
           </div>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 items-stretch">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 items-stretch">
           {filteredProjects.map((project) => (
             <ProjectCard
               key={project.id}
