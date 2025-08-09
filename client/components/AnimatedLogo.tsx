@@ -24,20 +24,24 @@ export default function AnimatedLogo({ isFullscreen = false, onAnimationComplete
       }`
     : 'relative';
 
-  const textClasses = isFullscreen
-    ? 'text-8xl md:text-9xl lg:text-[12rem] font-bold animate-logo-pulse'
-    : 'text-2xl font-bold animate-logo-pulse';
+  const logoSize = isFullscreen
+    ? 'w-64 h-64 md:w-80 md:h-80 lg:w-96 lg:h-96'
+    : 'w-10 h-10';
 
   return (
     <div className={logoClasses}>
       <div className="relative">
-        <span className={`gradient-text ${textClasses}`}>
-          JA
-        </span>
-        <div className="absolute inset-0 blur-lg opacity-50">
-          <span className={`gradient-text ${textClasses}`}>
-            JA
-          </span>
+        <img
+          src="https://cdn.builder.io/api/v1/image/assets%2F78bb8a2b1dce448185f7c0a17bacab1d%2Fac654d34f824415f8143e76e544ce856?format=webp&width=800"
+          alt="Javeria Akram Logo"
+          className={`${logoSize} object-contain animate-logo-pulse transition-all duration-1000`}
+        />
+        <div className="absolute inset-0 blur-sm opacity-30">
+          <img
+            src="https://cdn.builder.io/api/v1/image/assets%2F78bb8a2b1dce448185f7c0a17bacab1d%2Fac654d34f824415f8143e76e544ce856?format=webp&width=800"
+            alt="Javeria Akram Logo Glow"
+            className={`${logoSize} object-contain animate-logo-pulse transition-all duration-1000`}
+          />
         </div>
       </div>
     </div>
