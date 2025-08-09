@@ -208,9 +208,10 @@ const categories = ['All', 'Web Development', 'C++ Development', 'Frontend'];
 export default function Portfolio() {
   const [selectedCategory, setSelectedCategory] = useState('All');
   const [hoveredProject, setHoveredProject] = useState<number | null>(null);
+  const [selectedProject, setSelectedProject] = useState<Project | null>(null);
 
-  const filteredProjects = selectedCategory === 'All' 
-    ? projects 
+  const filteredProjects = selectedCategory === 'All'
+    ? projects
     : projects.filter(project => project.category === selectedCategory);
 
   return (
@@ -254,6 +255,15 @@ export default function Portfolio() {
           ))}
         </div>
       </div>
+
+      {/* Project Modal */}
+      {selectedProject && (
+        <ProjectModal
+          project={selectedProject}
+          isOpen={!!selectedProject}
+          onClose={() => setSelectedProject(null)}
+        />
+      )}
     </section>
   );
 }
@@ -268,11 +278,18 @@ interface ProjectCardProps {
 function ProjectCard({ project, isHovered, onHover, onLeave }: ProjectCardProps) {
   return (
     <div
-      className={`group relative bg-card rounded-xl overflow-hidden border border-border transition-all duration-500 transform ${
+      className={`group relative bg-card rounded-xl overflow-hidden border border-border transition-all duration-500 transform cursor-pointer ${
         isHovered ? 'scale-105 shadow-2xl shadow-primary/20 neon-glow' : 'hover:shadow-lg'
       }`}
       onMouseEnter={onHover}
       onMouseLeave={onLeave}
+      onClick={() => {
+        // This will be handled by the parent Portfolio component
+        const portfolioComponent = document.querySelector('[data-portfolio]') as any;
+        if (portfolioComponent?._setSelectedProject) {
+          portfolioComponent._setSelectedProject(project);
+        }
+      }}
     >
       {/* Project Image */}
       <div className="relative h-48 overflow-hidden">
