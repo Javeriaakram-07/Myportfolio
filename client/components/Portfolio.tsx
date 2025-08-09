@@ -15,63 +15,63 @@ interface Project {
 const projects: Project[] = [
   {
     id: 1,
-    title: 'E-Commerce Platform',
-    description: 'A modern e-commerce platform built with React and Node.js, featuring user authentication, product management, and payment integration.',
-    technologies: ['React', 'Node.js', 'MongoDB', 'Stripe'],
-    image: '/placeholder.svg',
-    liveUrl: '#',
-    githubUrl: '#',
-    category: 'Web Development'
+    title: 'Cyber Management System',
+    description: 'A comprehensive cyber management system built for cybersecurity operations. Features real-time monitoring, threat detection, and administrative controls with a modern dark interface.',
+    technologies: ['C++', 'System Programming', 'Security', 'GUI'],
+    image: 'https://cdn.builder.io/api/v1/image/assets%2F78bb8a2b1dce448185f7c0a17bacab1d%2F0e3980adcbc94c48b993ddefc1e2dad7?format=webp&width=800',
+    liveUrl: '',
+    githubUrl: '',
+    category: 'C++ Development'
   },
   {
     id: 2,
-    title: 'Task Management App',
-    description: 'A collaborative task management application with real-time updates, drag-and-drop functionality, and team collaboration features.',
-    technologies: ['React', 'TypeScript', 'Socket.io', 'PostgreSQL'],
-    image: '/placeholder.svg',
-    liveUrl: '#',
-    githubUrl: '#',
+    title: 'Sweet Shop Website',
+    description: 'A vibrant sweet shop website featuring refreshing cocktails and beverages. Built with responsive design, interactive elements, and beautiful gradients. Deployed on W3Spaces.',
+    technologies: ['HTML', 'CSS', 'JavaScript', 'Responsive Design'],
+    image: 'https://cdn.builder.io/api/v1/image/assets%2F78bb8a2b1dce448185f7c0a17bacab1d%2Fd3d7322df3854d3780bb63a3f2f64c5b?format=webp&width=800',
+    liveUrl: 'https://webull.w3spaces.com',
+    githubUrl: '',
     category: 'Web Development'
   },
   {
     id: 3,
-    title: 'Data Structures Visualizer',
-    description: 'An interactive C++ application that visualizes common data structures and algorithms to help students understand complex concepts.',
-    technologies: ['C++', 'SFML', 'Algorithms', 'Education'],
-    image: '/placeholder.svg',
-    liveUrl: '#',
-    githubUrl: '#',
-    category: 'C++ Development'
+    title: 'Sweet Shop Blog',
+    description: 'A modern blog platform for Sweet Shop featuring articles, product reviews, and user engagement. Clean design with responsive grid layout and smooth animations.',
+    technologies: ['HTML', 'CSS', 'JavaScript', 'Blog System'],
+    image: 'https://cdn.builder.io/api/v1/image/assets%2F78bb8a2b1dce448185f7c0a17bacab1d%2Fd6ea10eda1624cef86175af07fade245?format=webp&width=800',
+    liveUrl: '',
+    githubUrl: '',
+    category: 'Web Development'
   },
   {
     id: 4,
-    title: 'Weather Dashboard',
-    description: 'A responsive weather dashboard with location-based forecasts, interactive charts, and beautiful UI animations.',
-    technologies: ['HTML', 'CSS', 'JavaScript', 'Weather API'],
-    image: '/placeholder.svg',
-    liveUrl: '#',
-    githubUrl: '#',
+    title: 'Interactive Payment Card',
+    description: 'A sleek payment card interface with dark theme, neon effects, and animated background elements. Features order summary, pricing, and payment integration.',
+    technologies: ['HTML', 'CSS', 'JavaScript', 'UI/UX'],
+    image: 'https://cdn.builder.io/api/v1/image/assets%2F78bb8a2b1dce448185f7c0a17bacab1d%2Fd397edceac6449d5a79d3f6e1da819e5?format=webp&width=800',
+    liveUrl: '',
+    githubUrl: '',
     category: 'Frontend'
   },
   {
     id: 5,
-    title: 'Portfolio Website',
-    description: 'A personal portfolio website showcasing projects and skills with modern design principles and smooth animations.',
-    technologies: ['React', 'Tailwind CSS', 'Framer Motion'],
-    image: '/placeholder.svg',
-    liveUrl: '#',
-    githubUrl: '#',
+    title: 'Code Editor Interface',
+    description: 'A professional code editor interface with syntax highlighting, dark theme, and clean typography. Built for developers with attention to detail and usability.',
+    technologies: ['HTML', 'CSS', 'JavaScript', 'Code Editor'],
+    image: 'https://cdn.builder.io/api/v1/image/assets%2F78bb8a2b1dce448185f7c0a17bacab1d%2F2f736c9890774655bbf25e9f27a966e6?format=webp&width=800',
+    liveUrl: '',
+    githubUrl: '',
     category: 'Web Development'
   },
   {
     id: 6,
-    title: 'Algorithm Solver',
-    description: 'A C++ application that solves common algorithmic problems with optimal time complexity and detailed step-by-step solutions.',
-    technologies: ['C++', 'STL', 'Algorithms', 'Problem Solving'],
-    image: '/placeholder.svg',
-    liveUrl: '#',
-    githubUrl: '#',
-    category: 'C++ Development'
+    title: 'Developer Portfolio',
+    description: 'A modern developer portfolio showcasing projects and skills with elegant design, smooth animations, and professional presentation.',
+    technologies: ['HTML', 'CSS', 'JavaScript', 'Portfolio'],
+    image: 'https://cdn.builder.io/api/v1/image/assets%2F78bb8a2b1dce448185f7c0a17bacab1d%2Fd37824b2bf7e46ea99b5f31b6c01866c?format=webp&width=800',
+    liveUrl: '',
+    githubUrl: '',
+    category: 'Web Development'
   }
 ];
 
