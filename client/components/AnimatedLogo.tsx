@@ -26,7 +26,7 @@ export default function AnimatedLogo({ isFullscreen = false, onAnimationComplete
 
   const logoSize = isFullscreen
     ? 'w-[50vw] h-[50vw] max-w-96 max-h-96 md:w-[40vw] md:h-[40vw] lg:w-[35vw] lg:h-[35vw]'
-    : 'w-10 h-10';
+    : 'w-14 h-14';
 
   return (
     <div className={logoClasses}>
@@ -62,7 +62,7 @@ export default function AnimatedLogo({ isFullscreen = false, onAnimationComplete
 
         {/* Navigation blur effect */}
         {!isFullscreen && (
-          <div className="absolute inset-0 blur-sm opacity-30">
+          <div className="absolute inset-0 blur-sm opacity-40">
             <img
               src="https://cdn.builder.io/api/v1/image/assets%2F78bb8a2b1dce448185f7c0a17bacab1d%2Fac654d34f824415f8143e76e544ce856?format=webp&width=800"
               alt="Javeria Akram Logo Glow"
