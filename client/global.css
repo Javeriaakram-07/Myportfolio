@@ -114,4 +114,28 @@
   .parallax {
     transform-style: preserve-3d;
   }
+
+  @keyframes letterAppear {
+    0% {
+      opacity: 0;
+      transform: translateY(20px) scale(0.8);
+    }
+    50% {
+      opacity: 0.8;
+      transform: translateY(-5px) scale(1.1);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0px) scale(1);
+    }
+  }
+
+  @keyframes cursorBlink {
+    0%, 50% {
+      opacity: 1;
+    }
+    51%, 100% {
+      opacity: 0.3;
+    }
+  }
 }

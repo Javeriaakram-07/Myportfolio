@@ -83,14 +83,14 @@ export default function Hero() {
 
         {/* Profile Image */}
         <div className={`relative transition-all duration-1000 delay-300 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
-          <div className="relative mx-auto w-80 h-80 lg:w-96 lg:h-96">
+          <div className="relative mx-auto w-64 h-64 lg:w-80 lg:h-80">
             {/* Enhanced multi-layer glow effect */}
             <div className="absolute inset-0 bg-gradient-to-r from-primary to-accent rounded-full blur-2xl opacity-40 animate-pulse"></div>
             <div className="absolute inset-0 bg-gradient-to-r from-primary to-accent rounded-full blur-xl opacity-50 animate-pulse scale-95"></div>
 
             {/* Profile logo circle with neon border */}
             <div className="relative w-full h-full rounded-full overflow-hidden border-4 border-primary circle-neon">
-              <div className="w-full h-full bg-gradient-to-br from-primary/5 to-accent/5 flex items-center justify-center p-16">
+              <div className="w-full h-full bg-gradient-to-br from-primary/5 to-accent/5 flex items-center justify-center p-12">
                 <img
                   src="https://cdn.builder.io/api/v1/image/assets%2F78bb8a2b1dce448185f7c0a17bacab1d%2Fac654d34f824415f8143e76e544ce856?format=webp&width=800"
                   alt="Javeria Akram Logo"
@@ -100,8 +100,8 @@ export default function Hero() {
             </div>
 
             {/* Enhanced floating elements with neon glow */}
-            <div className="absolute -top-4 -right-4 w-8 h-8 bg-primary rounded-full animate-float shadow-glow"></div>
-            <div className="absolute -bottom-4 -left-4 w-6 h-6 bg-accent rounded-full animate-float delay-1000 shadow-glow"></div>
+            <div className="absolute -top-3 -right-3 w-6 h-6 bg-primary rounded-full animate-float shadow-glow"></div>
+            <div className="absolute -bottom-3 -left-3 w-5 h-5 bg-accent rounded-full animate-float delay-1000 shadow-glow"></div>
           </div>
         </div>
       </div>
