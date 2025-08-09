@@ -18,31 +18,44 @@ export default function About() {
 
             <div className="space-y-6 text-muted-foreground leading-relaxed">
               <p>
-                I'm Javeria Akram, a dedicated Computer Science student with a passion for 
-                transforming complex problems into elegant solutions. My journey in technology 
-                began with curiosity about how things work and has evolved into a deep love 
-                for coding and software development.
-              </p>
-              
-              <p>
-                Specializing in logic building and algorithmic thinking, I excel at breaking 
-                down complex problems into manageable components. My expertise in C++ allows 
-                me to create efficient, high-performance applications, while my web development 
-                skills help me build user-friendly, responsive interfaces that bring ideas to life.
+                I'm Javeria Akram, a dedicated Computer Science student with a passion for
+                transforming complex problems into elegant solutions through code and design.
               </p>
 
-              <p>
-                As a freelancer, I've had the opportunity to work on diverse projects, 
-                collaborating with clients to deliver custom solutions that meet their unique 
-                needs. This experience has taught me the importance of clear communication, 
-                attention to detail, and delivering quality work within deadlines.
-              </p>
+              <div className="space-y-4">
+                <h4 className="text-foreground font-semibold">Education</h4>
+                <div className="pl-4 border-l-2 border-primary/30">
+                  <p className="font-medium text-foreground">BS Computer Science</p>
+                  <p className="text-sm">Punjab University of Information Technology, Lahore</p>
+                  <p className="text-sm text-primary">2024 - 2028</p>
+                </div>
+              </div>
 
-              <p>
-                When I'm not coding, I enjoy exploring new technologies, contributing to 
-                open-source projects, and mentoring fellow students. I believe in continuous 
-                learning and staying updated with the latest industry trends and best practices.
-              </p>
+              <div className="space-y-3">
+                <h4 className="text-foreground font-semibold">What I Do</h4>
+                <ul className="space-y-2 pl-4">
+                  <li className="flex items-start gap-2">
+                    <span className="text-primary mt-1.5 text-xs">▸</span>
+                    <span>Specialize in logic building and algorithmic thinking</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <span className="text-primary mt-1.5 text-xs">▸</span>
+                    <span>Create efficient C++ applications and system programming</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <span className="text-primary mt-1.5 text-xs">▸</span>
+                    <span>Build responsive web interfaces with modern technologies</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <span className="text-primary mt-1.5 text-xs">▸</span>
+                    <span>Freelance development delivering custom client solutions</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <span className="text-primary mt-1.5 text-xs">▸</span>
+                    <span>Passionate about exploring new technologies and best practices</span>
+                  </li>
+                </ul>
+              </div>
             </div>
 
             <div className="grid grid-cols-2 gap-6">
