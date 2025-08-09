@@ -70,9 +70,9 @@ Built entirely in C++, this project showcases the power of object-oriented progr
     technologies: ['HTML', 'CSS', 'Responsive Design', 'UI/UX'],
     category: 'Web Development',
     images: [
-      { url: 'https://cdn.builder.io/api/v1/image/assets%2F78bb8a2b1dce448185f7c0a17bacab1d%2Fd3d7322df3854d3780bb63a3f2f64c5b?format=webp&width=1200', title: 'Landing Section', description: 'Hero header with gradient background and glowing typography.' },
-      { url: 'https://cdn.builder.io/api/v1/image/assets%2F78bb8a2b1dce448185f7c0a17bacab1d%2F7d3d9818bd7b4b0aa0fe027d23483a06?format=webp&width=1200', title: 'Recipe Card', description: 'Beautiful recipe card styling with balanced spacing and rounded images.' },
-      { url: 'https://cdn.builder.io/api/v1/image/assets%2F78bb8a2b1dce448185f7c0a17bacab1d%2F0aa7d44a05bb4b6ba48bb6d2a3b815f6?format=webp&width=1200', title: 'Typography', description: 'Readable content layout with headings and bullet lists.' }
+      { url: '/assets/projects/sweet-shop-hero.jpg', title: 'Landing Section', description: 'Hero header with gradient background and glowing typography.' },
+      { url: '/assets/projects/sweet-shop-card.jpg', title: 'Recipe Card', description: 'Beautiful recipe card styling with balanced spacing and rounded images.' },
+      { url: '/assets/projects/sweet-shop-typography.jpg', title: 'Typography', description: 'Readable content layout with headings and bullet lists.' }
     ],
     fullDescription: `A beautifully designed sweet shop website showcasing cocktail recipes and beverages. The design focuses on a fun, modern aesthetic with gradients and subtle shadows while keeping the markup semantic and accessible.`,
     features: [
@@ -96,8 +96,8 @@ Built entirely in C++, this project showcases the power of object-oriented progr
     category: 'Web Development',
     liveUrl: 'https://webull.w3spaces.com',
     images: [
-      { url: 'https://cdn.builder.io/api/v1/image/assets%2F78bb8a2b1dce448185f7c0a17bacab1d%2Fd6ea10eda1624cef86175af07fade245?format=webp&width=1200', title: 'Blog Grid', description: 'Responsive grid of blog cards with imagery, titles, and categories.' },
-      { url: 'https://cdn.builder.io/api/v1/image/assets%2F78bb8a2b1dce448185f7c0a17bacab1d%2Ff2d9e79d6d544e9aaed618e2ab2aede5?format=webp&width=1200', title: 'Article Card', description: 'Card with author, date, and category badge.' }
+      { url: '/assets/projects/sweet-shop-blog-grid.jpg', title: 'Blog Grid', description: 'Responsive grid of blog cards with imagery, titles, and categories.' },
+      { url: '/assets/projects/sweet-shop-blog-article.jpg', title: 'Article Card', description: 'Card with author, date, and category badge.' }
     ],
     fullDescription: `A comprehensive blog platform designed for content sharing and user engagement, with clean card-based presentation and strong typographic hierarchy.`,
     features: [
@@ -283,13 +283,15 @@ export default function ProjectDetail() {
           </div>
 
           {/* Project Details */}
-          <div className="grid lg:grid-cols-2 gap-12">
+          <div className="space-y-12">
             <div>
               <h2 className="text-2xl font-bold mb-6">Project Overview</h2>
               <div className="prose prose-sm max-w-none text-muted-foreground">
                 <p className="text-base leading-relaxed whitespace-pre-line">{project.fullDescription}</p>
               </div>
-              <h3 className="text-xl font-semibold mt-8 mb-4">Key Features</h3>
+            </div>
+            <div>
+              <h3 className="text-2xl font-semibold mb-4">Key Features</h3>
               <ul className="space-y-3">
                 {project.features.map((feature, index) => (
                   <li key={index} className="flex items-start gap-3">
@@ -300,7 +302,7 @@ export default function ProjectDetail() {
               </ul>
             </div>
             <div>
-              <h3 className="text-xl font-semibold mb-4">Technical Implementation</h3>
+              <h3 className="text-2xl font-semibold mb-4">Technical Implementation</h3>
               <ul className="space-y-3">
                 {project.technicalDetails.map((detail, index) => (
                   <li key={index} className="flex items-start gap-3">
