@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { ExternalLink, Github } from 'lucide-react';
+import ProjectModal from './ProjectModal';
 
 interface Project {
   id: number;
@@ -10,6 +11,8 @@ interface Project {
   liveUrl: string;
   githubUrl: string;
   category: string;
+  detailImages?: string[];
+  detailedDescription?: string;
 }
 
 const projects: Project[] = [
@@ -31,7 +34,7 @@ const projects: Project[] = [
 
     🏗️ **Object-Oriented Design**
     • User class with private data members and public methods
-    ��� Encapsulation of user data (username, sessions, violations)
+    • Encapsulation of user data (username, sessions, violations)
     • Static members for user numbering
 
     🔧 **Data Structures & STL**
@@ -61,47 +64,142 @@ const projects: Project[] = [
     image: 'https://cdn.builder.io/api/v1/image/assets%2F78bb8a2b1dce448185f7c0a17bacab1d%2Fd3d7322df3854d3780bb63a3f2f64c5b?format=webp&width=800',
     liveUrl: '',
     githubUrl: '',
-    category: 'Web Development'
+    category: 'Web Development',
+    detailedDescription: `A beautifully designed sweet shop website showcasing cocktail recipes and beverages:
+
+    🎨 **Design Features**
+    • Vibrant gradient backgrounds with cyan to purple color schemes
+    • Responsive grid layout adapting to all screen sizes
+    • Clean typography with Google Fonts integration
+    • Interactive hover effects and smooth transitions
+
+    💻 **Technical Implementation**
+    • Pure HTML5 semantic structure
+    • CSS3 with Flexbox and Grid layouts
+    • Custom CSS animations and transitions
+    • Mobile-first responsive design approach
+
+    🍹 **Content Highlights**
+    • Featured cocktail recipes with ingredients
+    • Step-by-step preparation instructions
+    • Attractive product imagery and styling
+    • Professional navigation and footer sections`
   },
   {
     id: 3,
     title: 'Sweet Shop Blog',
     description: 'A modern blog platform for Sweet Shop featuring articles, product reviews, and user engagement. Clean design with responsive grid layout and smooth animations.',
-    technologies: ['HTML', 'CSS', 'JavaScript', 'Blog System'],
+    technologies: ['HTML', 'CSS', 'Blog System'],
     image: 'https://cdn.builder.io/api/v1/image/assets%2F78bb8a2b1dce448185f7c0a17bacab1d%2Fd6ea10eda1624cef86175af07fade245?format=webp&width=800',
     liveUrl: 'https://webull.w3spaces.com',
     githubUrl: '',
-    category: 'Web Development'
+    category: 'Web Development',
+    detailedDescription: `A comprehensive blog platform designed for content sharing and user engagement:
+
+    📝 **Blog Features**
+    • Article grid layout with responsive design
+    • Author profiles with avatar integration
+    • Category-based content organization
+    • Date-based article sorting and filtering
+
+    🎯 **User Experience**
+    • Clean card-based design for easy reading
+    • Hover effects and smooth transitions
+    • Optimized typography for readability
+    • Mobile-friendly responsive layout
+
+    🚀 **Deployment**
+    • Successfully deployed on W3Spaces platform
+    • Fast loading times and optimized assets
+    • Cross-browser compatibility testing
+    • SEO-friendly structure and meta tags`
   },
   {
     id: 4,
     title: 'Interactive Payment Card',
     description: 'A sleek payment card interface with dark theme, neon effects, and animated background elements. Features order summary, pricing, and payment integration.',
-    technologies: ['HTML', 'CSS', 'JavaScript', 'UI/UX'],
+    technologies: ['HTML', 'CSS', 'UI/UX', 'Animations'],
     image: 'https://cdn.builder.io/api/v1/image/assets%2F78bb8a2b1dce448185f7c0a17bacab1d%2Fd397edceac6449d5a79d3f6e1da819e5?format=webp&width=800',
     liveUrl: '',
     githubUrl: '',
-    category: 'Frontend'
+    category: 'Frontend',
+    detailedDescription: `An engaging payment interface with modern design principles:
+
+    🌟 **Visual Design**
+    • Dark theme with blue neon accent colors
+    • Animated rotating circles in background
+    • Glass-morphism effects and backdrop blur
+    • Premium card styling with shadows
+
+    ⚡ **Interactive Elements**
+    • Smooth CSS animations and keyframes
+    • Hover effects on interactive components
+    • Responsive button states and feedback
+    • Professional form styling and layout
+
+    💳 **Payment Features**
+    • Order summary with pricing breakdown
+    • Plan selection with change options
+    • Payment processing simulation
+    • Cancel order functionality`
   },
   {
     id: 5,
     title: 'Code Editor Interface',
     description: 'A professional code editor interface with syntax highlighting, dark theme, and clean typography. Built for developers with attention to detail and usability.',
-    technologies: ['HTML', 'CSS', 'JavaScript', 'Code Editor'],
+    technologies: ['HTML', 'CSS', 'Syntax Highlighting', 'Developer Tools'],
     image: 'https://cdn.builder.io/api/v1/image/assets%2F78bb8a2b1dce448185f7c0a17bacab1d%2F2f736c9890774655bbf25e9f27a966e6?format=webp&width=800',
     liveUrl: '',
     githubUrl: '',
-    category: 'Web Development'
+    category: 'Web Development',
+    detailedDescription: `A sophisticated code editor interface mimicking popular development environments:
+
+    👨‍💻 **Developer Experience**
+    • VS Code-inspired dark theme design
+    • Accurate syntax highlighting for multiple languages
+    • Line numbering and code formatting
+    • Professional monospace typography
+
+    🎨 **Interface Design**
+    • Clean sidebar navigation structure
+    • Tabbed interface for file management
+    • Proper color coding for different code elements
+    • Authentic developer tool aesthetics
+
+    🔧 **Technical Features**
+    • CSS-based syntax highlighting system
+    • Responsive layout for different screen sizes
+    • Optimized for developer workflow presentation
+    • Attention to detail in spacing and alignment`
   },
   {
     id: 6,
     title: 'Developer Portfolio',
     description: 'A modern developer portfolio showcasing projects and skills with elegant design, smooth animations, and professional presentation.',
-    technologies: ['HTML', 'CSS', 'JavaScript', 'Portfolio'],
+    technologies: ['HTML', 'CSS', 'Portfolio Design', 'Responsive Web'],
     image: 'https://cdn.builder.io/api/v1/image/assets%2F78bb8a2b1dce448185f7c0a17bacab1d%2Fd37824b2bf7e46ea99b5f31b6c01866c?format=webp&width=800',
     liveUrl: '',
     githubUrl: '',
-    category: 'Web Development'
+    category: 'Web Development',
+    detailedDescription: `A comprehensive portfolio website showcasing professional development skills:
+
+    🎯 **Portfolio Features**
+    • Professional hero section with clear value proposition
+    • Project showcase with detailed case studies
+    • Skills section with technology highlighting
+    • Contact form and professional information
+
+    🚀 **Performance & Design**
+    • Fast loading optimized assets
+    • Mobile-first responsive design approach
+    • Professional color scheme and typography
+    • Smooth scrolling and navigation experience
+
+    📈 **Professional Impact**
+    • Clear demonstration of technical capabilities
+    • Well-organized content structure
+    • Professional photography and branding
+    • SEO optimized for discoverability`
   }
 ];
 
