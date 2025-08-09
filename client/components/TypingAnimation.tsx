@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 
 interface TypingAnimationProps {
   text: string;
@@ -9,45 +9,45 @@ interface TypingAnimationProps {
 
 export default function TypingAnimation({
   text,
-  delay = 1000,
-  speed = 120,
+  delay = 300,
+  speed = 90,
   className = ''
 }: TypingAnimationProps) {
   const [displayText, setDisplayText] = useState('');
   const [isTyping, setIsTyping] = useState(false);
   const [showCursor, setShowCursor] = useState(true);
-  const [currentIndex, setCurrentIndex] = useState(0);
+  const indexRef = useRef(0);
+  const timeoutRef = useRef<number | null>(null);
 
   useEffect(() => {
-    const startTyping = setTimeout(() => {
+    // Reset state when text changes
+    setDisplayText('');
+    indexRef.current = 0;
+    setIsTyping(false);
+
+    const start = window.setTimeout(() => {
       setIsTyping(true);
+      const typeNext = () => {
+        if (indexRef.current <= text.length) {
+          setDisplayText(text.slice(0, indexRef.current));
+          indexRef.current += 1;
+          timeoutRef.current = window.setTimeout(typeNext, speed);
+        } else {
+          setIsTyping(false);
+        }
+      };
+      typeNext();
     }, delay);
 
-    return () => clearTimeout(startTyping);
-  }, [delay]);
-
-  useEffect(() => {
-    if (!isTyping) return;
-
-    const typingInterval = setInterval(() => {
-      if (currentIndex <= text.length) {
-        setDisplayText(text.slice(0, currentIndex));
-        setCurrentIndex(prev => prev + 1);
-      } else {
-        clearInterval(typingInterval);
-        setIsTyping(false);
-      }
-    }, speed);
-
-    return () => clearInterval(typingInterval);
-  }, [isTyping, text, speed, currentIndex]);
+    return () => {
+      window.clearTimeout(start);
+      if (timeoutRef.current) window.clearTimeout(timeoutRef.current);
+    };
+  }, [text, delay, speed]);
 
   // Cursor blinking effect
   useEffect(() => {
-    const cursorInterval = setInterval(() => {
-      setShowCursor(prev => !prev);
-    }, 530);
-
+    const cursorInterval = setInterval(() => setShowCursor((prev) => !prev), 530);
     return () => clearInterval(cursorInterval);
   }, []);
 
@@ -61,7 +61,7 @@ export default function TypingAnimation({
             style={{
               transform: 'translateY(0px) scale(1)',
               animation: 'letterAppear 0.3s ease-out forwards',
-              animationDelay: `${index * 50}ms`,
+              animationDelay: `${index * 45}ms`,
               filter: 'drop-shadow(0 0 8px hsla(var(--primary), 0.4))',
               textShadow: '0 0 20px hsla(var(--primary), 0.3)'
             }}

@@ -191,7 +191,7 @@ export default function Portfolio() {
           </div>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 items-stretch">
           {filteredProjects.map((project) => (
             <ProjectCard
               key={project.id}
@@ -230,7 +230,7 @@ function ProjectCard({ project, isHovered, onHover, onLeave, onClick }: ProjectC
     <div
       className={`group relative bg-card rounded-xl overflow-hidden border border-border transition-all duration-500 transform cursor-pointer ${
         isHovered ? 'scale-105 shadow-2xl shadow-primary/20 neon-glow' : 'hover:shadow-lg'
-      }`}
+      } h-full flex flex-col`}
       onMouseEnter={onHover}
       onMouseLeave={onLeave}
       onClick={onClick}
@@ -273,7 +273,7 @@ function ProjectCard({ project, isHovered, onHover, onLeave, onClick }: ProjectC
       </div>
 
       {/* Project Content */}
-      <div className="p-6">
+      <div className="p-6 flex-1 flex flex-col">
         <div className="mb-2">
           <span className="text-xs font-semibold text-primary bg-primary/10 px-2 py-1 rounded-full">
             {project.category}
@@ -283,7 +283,7 @@ function ProjectCard({ project, isHovered, onHover, onLeave, onClick }: ProjectC
         <p className="text-muted-foreground text-sm mb-4 leading-relaxed">
           {project.description}
         </p>
-        <div className="flex flex-wrap gap-2">
+        <div className="mt-auto flex flex-wrap gap-2">
           {project.technologies.map((tech) => (
             <span
               key={tech}
