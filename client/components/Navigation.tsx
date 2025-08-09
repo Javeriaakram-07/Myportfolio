@@ -44,25 +44,29 @@ export default function Navigation() {
           <div className="flex items-center space-x-4">
             {/* Desktop Social Links */}
             <div className="hidden sm:flex items-center space-x-4">
-              <SocialLink 
-                href="https://instagram.com/javeria_akram" 
+              <SocialLink
+                href="https://www.instagram.com/javeriyayayaya.07?igsh=NzF3ZGlsczE3MXph"
                 icon={<Instagram className="w-5 h-5" />}
                 label="Instagram"
+                color="instagram"
               />
-              <SocialLink 
-                href="https://linkedin.com/in/javeria-akram" 
+              <SocialLink
+                href="https://www.linkedin.com/in/javeria-akram-10b607334?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
                 icon={<Linkedin className="w-5 h-5" />}
                 label="LinkedIn"
+                color="linkedin"
               />
-              <SocialLink 
-                href="https://freelancer.com/u/javeria-akram" 
+              <SocialLink
+                href="https://www.freelancer.com/u/Javeriaakram77?frm=Javeriaakram77&sb=t"
                 icon={<Globe className="w-5 h-5" />}
                 label="Freelancer"
+                color="freelancer"
               />
-              <SocialLink 
-                href="mailto:javeria.akram@example.com" 
+              <SocialLink
+                href="mailto:javeria.akram@example.com"
                 icon={<Mail className="w-5 h-5" />}
                 label="Email"
+                color="email"
               />
             </div>
 
@@ -111,25 +115,29 @@ export default function Navigation() {
               
               {/* Mobile Social Links */}
               <div className="flex items-center space-x-4 pt-4 border-t border-border">
-                <SocialLink 
-                  href="https://instagram.com/javeria_akram" 
+                <SocialLink
+                  href="https://www.instagram.com/javeriyayayya.07?igsh=NzF3ZGlsczE3MXph"
                   icon={<Instagram className="w-5 h-5" />}
                   label="Instagram"
+                  color="instagram"
                 />
-                <SocialLink 
-                  href="https://linkedin.com/in/javeria-akram" 
+                <SocialLink
+                  href="https://www.linkedin.com/in/javeria-akram-10b607334?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
                   icon={<Linkedin className="w-5 h-5" />}
                   label="LinkedIn"
+                  color="linkedin"
                 />
-                <SocialLink 
-                  href="https://freelancer.com/u/javeria-akram" 
+                <SocialLink
+                  href="https://www.freelancer.com/u/Javeriaakram77?frm=Javeriaakram77&sb=t"
                   icon={<Globe className="w-5 h-5" />}
                   label="Freelancer"
+                  color="freelancer"
                 />
-                <SocialLink 
-                  href="mailto:javeria.akram@example.com" 
+                <SocialLink
+                  href="mailto:javeria.akram@example.com"
                   icon={<Mail className="w-5 h-5" />}
                   label="Email"
+                  color="email"
                 />
               </div>
             </div>
