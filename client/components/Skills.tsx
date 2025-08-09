@@ -105,8 +105,8 @@ function SkillCard({ skill, isHovered, onHover, onLeave }: SkillCardProps) {
       <div
         className={`
           relative p-6 rounded-xl border-2 border-border/50 bg-card
-          transition-all duration-300 cursor-pointer overflow-hidden
-          ${isHovered ? 'transform rotate-2 scale-105 border-opacity-100' : 'hover:border-opacity-70'}
+          transition-all duration-500 cursor-pointer overflow-hidden transform
+          ${isHovered ? 'rotate-2 scale-105 border-opacity-100 neon-glow' : 'hover:border-opacity-70'}
         `}
         style={{ 
           borderColor: isHovered ? `hsl(var(--${skill.color}))` : undefined,

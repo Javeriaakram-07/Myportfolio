@@ -140,8 +140,8 @@ interface ProjectCardProps {
 function ProjectCard({ project, isHovered, onHover, onLeave }: ProjectCardProps) {
   return (
     <div
-      className={`group relative bg-card rounded-xl overflow-hidden border border-border transition-all duration-500 ${
-        isHovered ? 'transform scale-105 shadow-2xl shadow-primary/20' : 'hover:shadow-lg'
+      className={`group relative bg-card rounded-xl overflow-hidden border border-border transition-all duration-500 transform ${
+        isHovered ? 'scale-105 shadow-2xl shadow-primary/20 neon-glow' : 'hover:shadow-lg'
       }`}
       onMouseEnter={onHover}
       onMouseLeave={onLeave}

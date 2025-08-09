@@ -128,7 +128,7 @@ export default function Contact() {
               <button
                 type="submit"
                 disabled={isSubmitting}
-                className="group w-full bg-gradient-to-r from-primary to-accent text-white px-8 py-4 rounded-lg font-semibold transition-all duration-300 hover:scale-105 hover:shadow-glow disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:scale-100"
+                className="group w-full bg-gradient-to-r from-primary to-accent text-white px-8 py-4 rounded-lg font-semibold transition-all duration-500 hover:scale-105 transform hover:neon-glow disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:scale-100"
               >
                 <span className="flex items-center justify-center gap-2">
                   {isSubmitting ? (
@@ -183,7 +183,7 @@ export default function Contact() {
               <div className="mt-8">
                 <button
                   onClick={handleEmailClick}
-                  className="group w-full bg-card border-2 border-primary text-primary px-6 py-3 rounded-lg font-semibold transition-all duration-300 hover:bg-primary hover:text-white hover:scale-105"
+                  className="group w-full bg-card border-2 border-primary text-primary px-6 py-3 rounded-lg font-semibold transition-all duration-500 hover:bg-primary hover:text-white hover:scale-105 transform hover:neon-glow"
                 >
                   <span className="flex items-center justify-center gap-2">
                     <Mail className="w-5 h-5" />
