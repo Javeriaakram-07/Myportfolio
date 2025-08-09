@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
 import { ChevronDown } from 'lucide-react';
+import TypingAnimation from './TypingAnimation';
 
 export default function Hero() {
   const [isVisible, setIsVisible] = useState(false);
@@ -26,10 +27,13 @@ export default function Hero() {
         {/* Content */}
         <div className={`space-y-8 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
           <div className="space-y-4">
-            <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold">
-              <span className="gradient-text">Javeria</span>
-              <br />
-              <span className="text-foreground">Akram</span>
+            <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold min-h-[2.5em]">
+              <TypingAnimation
+                text="Javeria Akram"
+                delay={2000}
+                speed={150}
+                className="gradient-text block"
+              />
             </h1>
             <p className="text-xl md:text-2xl text-muted-foreground">
               Computer Science Student & Freelancer
