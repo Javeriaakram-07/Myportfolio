@@ -40,14 +40,6 @@ export default function AnimatedLogo({ isFullscreen = false, onAnimationComplete
           </span>
         </div>
       </div>
-      {isFullscreen && (
-        <div className="absolute bottom-20 left-1/2 transform -translate-x-1/2 text-center">
-          <div className="animate-pulse text-muted-foreground">
-            Loading Portfolio...
-          </div>
-          <div className="mt-4 w-16 h-1 bg-gradient-to-r from-primary to-accent rounded-full mx-auto animate-pulse"></div>
-        </div>
-      )}
     </div>
   );
 }
