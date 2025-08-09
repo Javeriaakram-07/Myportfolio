@@ -118,11 +118,19 @@ export default {
         "scale-in": {
           "0%": {
             opacity: "0",
-            transform: "scale(0.8)",
+            transform: "scale(0.8) rotateY(-10deg)",
           },
           "100%": {
             opacity: "1",
-            transform: "scale(1)",
+            transform: "scale(1) rotateY(0deg)",
+          },
+        },
+        "text-glow": {
+          "0%, 100%": {
+            textShadow: "0 0 5px hsl(var(--primary)), 0 0 10px hsl(var(--primary)), 0 0 15px hsl(var(--primary))",
+          },
+          "50%": {
+            textShadow: "0 0 10px hsl(var(--primary)), 0 0 20px hsl(var(--primary)), 0 0 30px hsl(var(--primary))",
           },
         },
       },
@@ -134,6 +142,7 @@ export default {
         "slide-up": "slide-up 0.6s ease-out",
         "fade-in": "fade-in 1s ease-out",
         "scale-in": "scale-in 0.5s ease-out",
+        "text-glow": "text-glow 2s ease-in-out infinite",
       },
     },
   },
