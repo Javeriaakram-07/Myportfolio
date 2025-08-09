@@ -42,28 +42,99 @@ export default function Navigation() {
           </div>
 
           <div className="flex items-center space-x-4">
-            <SocialLink 
-              href="https://instagram.com/javeria_akram" 
-              icon={<Instagram className="w-5 h-5" />}
-              label="Instagram"
-            />
-            <SocialLink 
-              href="https://linkedin.com/in/javeria-akram" 
-              icon={<Linkedin className="w-5 h-5" />}
-              label="LinkedIn"
-            />
-            <SocialLink 
-              href="https://freelancer.com/u/javeria-akram" 
-              icon={<Globe className="w-5 h-5" />}
-              label="Freelancer"
-            />
-            <SocialLink 
-              href="mailto:javeria.akram@example.com" 
-              icon={<Mail className="w-5 h-5" />}
-              label="Email"
-            />
+            {/* Desktop Social Links */}
+            <div className="hidden sm:flex items-center space-x-4">
+              <SocialLink 
+                href="https://instagram.com/javeria_akram" 
+                icon={<Instagram className="w-5 h-5" />}
+                label="Instagram"
+              />
+              <SocialLink 
+                href="https://linkedin.com/in/javeria-akram" 
+                icon={<Linkedin className="w-5 h-5" />}
+                label="LinkedIn"
+              />
+              <SocialLink 
+                href="https://freelancer.com/u/javeria-akram" 
+                icon={<Globe className="w-5 h-5" />}
+                label="Freelancer"
+              />
+              <SocialLink 
+                href="mailto:javeria.akram@example.com" 
+                icon={<Mail className="w-5 h-5" />}
+                label="Email"
+              />
+            </div>
+
+            {/* Mobile Menu Button */}
+            <button
+              onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+              className="md:hidden p-2 rounded-lg hover:bg-muted transition-colors"
+            >
+              {isMobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+            </button>
           </div>
         </div>
+
+        {/* Mobile Menu */}
+        {isMobileMenuOpen && (
+          <div className="md:hidden border-t border-border bg-background/95 backdrop-blur-md">
+            <div className="px-4 py-4 space-y-4">
+              <a 
+                href="#about" 
+                className="block text-foreground hover:text-primary transition-colors"
+                onClick={() => setIsMobileMenuOpen(false)}
+              >
+                About
+              </a>
+              <a 
+                href="#skills" 
+                className="block text-foreground hover:text-primary transition-colors"
+                onClick={() => setIsMobileMenuOpen(false)}
+              >
+                Skills
+              </a>
+              <a 
+                href="#portfolio" 
+                className="block text-foreground hover:text-primary transition-colors"
+                onClick={() => setIsMobileMenuOpen(false)}
+              >
+                Portfolio
+              </a>
+              <a 
+                href="#contact" 
+                className="block text-foreground hover:text-primary transition-colors"
+                onClick={() => setIsMobileMenuOpen(false)}
+              >
+                Contact
+              </a>
+              
+              {/* Mobile Social Links */}
+              <div className="flex items-center space-x-4 pt-4 border-t border-border">
+                <SocialLink 
+                  href="https://instagram.com/javeria_akram" 
+                  icon={<Instagram className="w-5 h-5" />}
+                  label="Instagram"
+                />
+                <SocialLink 
+                  href="https://linkedin.com/in/javeria-akram" 
+                  icon={<Linkedin className="w-5 h-5" />}
+                  label="LinkedIn"
+                />
+                <SocialLink 
+                  href="https://freelancer.com/u/javeria-akram" 
+                  icon={<Globe className="w-5 h-5" />}
+                  label="Freelancer"
+                />
+                <SocialLink 
+                  href="mailto:javeria.akram@example.com" 
+                  icon={<Mail className="w-5 h-5" />}
+                  label="Email"
+                />
+              </div>
+            </div>
+          </div>
+        )}
       </div>
     </nav>
   );
