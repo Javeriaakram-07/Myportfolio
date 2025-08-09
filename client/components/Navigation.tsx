@@ -152,22 +152,53 @@ interface SocialLinkProps {
   href: string;
   icon: React.ReactNode;
   label: string;
+  color?: string;
 }
 
-function SocialLink({ href, icon, label }: SocialLinkProps) {
+function SocialLink({ href, icon, label, color }: SocialLinkProps) {
+  const getColorClass = (colorType?: string) => {
+    switch (colorType) {
+      case 'instagram':
+        return 'group-hover:text-pink-500';
+      case 'linkedin':
+        return 'group-hover:text-blue-600';
+      case 'freelancer':
+        return 'group-hover:text-orange-500';
+      case 'email':
+        return 'group-hover:text-green-500';
+      default:
+        return 'group-hover:text-primary';
+    }
+  };
+
+  const getGlowColor = (colorType?: string) => {
+    switch (colorType) {
+      case 'instagram':
+        return 'group-hover:shadow-[0_0_15px_rgba(236,72,153,0.6)]';
+      case 'linkedin':
+        return 'group-hover:shadow-[0_0_15px_rgba(37,99,235,0.6)]';
+      case 'freelancer':
+        return 'group-hover:shadow-[0_0_15px_rgba(249,115,22,0.6)]';
+      case 'email':
+        return 'group-hover:shadow-[0_0_15px_rgba(34,197,94,0.6)]';
+      default:
+        return 'group-hover:shadow-glow';
+    }
+  };
+
   return (
     <a
       href={href}
       target="_blank"
       rel="noopener noreferrer"
-      className="group relative p-2 rounded-lg transition-all duration-300 hover:scale-110"
+      className="group relative p-2 rounded-lg transition-all duration-500 hover:scale-110 transform"
       aria-label={label}
     >
-      <div className="absolute inset-0 bg-gradient-to-r from-primary to-accent opacity-0 group-hover:opacity-20 rounded-lg transition-all duration-300"></div>
-      <div className="relative text-muted-foreground group-hover:text-primary transition-colors">
+      <div className="absolute inset-0 bg-gradient-to-r from-primary to-accent opacity-0 group-hover:opacity-20 rounded-lg transition-all duration-500"></div>
+      <div className={`relative text-muted-foreground transition-all duration-500 ${getColorClass(color)}`}>
         {icon}
       </div>
-      <div className="absolute inset-0 group-hover:shadow-glow rounded-lg transition-all duration-300 pointer-events-none"></div>
+      <div className={`absolute inset-0 rounded-lg transition-all duration-500 pointer-events-none ${getGlowColor(color)}`}></div>
     </a>
   );
 }
