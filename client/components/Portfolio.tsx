@@ -251,6 +251,7 @@ export default function Portfolio() {
               isHovered={hoveredProject === project.id}
               onHover={() => setHoveredProject(project.id)}
               onLeave={() => setHoveredProject(null)}
+              onClick={() => setSelectedProject(project)}
             />
           ))}
         </div>
@@ -273,9 +274,10 @@ interface ProjectCardProps {
   isHovered: boolean;
   onHover: () => void;
   onLeave: () => void;
+  onClick: () => void;
 }
 
-function ProjectCard({ project, isHovered, onHover, onLeave }: ProjectCardProps) {
+function ProjectCard({ project, isHovered, onHover, onLeave, onClick }: ProjectCardProps) {
   return (
     <div
       className={`group relative bg-card rounded-xl overflow-hidden border border-border transition-all duration-500 transform cursor-pointer ${
@@ -283,13 +285,7 @@ function ProjectCard({ project, isHovered, onHover, onLeave }: ProjectCardProps)
       }`}
       onMouseEnter={onHover}
       onMouseLeave={onLeave}
-      onClick={() => {
-        // This will be handled by the parent Portfolio component
-        const portfolioComponent = document.querySelector('[data-portfolio]') as any;
-        if (portfolioComponent?._setSelectedProject) {
-          portfolioComponent._setSelectedProject(project);
-        }
-      }}
+      onClick={onClick}
     >
       {/* Project Image */}
       <div className="relative h-48 overflow-hidden">
