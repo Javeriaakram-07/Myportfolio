@@ -34,7 +34,7 @@ export default function Contact() {
   };
 
   const handleEmailClick = () => {
-    window.location.href = 'mailto:javeria.akram@example.com?subject=Portfolio Contact';
+    window.location.href = 'mailto:javeriaakram259@gmail.com?subject=Portfolio Contact';
   };
 
   return (
@@ -164,8 +164,8 @@ export default function Contact() {
                 <ContactItem
                   icon={<Mail className="w-6 h-6" />}
                   title="Email"
-                  value="javeria.akram@example.com"
-                  action={() => window.location.href = 'mailto:javeria.akram@example.com'}
+                  value="javeriaakram259@gmail.com"
+                  action={() => window.location.href = 'mailto:javeriaakram259@gmail.com'}
                 />
                 <ContactItem
                   icon={<Phone className="w-6 h-6" />}
