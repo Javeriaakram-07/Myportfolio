@@ -4,21 +4,21 @@ export default function About() {
   return (
     <section id="about" className="py-16 bg-muted/30">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-16">
+        <div className="text-center mb-12">
           <h2 className="text-4xl md:text-5xl font-bold mb-4">
             About <span className="gradient-text">Me</span>
           </h2>
-          <p className="text-xl text-muted-foreground mb-8">
+          <p className="text-xl text-muted-foreground mb-6">
             Computer Science Student & Passionate Developer
           </p>
           <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
-            I'm Javeria Akram, a dedicated Computer Science student with a passion for 
+            I'm Javeria Akram, a dedicated Computer Science student with a passion for
             transforming complex problems into elegant solutions through code and design.
           </p>
         </div>
 
         {/* Statistics */}
-        <div className="grid grid-cols-2 gap-6 max-w-md mx-auto mb-16">
+        <div className="grid grid-cols-2 gap-6 max-w-md mx-auto mb-12">
           <div className="text-center p-4 bg-card rounded-lg border border-border">
             <div className="text-3xl font-bold gradient-text">10+</div>
             <div className="text-sm text-muted-foreground">Projects Completed</div>
@@ -30,7 +30,7 @@ export default function About() {
         </div>
 
         {/* Four Boxes: Education, Development, Passion, Freelancing */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
           <AboutCard
             icon={<GraduationCap className="w-8 h-8" />}
             title="Education"
