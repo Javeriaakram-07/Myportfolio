@@ -147,28 +147,38 @@ function ProjectCard({ project, isHovered, onHover, onLeave }: ProjectCardProps)
       onMouseLeave={onLeave}
     >
       {/* Project Image */}
-      <div className="relative h-48 bg-gradient-to-br from-primary/10 to-accent/10 overflow-hidden">
-        <div className="absolute inset-0 flex items-center justify-center text-4xl font-bold gradient-text">
-          {project.title.split(' ').map(word => word[0]).join('')}
-        </div>
-        <div className={`absolute inset-0 bg-gradient-to-t from-background/80 to-transparent transition-opacity duration-300 ${
+      <div className="relative h-48 overflow-hidden">
+        <img
+          src={project.image}
+          alt={project.title}
+          className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+        />
+        <div className={`absolute inset-0 bg-gradient-to-t from-background/90 to-transparent transition-opacity duration-500 ${
           isHovered ? 'opacity-100' : 'opacity-0'
         }`}>
           <div className="absolute bottom-4 left-4 right-4 flex gap-2">
-            <a
-              href={project.liveUrl}
-              className="flex items-center gap-2 px-3 py-1 bg-primary text-white rounded-lg text-sm hover:bg-primary/90 transition-colors"
-            >
-              <ExternalLink className="w-4 h-4" />
-              Live
-            </a>
-            <a
-              href={project.githubUrl}
-              className="flex items-center gap-2 px-3 py-1 bg-muted text-foreground rounded-lg text-sm hover:bg-muted/80 transition-colors"
-            >
-              <Github className="w-4 h-4" />
-              Code
-            </a>
+            {project.liveUrl && (
+              <a
+                href={project.liveUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-2 px-3 py-1 bg-primary text-white rounded-lg text-sm hover:bg-primary/90 transition-all duration-300 hover:scale-105"
+              >
+                <ExternalLink className="w-4 h-4" />
+                Live
+              </a>
+            )}
+            {project.githubUrl && (
+              <a
+                href={project.githubUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-2 px-3 py-1 bg-muted text-foreground rounded-lg text-sm hover:bg-muted/80 transition-all duration-300 hover:scale-105"
+              >
+                <Github className="w-4 h-4" />
+                Code
+              </a>
+            )}
           </div>
         </div>
       </div>
