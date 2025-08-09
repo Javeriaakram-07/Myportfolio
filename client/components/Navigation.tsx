@@ -22,11 +22,8 @@ export default function Navigation() {
     }`}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
-          <Link to="/" className="flex items-center min-w-0">
-            <div className="w-10 h-10 sm:w-12 sm:h-12 shrink-0">
-              <AnimatedLogo />
-            </div>
-            <span className="sr-only">Home</span>
+          <Link to="/" className="flex items-center">
+            <AnimatedLogo />
           </Link>
 
           <div className="hidden md:flex items-center space-x-8">
@@ -37,7 +34,7 @@ export default function Navigation() {
               Skills
             </a>
             <a href="#portfolio" className="text-foreground hover:text-primary transition-colors">
-              Projects
+              Portfolio
             </a>
             <a href="#contact" className="text-foreground hover:text-primary transition-colors">
               Contact
@@ -77,7 +74,6 @@ export default function Navigation() {
             <button
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
               className="md:hidden p-2 rounded-lg hover:bg-muted transition-colors"
-              aria-label="Toggle menu"
             >
               {isMobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
             </button>
