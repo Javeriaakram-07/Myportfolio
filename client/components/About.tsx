@@ -17,44 +17,99 @@ export default function About() {
             </div>
 
             <div className="space-y-6 text-muted-foreground leading-relaxed">
-              <p>
+              <p className="text-lg">
                 I'm Javeria Akram, a dedicated Computer Science student with a passion for
                 transforming complex problems into elegant solutions through code and design.
               </p>
 
+              <div className="grid md:grid-cols-2 gap-6">
+                <div className="space-y-4">
+                  <h4 className="text-foreground font-semibold text-lg flex items-center gap-2">
+                    🎓 Education
+                  </h4>
+                  <div className="pl-4 border-l-2 border-primary/40 bg-primary/5 rounded-r-lg p-4">
+                    <p className="font-medium text-foreground">BS Computer Science</p>
+                    <p className="text-sm text-muted-foreground">Punjab University of Information Technology</p>
+                    <p className="text-sm text-muted-foreground">Lahore, Pakistan</p>
+                    <p className="text-sm text-primary font-medium">2024 - 2028</p>
+                  </div>
+                </div>
+
+                <div className="space-y-4">
+                  <h4 className="text-foreground font-semibold text-lg flex items-center gap-2">
+                    💻 Core Skills
+                  </h4>
+                  <div className="space-y-2">
+                    <div className="flex items-center gap-2 text-sm">
+                      <span className="w-2 h-2 bg-primary rounded-full"></span>
+                      <span>C++ Programming & OOP</span>
+                    </div>
+                    <div className="flex items-center gap-2 text-sm">
+                      <span className="w-2 h-2 bg-primary rounded-full"></span>
+                      <span>Logic Building & Algorithms</span>
+                    </div>
+                    <div className="flex items-center gap-2 text-sm">
+                      <span className="w-2 h-2 bg-primary rounded-full"></span>
+                      <span>System Programming</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
               <div className="space-y-4">
-                <h4 className="text-foreground font-semibold">Education</h4>
-                <div className="pl-4 border-l-2 border-primary/30">
-                  <p className="font-medium text-foreground">BS Computer Science</p>
-                  <p className="text-sm">Punjab University of Information Technology, Lahore</p>
-                  <p className="text-sm text-primary">2024 - 2028</p>
+                <h4 className="text-foreground font-semibold text-lg flex items-center gap-2">
+                  🌐 Web Development
+                </h4>
+                <div className="grid md:grid-cols-3 gap-4">
+                  <div className="bg-accent/5 border border-accent/20 rounded-lg p-4">
+                    <h5 className="font-medium text-foreground mb-2">Frontend</h5>
+                    <ul className="space-y-1 text-sm">
+                      <li>• HTML5 & Semantic Markup</li>
+                      <li>• CSS3 & Responsive Design</li>
+                      <li>• Modern Layout Techniques</li>
+                    </ul>
+                  </div>
+                  <div className="bg-accent/5 border border-accent/20 rounded-lg p-4">
+                    <h5 className="font-medium text-foreground mb-2">Styling</h5>
+                    <ul className="space-y-1 text-sm">
+                      <li>• CSS Grid & Flexbox</li>
+                      <li>• Animations & Transitions</li>
+                      <li>• Cross-browser Compatibility</li>
+                    </ul>
+                  </div>
+                  <div className="bg-accent/5 border border-accent/20 rounded-lg p-4">
+                    <h5 className="font-medium text-foreground mb-2">Design</h5>
+                    <ul className="space-y-1 text-sm">
+                      <li>• UI/UX Principles</li>
+                      <li>• Mobile-First Approach</li>
+                      <li>• Professional Layouts</li>
+                    </ul>
+                  </div>
                 </div>
               </div>
 
               <div className="space-y-3">
-                <h4 className="text-foreground font-semibold">What I Do</h4>
-                <ul className="space-y-2 pl-4">
-                  <li className="flex items-start gap-2">
-                    <span className="text-primary mt-1.5 text-xs">▸</span>
-                    <span>Specialize in logic building and algorithmic thinking</span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <span className="text-primary mt-1.5 text-xs">▸</span>
-                    <span>Create efficient C++ applications and system programming</span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <span className="text-primary mt-1.5 text-xs">▸</span>
-                    <span>Build responsive web interfaces with modern technologies</span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <span className="text-primary mt-1.5 text-xs">▸</span>
-                    <span>Freelance development delivering custom client solutions</span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <span className="text-primary mt-1.5 text-xs">▸</span>
-                    <span>Passionate about exploring new technologies and best practices</span>
-                  </li>
-                </ul>
+                <h4 className="text-foreground font-semibold text-lg flex items-center gap-2">
+                  🚀 What I Do
+                </h4>
+                <div className="grid md:grid-cols-2 gap-3">
+                  <div className="flex items-start gap-3 p-3 bg-primary/5 rounded-lg border border-primary/20">
+                    <span className="text-primary mt-1 text-sm">▶</span>
+                    <span className="text-sm">Build console-based applications with advanced C++ concepts</span>
+                  </div>
+                  <div className="flex items-start gap-3 p-3 bg-primary/5 rounded-lg border border-primary/20">
+                    <span className="text-primary mt-1 text-sm">▶</span>
+                    <span className="text-sm">Create responsive websites with modern design principles</span>
+                  </div>
+                  <div className="flex items-start gap-3 p-3 bg-primary/5 rounded-lg border border-primary/20">
+                    <span className="text-primary mt-1 text-sm">▶</span>
+                    <span className="text-sm">Freelance development delivering custom client solutions</span>
+                  </div>
+                  <div className="flex items-start gap-3 p-3 bg-primary/5 rounded-lg border border-primary/20">
+                    <span className="text-primary mt-1 text-sm">��</span>
+                    <span className="text-sm">Focus on clean code and efficient problem-solving</span>
+                  </div>
+                </div>
               </div>
             </div>
 
