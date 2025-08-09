@@ -8,16 +8,60 @@ interface Skill {
 }
 
 const skills: Skill[] = [
-  { name: 'C', icon: 'C', color: 'skill-c', description: 'Systems programming and embedded development' },
-  { name: 'C++', icon: 'C++', color: 'skill-cpp', description: 'Object-oriented programming and algorithms' },
-  { name: 'HTML', icon: 'HTML', color: 'skill-html', description: 'Semantic markup and web structure' },
-  { name: 'CSS', icon: 'CSS', color: 'skill-css', description: 'Responsive design and modern styling' },
-  { name: 'JavaScript', icon: 'JS', color: 'skill-js', description: 'Interactive web applications and ES6+' },
-  { name: 'React', icon: '⚛', color: 'skill-web', description: 'Component-based UI with hooks and ecosystem' },
-  { name: 'OOP', icon: '⚙️', color: 'skill-cpp', description: 'Object-oriented programming principles' },
-  { name: 'UI/UX Design', icon: '🎨', color: 'skill-logic', description: 'User interface and experience design' },
-  { name: 'Vibe Coding', icon: '✨', color: 'skill-logic', description: 'Clean, readable code with aesthetic touches' },
-  { name: 'Web Development', icon: '🌐', color: 'skill-web', description: 'Responsive websites and modern frameworks' },
+  {
+    name: 'C',
+    icon: 'C',
+    color: 'skill-c',
+    description: 'Systems programming and embedded development'
+  },
+  {
+    name: 'C++',
+    icon: 'C++',
+    color: 'skill-cpp',
+    description: 'Object-oriented programming and algorithms'
+  },
+  {
+    name: 'HTML',
+    icon: 'HTML',
+    color: 'skill-html',
+    description: 'Semantic markup and web structure'
+  },
+  {
+    name: 'CSS',
+    icon: 'CSS',
+    color: 'skill-css',
+    description: 'Responsive design and modern styling'
+  },
+  {
+    name: 'JavaScript',
+    icon: 'JS',
+    color: 'skill-js',
+    description: 'Interactive web applications and ES6+'
+  },
+  {
+    name: 'OOP',
+    icon: '⚙️',
+    color: 'skill-cpp',
+    description: 'Object-oriented programming principles'
+  },
+  {
+    name: 'Web Development',
+    icon: '🌐',
+    color: 'skill-web',
+    description: 'Responsive websites and modern frameworks'
+  },
+  {
+    name: 'UI/UX Design',
+    icon: '🎨',
+    color: 'skill-logic',
+    description: 'User interface and experience design'
+  },
+  {
+    name: 'Graphics Design',
+    icon: '🖼️',
+    color: 'skill-web',
+    description: 'Visual design for websites and applications'
+  }
 ];
 
 export default function Skills() {
@@ -37,7 +81,7 @@ export default function Skills() {
 
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
           {skills.map((skill) => (
-            <SkillCard
+            <SkillCard 
               key={skill.name}
               skill={skill}
               isHovered={hoveredSkill === skill.name}
@@ -68,9 +112,6 @@ function SkillCard({ skill, isHovered, onHover, onLeave }: SkillCardProps) {
     setMousePosition({ x, y });
   };
 
-  const isOOP = skill.name === 'OOP';
-  const isUIUX = skill.name === 'UI/UX Design';
-
   return (
     <div className="relative group">
       <div
@@ -79,22 +120,9 @@ function SkillCard({ skill, isHovered, onHover, onLeave }: SkillCardProps) {
           transition-all duration-500 cursor-pointer overflow-hidden transform
           ${isHovered ? 'rotate-2 scale-105 border-opacity-100 neon-glow' : 'hover:border-opacity-70'}
         `}
-        style={{
-          borderColor: isHovered
-            ? isOOP
-              ? '#C0C0C0'
-              : isUIUX
-                ? '#FFC0CB'
-                : `hsl(var(--${skill.color}))`
-            : undefined,
-          transform: isHovered ? 'perspective(1000px) rotateX(5deg) rotateY(5deg)' : undefined,
-          boxShadow: isHovered
-            ? isOOP
-              ? '0 0 15px rgba(192,192,192,0.6)'
-              : isUIUX
-                ? '0 0 15px rgba(255,192,203,0.6)'
-                : undefined
-            : undefined,
+        style={{ 
+          borderColor: isHovered ? `hsl(var(--${skill.color}))` : undefined,
+          transform: isHovered ? 'perspective(1000px) rotateX(5deg) rotateY(5deg)' : undefined
         }}
         onMouseEnter={onHover}
         onMouseLeave={onLeave}
@@ -105,11 +133,7 @@ function SkillCard({ skill, isHovered, onHover, onLeave }: SkillCardProps) {
           <div
             className="absolute inset-0 opacity-20 rounded-xl transition-all duration-100"
             style={{
-              background: isOOP
-                ? `radial-gradient(circle at ${mousePosition.x}% ${mousePosition.y}%, #C0C0C0 0%, transparent 50%)`
-                : isUIUX
-                  ? `radial-gradient(circle at ${mousePosition.x}% ${mousePosition.y}%, #FFC0CB 0%, transparent 50%)`
-                  : `radial-gradient(circle at ${mousePosition.x}% ${mousePosition.y}%, hsl(var(--${skill.color})) 0%, transparent 50%)`,
+              background: `radial-gradient(circle at ${mousePosition.x}% ${mousePosition.y}%, hsl(var(--${skill.color})) 0%, transparent 50%)`,
             }}
           />
         )}
@@ -122,7 +146,7 @@ function SkillCard({ skill, isHovered, onHover, onLeave }: SkillCardProps) {
           <h3 className="font-semibold text-foreground mb-2">{skill.name}</h3>
         </div>
 
-        {/* Tooltip (unchanged behavior) */}
+        {/* Tooltip */}
         {isHovered && (
           <div className="absolute top-full left-1/2 transform -translate-x-1/2 mt-2 z-20">
             <div className="bg-popover border border-border rounded-lg px-3 py-2 shadow-lg animate-fade-in">
