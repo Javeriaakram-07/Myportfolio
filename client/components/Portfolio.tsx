@@ -60,7 +60,7 @@ const projects: Project[] = [
     id: 2,
     title: 'Sweet Shop Website',
     description: 'A vibrant sweet shop website featuring refreshing cocktails and beverages. Built with responsive design, interactive elements, and beautiful gradients.',
-    technologies: ['HTML', 'CSS', 'Responsive Design'],
+    technologies: ['HTML', 'CSS', 'Responsive Design', 'UI/UX'],
     image: 'https://cdn.builder.io/api/v1/image/assets%2F78bb8a2b1dce448185f7c0a17bacab1d%2Fd3d7322df3854d3780bb63a3f2f64c5b?format=webp&width=800',
     liveUrl: '',
     githubUrl: '',
@@ -89,7 +89,7 @@ const projects: Project[] = [
     id: 3,
     title: 'Sweet Shop Blog',
     description: 'A modern blog platform for Sweet Shop featuring articles, product reviews, and user engagement. Clean design with responsive grid layout and smooth animations.',
-    technologies: ['HTML', 'CSS', 'Blog System'],
+    technologies: ['HTML', 'CSS', 'Blog System', 'Responsive Design'],
     image: 'https://cdn.builder.io/api/v1/image/assets%2F78bb8a2b1dce448185f7c0a17bacab1d%2Fd6ea10eda1624cef86175af07fade245?format=webp&width=800',
     liveUrl: 'https://webull.w3spaces.com',
     githubUrl: '',
@@ -118,7 +118,7 @@ const projects: Project[] = [
     id: 4,
     title: 'Interactive Payment Card',
     description: 'A sleek payment card interface with dark theme, neon effects, and animated background elements. Features order summary, pricing, and payment integration.',
-    technologies: ['HTML', 'CSS', 'UI/UX', 'Animations'],
+    technologies: ['HTML', 'CSS', 'UI/UX', 'Animations', 'Responsive Design'],
     image: 'https://cdn.builder.io/api/v1/image/assets%2F78bb8a2b1dce448185f7c0a17bacab1d%2Fd397edceac6449d5a79d3f6e1da819e5?format=webp&width=800',
     liveUrl: '',
     githubUrl: '',
@@ -142,64 +142,6 @@ const projects: Project[] = [
     • Plan selection with change options
     • Payment processing simulation
     • Cancel order functionality`
-  },
-  {
-    id: 5,
-    title: 'Code Editor Interface',
-    description: 'A professional code editor interface with syntax highlighting, dark theme, and clean typography. Built for developers with attention to detail and usability.',
-    technologies: ['HTML', 'CSS', 'Syntax Highlighting', 'Developer Tools'],
-    image: 'https://cdn.builder.io/api/v1/image/assets%2F78bb8a2b1dce448185f7c0a17bacab1d%2F2f736c9890774655bbf25e9f27a966e6?format=webp&width=800',
-    liveUrl: '',
-    githubUrl: '',
-    category: 'Web Development',
-    detailedDescription: `A sophisticated code editor interface mimicking popular development environments:
-
-    👨‍💻 **Developer Experience**
-    • VS Code-inspired dark theme design
-    • Accurate syntax highlighting for multiple languages
-    • Line numbering and code formatting
-    • Professional monospace typography
-
-    🎨 **Interface Design**
-    • Clean sidebar navigation structure
-    • Tabbed interface for file management
-    • Proper color coding for different code elements
-    • Authentic developer tool aesthetics
-
-    🔧 **Technical Features**
-    • CSS-based syntax highlighting system
-    • Responsive layout for different screen sizes
-    • Optimized for developer workflow presentation
-    • Attention to detail in spacing and alignment`
-  },
-  {
-    id: 6,
-    title: 'Developer Portfolio',
-    description: 'A modern developer portfolio showcasing projects and skills with elegant design, smooth animations, and professional presentation.',
-    technologies: ['HTML', 'CSS', 'Portfolio Design', 'Responsive Web'],
-    image: 'https://cdn.builder.io/api/v1/image/assets%2F78bb8a2b1dce448185f7c0a17bacab1d%2Fd37824b2bf7e46ea99b5f31b6c01866c?format=webp&width=800',
-    liveUrl: '',
-    githubUrl: '',
-    category: 'Web Development',
-    detailedDescription: `A comprehensive portfolio website showcasing professional development skills:
-
-    🎯 **Portfolio Features**
-    • Professional hero section with clear value proposition
-    • Project showcase with detailed case studies
-    • Skills section with technology highlighting
-    • Contact form and professional information
-
-    🚀 **Performance & Design**
-    • Fast loading optimized assets
-    • Mobile-first responsive design approach
-    • Professional color scheme and typography
-    • Smooth scrolling and navigation experience
-
-    📈 **Professional Impact**
-    • Clear demonstration of technical capabilities
-    • Well-organized content structure
-    • Professional photography and branding
-    • SEO optimized for discoverability`
   }
 ];
 
