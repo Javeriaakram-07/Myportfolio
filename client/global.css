@@ -138,4 +138,19 @@
       opacity: 0.3;
     }
   }
+
+  /* Equal-height card helper */
+  .card-equal {
+    @apply h-full flex flex-col;
+  }
+
+  /* Reduce motion preference */
+  @media (prefers-reduced-motion: reduce) {
+    * {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+      scroll-behavior: auto !important;
+    }
+  }
 }
