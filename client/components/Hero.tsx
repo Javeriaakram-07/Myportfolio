@@ -66,10 +66,14 @@ export default function Hero() {
             {/* Glow effect */}
             <div className="absolute inset-0 bg-gradient-to-r from-primary to-accent rounded-full blur-xl opacity-30 animate-pulse"></div>
             
-            {/* Profile image placeholder */}
+            {/* Profile logo circle */}
             <div className="relative w-full h-full rounded-full overflow-hidden border-4 border-gradient-to-r from-primary to-accent shadow-2xl">
-              <div className="w-full h-full bg-gradient-to-br from-primary/20 to-accent/20 flex items-center justify-center">
-                <div className="text-6xl font-bold gradient-text">JA</div>
+              <div className="w-full h-full bg-gradient-to-br from-primary/10 to-accent/10 flex items-center justify-center p-16">
+                <img
+                  src="https://cdn.builder.io/api/v1/image/assets%2F78bb8a2b1dce448185f7c0a17bacab1d%2Fac654d34f824415f8143e76e544ce856?format=webp&width=800"
+                  alt="Javeria Akram Logo"
+                  className="w-full h-full object-contain animate-logo-pulse drop-shadow-lg"
+                />
               </div>
             </div>
 

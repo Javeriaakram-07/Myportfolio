@@ -25,24 +25,51 @@ export default function AnimatedLogo({ isFullscreen = false, onAnimationComplete
     : 'relative';
 
   const logoSize = isFullscreen
-    ? 'w-64 h-64 md:w-80 md:h-80 lg:w-96 lg:h-96'
+    ? 'w-[50vw] h-[50vw] max-w-96 max-h-96 md:w-[40vw] md:h-[40vw] lg:w-[35vw] lg:h-[35vw]'
     : 'w-10 h-10';
 
   return (
     <div className={logoClasses}>
       <div className="relative">
+        {/* Main logo */}
         <img
           src="https://cdn.builder.io/api/v1/image/assets%2F78bb8a2b1dce448185f7c0a17bacab1d%2Fac654d34f824415f8143e76e544ce856?format=webp&width=800"
           alt="Javeria Akram Logo"
-          className={`${logoSize} object-contain animate-logo-pulse transition-all duration-1000`}
+          className={`${logoSize} object-contain animate-logo-pulse transition-all duration-1000 drop-shadow-2xl ${
+            isFullscreen ? 'filter drop-shadow-[0_0_50px_rgba(66,128,255,0.6)]' : ''
+          }`}
         />
-        <div className="absolute inset-0 blur-sm opacity-30">
-          <img
-            src="https://cdn.builder.io/api/v1/image/assets%2F78bb8a2b1dce448185f7c0a17bacab1d%2Fac654d34f824415f8143e76e544ce856?format=webp&width=800"
-            alt="Javeria Akram Logo Glow"
-            className={`${logoSize} object-contain animate-logo-pulse transition-all duration-1000`}
-          />
-        </div>
+
+        {/* Blur glow effect layers */}
+        {isFullscreen && (
+          <>
+            <div className="absolute inset-0 blur-xl opacity-40">
+              <img
+                src="https://cdn.builder.io/api/v1/image/assets%2F78bb8a2b1dce448185f7c0a17bacab1d%2Fac654d34f824415f8143e76e544ce856?format=webp&width=800"
+                alt="Javeria Akram Logo Glow"
+                className={`${logoSize} object-contain animate-logo-pulse transition-all duration-1000`}
+              />
+            </div>
+            <div className="absolute inset-0 blur-2xl opacity-20 scale-110">
+              <img
+                src="https://cdn.builder.io/api/v1/image/assets%2F78bb8a2b1dce448185f7c0a17bacab1d%2Fac654d34f824415f8143e76e544ce856?format=webp&width=800"
+                alt="Javeria Akram Logo Glow 2"
+                className={`${logoSize} object-contain animate-logo-pulse transition-all duration-1000`}
+              />
+            </div>
+          </>
+        )}
+
+        {/* Navigation blur effect */}
+        {!isFullscreen && (
+          <div className="absolute inset-0 blur-sm opacity-30">
+            <img
+              src="https://cdn.builder.io/api/v1/image/assets%2F78bb8a2b1dce448185f7c0a17bacab1d%2Fac654d34f824415f8143e76e544ce856?format=webp&width=800"
+              alt="Javeria Akram Logo Glow"
+              className={`${logoSize} object-contain animate-logo-pulse transition-all duration-1000`}
+            />
+          </div>
+        )}
       </div>
     </div>
   );
