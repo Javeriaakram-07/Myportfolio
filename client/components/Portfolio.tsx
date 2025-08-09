@@ -16,12 +16,42 @@ const projects: Project[] = [
   {
     id: 1,
     title: 'Cyber Management System',
-    description: 'A comprehensive cyber management system built for cybersecurity operations. Features real-time monitoring, threat detection, and administrative controls with a modern dark interface.',
-    technologies: ['C++', 'System Programming', 'Security', 'GUI'],
+    description: 'A console-based cyber management system built in C++ using Object-Oriented Programming principles. Features user management, session tracking, website blocking, and comprehensive reporting system.',
+    technologies: ['C++', 'OOP', 'Vectors', 'Classes', 'Encapsulation', 'Console Application'],
     image: 'https://cdn.builder.io/api/v1/image/assets%2F78bb8a2b1dce448185f7c0a17bacab1d%2Fff9e1714402f4ac899eef45c5cbc00d6?format=webp&width=800',
     liveUrl: '',
     githubUrl: '',
-    category: 'C++ Development'
+    category: 'C++ Development',
+    detailImages: [
+      'https://cdn.builder.io/api/v1/image/assets%2F78bb8a2b1dce448185f7c0a17bacab1d%2Fff9e1714402f4ac899eef45c5cbc00d6?format=webp&width=800',
+      'https://cdn.builder.io/api/v1/image/assets%2F78bb8a2b1dce448185f7c0a17bacab1d%2F71451d57e3e14ee5be181a75251d4e1f?format=webp&width=800',
+      'https://cdn.builder.io/api/v1/image/assets%2F78bb8a2b1dce448185f7c0a17bacab1d%2Fb892793cbb874d0284d3e47311d921e4?format=webp&width=800'
+    ],
+    detailedDescription: `This console-based Cyber Management System demonstrates advanced C++ programming concepts:
+
+    🏗️ **Object-Oriented Design**
+    • User class with private data members and public methods
+    ��� Encapsulation of user data (username, sessions, violations)
+    • Static members for user numbering
+
+    🔧 **Data Structures & STL**
+    • Vector containers for dynamic storage of websites and users
+    • String manipulation for user input and data handling
+    • Efficient memory management with automatic allocation
+
+    ⚙️ **Core Features**
+    • Admin login system with password authentication
+    • User session management and tracking
+    • Website blocking and violation monitoring
+    • Comprehensive reporting system
+    • Menu-driven interface with multiple options
+
+    💻 **Technical Implementation**
+    • Constructor and destructor implementation
+    • Member function definitions for data access
+    • Input/output stream operations
+    • Control structures and loops for menu navigation
+    • ANSI color codes for enhanced console display`
   },
   {
     id: 2,
