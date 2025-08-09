@@ -33,16 +33,34 @@ const skills: Skill[] = [
     description: 'Responsive design and modern styling'
   },
   {
-    name: 'Logic Building',
-    icon: '🧠',
-    color: 'skill-logic',
-    description: 'Problem-solving and algorithmic thinking'
+    name: 'JavaScript',
+    icon: 'JS',
+    color: 'skill-js',
+    description: 'Interactive web applications and ES6+'
+  },
+  {
+    name: 'OOP',
+    icon: '⚙️',
+    color: 'skill-cpp',
+    description: 'Object-oriented programming principles'
   },
   {
     name: 'Web Development',
     icon: '🌐',
     color: 'skill-web',
-    description: 'Full-stack development and modern frameworks'
+    description: 'Responsive websites and modern frameworks'
+  },
+  {
+    name: 'UI/UX Design',
+    icon: '🎨',
+    color: 'skill-logic',
+    description: 'User interface and experience design'
+  },
+  {
+    name: 'Graphics Design',
+    icon: '🖼️',
+    color: 'skill-web',
+    description: 'Visual design for websites and applications'
   }
 ];
 

@@ -57,11 +57,11 @@ export default function TypingAnimation({
         {displayText.split('').map((char, index) => (
           <span
             key={index}
-            className="inline-block animate-scale-in"
+            className="inline-block animate-scale-in gradient-text"
             style={{
               animationDelay: `${index * speed}ms`,
               transform: 'translateZ(0)',
-              textShadow: '0 0 10px hsla(var(--primary), 0.3), 0 0 20px hsla(var(--primary), 0.2), 0 0 30px hsla(var(--primary), 0.1)'
+              filter: 'drop-shadow(0 0 10px hsl(var(--primary)))'
             }}
           >
             {char === ' ' ? '\u00A0' : char}
@@ -69,7 +69,7 @@ export default function TypingAnimation({
         ))}
       </span>
       {(isTyping || showCursor) && (
-        <span 
+        <span
           className="inline-block w-0.5 h-[1em] bg-primary ml-1 animate-pulse"
           style={{
             boxShadow: '0 0 5px hsla(var(--primary), 0.8)',
