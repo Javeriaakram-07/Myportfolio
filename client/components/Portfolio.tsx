@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import { ExternalLink, Github } from 'lucide-react';
 import ProjectModal from './ProjectModal';
 
@@ -148,6 +149,7 @@ const projects: Project[] = [
 const categories = ['All', 'Web Development', 'C++ Development', 'Frontend'];
 
 export default function Portfolio() {
+  const navigate = useNavigate();
   const [selectedCategory, setSelectedCategory] = useState('All');
   const [hoveredProject, setHoveredProject] = useState<number | null>(null);
   const [selectedProject, setSelectedProject] = useState<Project | null>(null);
@@ -155,6 +157,10 @@ export default function Portfolio() {
   const filteredProjects = selectedCategory === 'All'
     ? projects
     : projects.filter(project => project.category === selectedCategory);
+
+  const handleProjectClick = (project: Project) => {
+    navigate(`/project/${project.id}`);
+  };
 
   return (
     <section id="portfolio" className="py-16">
@@ -193,7 +199,7 @@ export default function Portfolio() {
               isHovered={hoveredProject === project.id}
               onHover={() => setHoveredProject(project.id)}
               onLeave={() => setHoveredProject(null)}
-              onClick={() => setSelectedProject(project)}
+              onClick={() => handleProjectClick(project)}
             />
           ))}
         </div>

@@ -17,7 +17,7 @@
     --popover: 210 40% 6%;
     --popover-foreground: 0 0% 95%;
 
-    --primary: 220 100% 25%;
+    --primary: 215 100% 50%;
     --primary-foreground: 0 0% 100%;
 
     --secondary: 210 40% 12%;
@@ -26,7 +26,7 @@
     --muted: 210 40% 10%;
     --muted-foreground: 215 20.2% 65.1%;
 
-    --accent: 200 100% 30%;
+    --accent: 200 100% 55%;
     --accent-foreground: 0 0% 100%;
 
     --destructive: 0 84.2% 60.2%;
@@ -38,16 +38,16 @@
 
     --radius: 0.75rem;
 
-    /* Custom portfolio colors - Very Dark Navy theme */
-    --gradient-start: 220 100% 25%;
-    --gradient-end: 240 100% 20%;
-    --skill-c: 200 100% 30%;
-    --skill-cpp: 220 100% 35%;
+    /* Custom portfolio colors - Fresh Blue Navy theme */
+    --gradient-start: 215 100% 50%;
+    --gradient-end: 240 100% 45%;
+    --skill-c: 200 100% 55%;
+    --skill-cpp: 220 100% 60%;
     --skill-html: 20 100% 60%;
-    --skill-css: 200 80% 35%;
+    --skill-css: 200 80% 60%;
     --skill-js: 50 100% 60%;
-    --skill-logic: 240 80% 35%;
-    --skill-web: 200 90% 30%;
+    --skill-logic: 240 80% 55%;
+    --skill-web: 200 90% 55%;
   }
 }
 
