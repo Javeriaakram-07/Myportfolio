@@ -37,17 +37,19 @@ const projectsData: { [key: string]: ProjectDetailData } = {
         description: 'The main admin dashboard showing login system and menu options for system management.'
       },
       {
-        url: 'https://cdn.builder.io/api/v1/image/assets%2F78bb8a2b1dce448185f7c0a17bacab1d%2Faeda88c221504e5781de41718c5563cd?format=webp&width=800',
+        url: 'https://cdn.builder.io/api/v1/image/assets%2F78bb8a2b1dce448185f7c0a17bacab1d%2Faef5991f4ae9470baf10b3d546806689?format=webp&width=800',
         title: 'User Management',
         description: 'User registration and management interface showing successful user addition with feedback messages.'
       },
       {
-        url: 'https://cdn.builder.io/api/v1/image/assets%2F78bb8a2b1dce448185f7c0a17bacab1d%2F61db59bf716d4e06b3dafc91b32dab2f?format=webp&width=800',
+                url: 'https://cdn.builder.io/api/v1/image/assets%2F78bb8a2b1dce448185f7c0a17bacab1d%2F862d982036e2458aa7a00ce04ec6ee9b?format=webp&width=800',
+
         title: 'Session Tracking',
         description: 'Session management system tracking user activities, websites visited, and violation monitoring.'
       },
       {
-        url: 'https://cdn.builder.io/api/v1/image/assets%2F78bb8a2b1dce448185f7c0a17bacab1d%2Fd958b5effbdb4a7db8d213ddf1934901?format=webp&width=800',
+                url: 'https://cdn.builder.io/api/v1/image/assets%2F78bb8a2b1dce448185f7c0a17bacab1d%2F862d982036e2458aa7a00ce04ec6ee9b?format=webp&width=800',
+
         title: 'User Registry',
         description: 'Complete user registry showing all registered users and their associated data management.'
       },
@@ -57,12 +59,14 @@ const projectsData: { [key: string]: ProjectDetailData } = {
         description: 'Website blocking functionality displaying blocked sites and security management features.'
       },
       {
-        url: 'https://cdn.builder.io/api/v1/image/assets%2F78bb8a2b1dce448185f7c0a17bacab1d%2F65c60c2a0ffa4fa1bd2bd688664e08a8?format=webp&width=800',
+                url: 'https://cdn.builder.io/api/v1/image/assets%2F78bb8a2b1dce448185f7c0a17bacab1d%2F61db59bf716d4e06b3dafc91b32dab2f?format=webp&width=800',
+
         title: 'Code Implementation - Class Structure',
         description: 'C++ code showing the User class implementation with OOP concepts, constructors, and member functions.'
       },
       {
-        url: 'https://cdn.builder.io/api/v1/image/assets%2F78bb8a2b1dce448185f7c0a17bacab1d%2F862d982036e2458aa7a00ce04ec6ee9b?format=webp&width=800',
+                url: 'https://cdn.builder.io/api/v1/image/assets%2F78bb8a2b1dce448185f7c0a17bacab1d%2Fd958b5effbdb4a7db8d213ddf1934901?format=webp&width=800',
+
         title: 'Code Implementation - Methods',
         description: 'Advanced C++ implementation showing member functions, vector operations, and control structures.'
       }
