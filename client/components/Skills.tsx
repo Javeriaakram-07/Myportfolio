@@ -33,12 +33,6 @@ const skills: Skill[] = [
     description: 'Responsive design and modern styling'
   },
   {
-    name: 'JavaScript',
-    icon: 'JS',
-    color: 'skill-js',
-    description: 'Interactive web applications and ES6+'
-  },
-  {
     name: 'Logic Building',
     icon: '🧠',
     color: 'skill-logic',

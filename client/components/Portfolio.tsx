@@ -26,10 +26,10 @@ const projects: Project[] = [
   {
     id: 2,
     title: 'Sweet Shop Website',
-    description: 'A vibrant sweet shop website featuring refreshing cocktails and beverages. Built with responsive design, interactive elements, and beautiful gradients. Deployed on W3Spaces.',
-    technologies: ['HTML', 'CSS', 'JavaScript', 'Responsive Design'],
+    description: 'A vibrant sweet shop website featuring refreshing cocktails and beverages. Built with responsive design, interactive elements, and beautiful gradients.',
+    technologies: ['HTML', 'CSS', 'Responsive Design'],
     image: 'https://cdn.builder.io/api/v1/image/assets%2F78bb8a2b1dce448185f7c0a17bacab1d%2Fd3d7322df3854d3780bb63a3f2f64c5b?format=webp&width=800',
-    liveUrl: 'https://webull.w3spaces.com',
+    liveUrl: '',
     githubUrl: '',
     category: 'Web Development'
   },
