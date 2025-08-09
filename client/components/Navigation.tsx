@@ -134,7 +134,7 @@ export default function Navigation() {
                   color="freelancer"
                 />
                 <SocialLink
-                  href="mailto:javeria.akram@example.com"
+                  href="mailto:javeriaakram259@gmail.com"
                   icon={<Mail className="w-5 h-5" />}
                   label="Email"
                   color="email"

@@ -18,7 +18,7 @@ const projects: Project[] = [
     title: 'Cyber Management System',
     description: 'A comprehensive cyber management system built for cybersecurity operations. Features real-time monitoring, threat detection, and administrative controls with a modern dark interface.',
     technologies: ['C++', 'System Programming', 'Security', 'GUI'],
-    image: 'https://cdn.builder.io/api/v1/image/assets%2F78bb8a2b1dce448185f7c0a17bacab1d%2F0e3980adcbc94c48b993ddefc1e2dad7?format=webp&width=800',
+    image: 'https://cdn.builder.io/api/v1/image/assets%2F78bb8a2b1dce448185f7c0a17bacab1d%2Fff9e1714402f4ac899eef45c5cbc00d6?format=webp&width=800',
     liveUrl: '',
     githubUrl: '',
     category: 'C++ Development'
@@ -39,7 +39,7 @@ const projects: Project[] = [
     description: 'A modern blog platform for Sweet Shop featuring articles, product reviews, and user engagement. Clean design with responsive grid layout and smooth animations.',
     technologies: ['HTML', 'CSS', 'JavaScript', 'Blog System'],
     image: 'https://cdn.builder.io/api/v1/image/assets%2F78bb8a2b1dce448185f7c0a17bacab1d%2Fd6ea10eda1624cef86175af07fade245?format=webp&width=800',
-    liveUrl: '',
+    liveUrl: 'https://webull.w3spaces.com',
     githubUrl: '',
     category: 'Web Development'
   },

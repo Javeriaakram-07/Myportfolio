@@ -26,7 +26,7 @@ export default function AnimatedLogo({ isFullscreen = false, onAnimationComplete
 
   const logoSize = isFullscreen
     ? 'w-[50vw] h-[50vw] max-w-96 max-h-96 md:w-[40vw] md:h-[40vw] lg:w-[35vw] lg:h-[35vw]'
-    : 'w-14 h-14';
+    : 'w-16 h-16';
 
   return (
     <div className={logoClasses}>
