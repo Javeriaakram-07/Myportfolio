@@ -109,10 +109,10 @@ interface AboutCardProps {
 
 function AboutCard({ icon, title, description, color, delay = '' }: AboutCardProps) {
   return (
-    <div className={`group p-6 bg-card rounded-xl border border-border hover:border-opacity-50 transition-all duration-300 hover:scale-105 animate-slide-up ${delay}`}>
+    <div className={`group p-6 bg-card rounded-xl border border-border hover:border-opacity-50 transition-all duration-500 hover:scale-105 transform hover:neon-glow animate-slide-up ${delay}`}>
       <div className="space-y-4">
-        <div 
-          className="w-fit p-3 rounded-lg transition-colors duration-300"
+        <div
+          className="w-fit p-3 rounded-lg transition-all duration-500"
           style={{ backgroundColor: `hsla(var(--${color}), 0.1)` }}
         >
           <div style={{ color: `hsl(var(--${color}))` }}>
@@ -124,7 +124,7 @@ function AboutCard({ icon, title, description, color, delay = '' }: AboutCardPro
           <p className="text-sm text-muted-foreground leading-relaxed">{description}</p>
         </div>
       </div>
-      <div className="absolute inset-0 bg-gradient-to-r from-primary/5 to-accent/5 opacity-0 group-hover:opacity-100 rounded-xl transition-opacity duration-300"></div>
+      <div className="absolute inset-0 bg-gradient-to-r from-primary/5 to-accent/5 opacity-0 group-hover:opacity-100 rounded-xl transition-all duration-500"></div>
     </div>
   );
 }

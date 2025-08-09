@@ -44,17 +44,16 @@ export default function Hero() {
           </div>
 
           <div className="flex flex-wrap gap-4">
-            <a 
-              href="#portfolio" 
-              className="group relative px-8 py-3 bg-gradient-to-r from-primary to-accent rounded-lg font-semibold text-white transition-all duration-300 hover:scale-105 hover:shadow-glow"
+            <a
+              href="#portfolio"
+              className="group relative px-8 py-3 bg-gradient-to-r from-primary to-accent rounded-lg font-semibold text-white transition-all duration-500 hover:scale-105 transform hover:neon-glow"
             >
-              View My Work
-              <div className="absolute inset-0 bg-gradient-to-r from-accent to-primary opacity-0 group-hover:opacity-100 rounded-lg transition-opacity duration-300"></div>
+              <div className="absolute inset-0 bg-gradient-to-r from-accent to-primary opacity-0 group-hover:opacity-100 rounded-lg transition-all duration-500"></div>
               <span className="relative z-10">View My Work</span>
             </a>
-            <a 
-              href="#contact" 
-              className="px-8 py-3 border-2 border-primary rounded-lg font-semibold text-primary hover:bg-primary hover:text-white transition-all duration-300 hover:scale-105"
+            <a
+              href="#contact"
+              className="px-8 py-3 border-2 border-primary rounded-lg font-semibold text-primary hover:bg-primary hover:text-white transition-all duration-500 hover:scale-105 transform hover:neon-glow"
             >
               Get In Touch
             </a>
