@@ -1,10 +1,11 @@
 import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import { Instagram, Linkedin, Mail, Globe } from 'lucide-react';
+import { Instagram, Linkedin, Mail, Globe, Menu, X } from 'lucide-react';
 import AnimatedLogo from './AnimatedLogo';
 
 export default function Navigation() {
   const [isScrolled, setIsScrolled] = useState(false);
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
