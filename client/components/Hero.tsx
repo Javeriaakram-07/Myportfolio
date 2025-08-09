@@ -1,9 +1,13 @@
 import { useEffect, useState } from 'react';
 import { ChevronDown } from 'lucide-react';
 import TypingAnimation from './TypingAnimation';
+import { useParallax } from '../hooks/useParallax';
 
 export default function Hero() {
   const [isVisible, setIsVisible] = useState(false);
+  const parallaxRef1 = useParallax(0.3);
+  const parallaxRef2 = useParallax(0.5);
+  const parallaxRef3 = useParallax(0.2);
 
   useEffect(() => {
     const timer = setTimeout(() => setIsVisible(true), 500);
@@ -15,12 +19,25 @@ export default function Hero() {
       {/* Background gradient */}
       <div className="absolute inset-0 bg-gradient-to-br from-background via-background/95 to-background/90"></div>
       
-      {/* Animated background elements */}
-      <div className="absolute inset-0">
-        <div className="absolute top-20 left-10 w-2 h-2 bg-primary rounded-full animate-pulse"></div>
-        <div className="absolute top-40 right-20 w-3 h-3 bg-accent rounded-full animate-pulse delay-300"></div>
-        <div className="absolute bottom-40 left-1/4 w-1 h-1 bg-primary rounded-full animate-pulse delay-700"></div>
-        <div className="absolute bottom-20 right-1/3 w-2 h-2 bg-accent rounded-full animate-pulse delay-1000"></div>
+      {/* Animated background elements with parallax */}
+      <div className="absolute inset-0 overflow-hidden">
+        <div
+          ref={parallaxRef1 as any}
+          className="absolute top-20 left-10 w-2 h-2 bg-primary rounded-full animate-pulse shadow-glow"
+        ></div>
+        <div
+          ref={parallaxRef2 as any}
+          className="absolute top-40 right-20 w-3 h-3 bg-accent rounded-full animate-pulse delay-300 shadow-glow"
+        ></div>
+        <div
+          ref={parallaxRef3 as any}
+          className="absolute bottom-40 left-1/4 w-1 h-1 bg-primary rounded-full animate-pulse delay-700 shadow-glow"
+        ></div>
+        <div className="absolute bottom-20 right-1/3 w-2 h-2 bg-accent rounded-full animate-pulse delay-1000 shadow-glow"></div>
+
+        {/* Additional parallax elements */}
+        <div className="absolute top-1/3 left-1/2 w-4 h-4 bg-primary/20 rounded-full animate-float"></div>
+        <div className="absolute top-3/4 right-1/4 w-3 h-3 bg-accent/30 rounded-full animate-float delay-500"></div>
       </div>
 
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid lg:grid-cols-2 gap-12 items-center">
