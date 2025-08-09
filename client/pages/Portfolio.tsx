@@ -65,16 +65,14 @@ export default function Portfolio() {
 
         <footer className="bg-muted/50 border-t border-border py-8">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="text-center">
-              <div className="mb-4">
-                <AnimatedLogo />
+            <div className="flex items-center justify-center gap-4">
+              <AnimatedLogo />
+              <div className="text-center">
+                <p className="text-foreground font-semibold">Javeria Akram</p>
+                <p className="text-sm text-muted-foreground">
+                  © 2024 All rights reserved.
+                </p>
               </div>
-              <p className="text-muted-foreground">
-                © 2024 Javeria Akram. All rights reserved.
-              </p>
-              <p className="text-sm text-muted-foreground mt-2">
-                Built with React, TypeScript, and Tailwind CSS
-              </p>
             </div>
           </div>
         </footer>

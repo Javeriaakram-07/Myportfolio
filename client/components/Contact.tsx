@@ -34,7 +34,7 @@ export default function Contact() {
   };
 
   const handleEmailClick = () => {
-    window.location.href = 'mailto:javeriaakram259@gmail.com?subject=Portfolio Contact';
+    window.open('mailto:javeriaakram259@gmail.com?subject=Portfolio Contact', '_blank');
   };
 
   return (
