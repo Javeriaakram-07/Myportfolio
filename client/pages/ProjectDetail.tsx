@@ -71,7 +71,7 @@ Built entirely in C++, this project showcases the power of object-oriented progr
     category: 'Web Development',
     images: [
       { url: 'https://cdn.builder.io/api/v1/image/assets%2F78bb8a2b1dce448185f7c0a17bacab1d%2Fd3d7322df3854d3780bb63a3f2f64c5b?format=webp&width=1200', title: 'Landing Section', description: 'Hero header with gradient background and glowing typography.' },
-      { url: 'https://cdn.builder.io/api/v1/image/assets%2F78bb8a2b1dce448185f7c0a17bacab1d%2F7d3d9818bd7b4b0aa0fe027d23483a06?format=webp&width=1200', title: 'Recipe Card', description: 'Beautiful recipe card styling with balanced spacing and rounded images.' },
+      { url: 'Assets/sweetshop/Screenshot 2025-08-09 065126.png', title: 'Recipe Card', description: 'Beautiful recipe card styling with balanced spacing and rounded images.' },
       { url: 'https://cdn.builder.io/api/v1/image/assets%2F78bb8a2b1dce448185f7c0a17bacab1d%2F0aa7d44a05bb4b6ba48bb6d2a3b815f6?format=webp&width=1200', title: 'Typography', description: 'Readable content layout with headings and bullet lists.' }
     ],
     fullDescription: `A beautifully designed sweet shop website showcasing cocktail recipes and beverages. The design focuses on a fun, modern aesthetic with gradients and subtle shadows while keeping the markup semantic and accessible.`,
