@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import Card3D from './Card3D';
 
 interface Skill {
   name: string;

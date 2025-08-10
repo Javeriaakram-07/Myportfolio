@@ -13,7 +13,7 @@ export default function About() {
             Computer Science Student & Passionate Developer
           </p>
           <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
-            I'm Javeria Akram, a dedicated Computer Science student with a passion for
+            I'm Javeria Akram, a dedicated Computer Science student with a passion for 
             transforming complex problems into elegant solutions through code and design.
           </p>
         </div>
@@ -66,22 +66,30 @@ export default function About() {
         <div>
           <h3 className="text-2xl font-bold text-foreground mb-6 text-center">What I Do</h3>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4">
-            <div className="flex items-start gap-3 p-4 bg-primary/5 rounded-lg border border-primary/20 hover:scale-105 transition-all duration-500">
-              <span className="text-primary mt-1 text-sm">▶</span>
-              <span className="text-sm">Build console-based applications with advanced C++ concepts</span>
-            </div>
-            <div className="flex items-start gap-3 p-4 bg-primary/5 rounded-lg border border-primary/20 hover:scale-105 transition-all duration-500">
-              <span className="text-primary mt-1 text-sm">▶</span>
-              <span className="text-sm">Create responsive websites with modern design principles</span>
-            </div>
-            <div className="flex items-start gap-3 p-4 bg-primary/5 rounded-lg border border-primary/20 hover:scale-105 transition-all duration-500">
-              <span className="text-primary mt-1 text-sm">▶</span>
-              <span className="text-sm">Freelance development delivering custom client solutions</span>
-            </div>
-            <div className="flex items-start gap-3 p-4 bg-primary/5 rounded-lg border border-primary/20 hover:scale-105 transition-all duration-500">
-              <span className="text-primary mt-1 text-sm">▶</span>
-              <span className="text-sm">Focus on clean code and efficient problem-solving</span>
-            </div>
+            <Card3D>
+              <div className="flex items-start gap-3 p-4 bg-primary/5 rounded-lg border border-primary/20 hover:scale-105 transition-all duration-500 h-full">
+                <span className="text-primary mt-1 text-sm">▶</span>
+                <span className="text-sm">Build console-based applications with advanced C++ concepts</span>
+              </div>
+            </Card3D>
+            <Card3D>
+              <div className="flex items-start gap-3 p-4 bg-primary/5 rounded-lg border border-primary/20 hover:scale-105 transition-all duration-500 h-full">
+                <span className="text-primary mt-1 text-sm">▶</span>
+                <span className="text-sm">Create responsive websites with modern design principles</span>
+              </div>
+            </Card3D>
+            <Card3D>
+              <div className="flex items-start gap-3 p-4 bg-primary/5 rounded-lg border border-primary/20 hover:scale-105 transition-all duration-500 h-full">
+                <span className="text-primary mt-1 text-sm">▶</span>
+                <span className="text-sm">Freelance development delivering custom client solutions</span>
+              </div>
+            </Card3D>
+            <Card3D>
+              <div className="flex items-start gap-3 p-4 bg-primary/5 rounded-lg border border-primary/20 hover:scale-105 transition-all duration-500 h-full">
+                <span className="text-primary mt-1 text-sm">▶</span>
+                <span className="text-sm">Focus on clean code and efficient problem-solving</span>
+              </div>
+            </Card3D>
           </div>
         </div>
       </div>
@@ -100,36 +108,38 @@ interface AboutCardProps {
 
 function AboutCard({ icon, title, description, color, delay = '', isEducation = false }: AboutCardProps) {
   return (
-    <div className={`group p-6 bg-card rounded-xl border border-border hover:border-opacity-50 transition-all duration-500 hover:scale-105 transform hover:neon-glow animate-slide-up ${delay}`}>
-      <div className="space-y-4">
-        <div
-          className="w-fit p-3 rounded-lg transition-all duration-500"
-          style={{ backgroundColor: `hsla(var(--${color}), 0.1)` }}
-        >
-          <div style={{ color: `hsl(var(--${color}))` }}>
-            {icon}
+    <Card3D className="h-full">
+      <div className={`group p-6 bg-card rounded-xl border border-border hover:border-opacity-50 transition-all duration-500 hover:scale-105 transform hover:neon-glow animate-slide-up ${delay} h-full relative`}>
+        <div className="space-y-4">
+          <div
+            className="w-fit p-3 rounded-lg transition-all duration-500"
+            style={{ backgroundColor: `hsla(var(--${color}), 0.1)` }}
+          >
+            <div style={{ color: `hsl(var(--${color}))` }}>
+              {icon}
+            </div>
+          </div>
+          <div>
+            <h3 className="font-semibold text-foreground mb-2">{title}</h3>
+            <p className={`text-sm leading-relaxed ${
+              isEducation 
+                ? 'text-primary font-medium' 
+                : 'text-muted-foreground'
+            }`}>
+              {isEducation ? (
+                <>
+                  <span className="neon-text font-semibold">BS Computer Science</span><br />
+                  <span className="neon-text">Punjab University of Information Technology</span><br />
+                  <span className="text-muted-foreground">Lahore (2024-2028)</span>
+                </>
+              ) : (
+                description
+              )}
+            </p>
           </div>
         </div>
-        <div>
-          <h3 className="font-semibold text-foreground mb-2">{title}</h3>
-          <p className={`text-sm leading-relaxed ${
-            isEducation
-              ? 'text-primary font-medium'
-              : 'text-muted-foreground'
-          }`}>
-            {isEducation ? (
-              <>
-                <span className="neon-text font-semibold">BS Computer Science</span><br />
-                <span className="neon-text">Punjab University of Information Technology</span><br />
-                <span className="text-muted-foreground">Lahore (2024-2028)</span>
-              </>
-            ) : (
-              description
-            )}
-          </p>
-        </div>
+        <div className="absolute inset-0 bg-gradient-to-r from-primary/5 to-accent/5 opacity-0 group-hover:opacity-100 rounded-xl transition-all duration-500"></div>
       </div>
-      <div className="absolute inset-0 bg-gradient-to-r from-primary/5 to-accent/5 opacity-0 group-hover:opacity-100 rounded-xl transition-all duration-500"></div>
-    </div>
+    </Card3D>
   );
 }
