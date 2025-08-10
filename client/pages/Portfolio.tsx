@@ -9,6 +9,7 @@ import PortfolioSection from '../components/Portfolio';
 import Contact from '../components/Contact';
 
 export default function Portfolio() {
+  const location = useLocation();
   const [showIntro, setShowIntro] = useState(true);
   const [showContent, setShowContent] = useState(false);
 
