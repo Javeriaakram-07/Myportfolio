@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import Card3D from './Card3D';
+import Card3D from './Card3D';
 
 interface Skill {
   name: string;
@@ -126,7 +127,7 @@ function SkillCard({ skill, isHovered, onHover, onLeave }: SkillCardProps) {
   };
 
   return (
-    <div className="relative group">
+    <Card3D className="relative group">
       <div
         className={`
           relative p-6 rounded-xl border-2 border-border/50 bg-card
@@ -170,6 +171,6 @@ function SkillCard({ skill, isHovered, onHover, onLeave }: SkillCardProps) {
           </div>
         )}
       </div>
-    </div>
+    </Card3D>
   );
 }
