@@ -139,6 +139,11 @@ export default function ProjectDetail() {
     );
   }
 
+  const handleBackClick = (e: React.MouseEvent) => {
+    e.preventDefault();
+    navigate('/', { state: { scrollTo: 'portfolio' } });
+  };
+
   const nextImage = () => {
     setCurrentImageIndex((prev) => (prev + 1) % project.images.length);
   };
