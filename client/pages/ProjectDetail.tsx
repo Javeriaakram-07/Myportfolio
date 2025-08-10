@@ -160,13 +160,13 @@ export default function ProjectDetail() {
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           {/* Header */}
           <div className="mb-8">
-            <Link
-              to="/#portfolio"
+            <button
+              onClick={handleBackClick}
               className="inline-flex items-center gap-2 text-primary hover:text-accent transition-colors mb-6"
             >
               <ChevronLeft className="w-4 h-4" />
               Back to Portfolio
-            </Link>
+            </button>
             
             <div className="flex items-center gap-4 mb-4">
               <span className="text-xs font-semibold text-primary bg-primary/10 px-3 py-1 rounded-full">
