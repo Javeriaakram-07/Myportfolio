@@ -1,6 +1,5 @@
 import { useState } from 'react';
 import Card3D from './Card3D';
-import Card3D from './Card3D';
 
 interface Skill {
   name: string;
@@ -157,7 +156,7 @@ function SkillCard({ skill, isHovered, onHover, onLeave }: SkillCardProps) {
           <div className="mb-4 text-4xl font-bold" style={{ color: `hsl(var(--${skill.color}))` }}>
             {skill.icon}
           </div>
-          <h3 className="font-semibold text-foreground mb-2">{skill.name}</h3>
+          <h3 className="font-semibold neon-text mb-2">{skill.name}</h3>
         </div>
 
         {/* Tooltip */}
