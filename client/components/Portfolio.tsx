@@ -60,13 +60,13 @@ const projects: Project[] = [
   },
   {
     id: 2,
-    title: 'Sweet Shop Website',
+    title: 'Bakery E-Commerce',
     description: 'A vibrant sweet shop website featuring refreshing cocktails and beverages. Built with responsive design, interactive elements, and beautiful gradients.',
-    technologies: ['HTML', 'CSS', 'Responsive Design', 'UI/UX'],
+    technologies: ['React', 'Node.js', 'MongoDB', 'HTML', 'CSS'],
     image: 'https://images.unsplash.com/photo-1551024506-0bccd828d307?w=800&h=600&fit=crop',
     liveUrl: '',
     githubUrl: '',
-    category: 'Frontend',
+    category: 'Web Development',
     detailedDescription: `A beautifully designed sweet shop website showcasing cocktail recipes and beverages:
 
     🎨 **Design Features**
