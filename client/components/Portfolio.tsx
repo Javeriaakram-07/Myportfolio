@@ -89,13 +89,13 @@ const projects: Project[] = [
   },
   {
     id: 3,
-    title: 'Sweet Shop Blog',
-    description: 'A modern blog platform for Sweet Shop featuring articles, product reviews, and user engagement. Clean design with responsive grid layout and smooth animations.',
-    technologies: ['HTML', 'CSS', 'Blog System', 'Responsive Design'],
-    image: 'https://images.unsplash.com/photo-1551024506-0bccd828d307?w=800&h=600&fit=crop',
+    title: 'Interactive Blog Card',
+    description: 'A modern blog card component featuring animated effects and responsive design. Built with pure CSS animations and smooth transitions.',
+    technologies: ['CSS3', 'Animations', 'HTML', 'Responsive Design'],
+    image: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&h=600&fit=crop',
     liveUrl: 'https://webull.w3spaces.com',
     githubUrl: '',
-    category: 'Frontend',
+    category: 'Web Development',
     detailedDescription: `A comprehensive blog platform designed for content sharing and user engagement:
 
     📝 **Blog Features**
