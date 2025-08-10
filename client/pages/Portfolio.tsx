@@ -25,11 +25,21 @@ export default function Portfolio() {
   }, []);
 
   useEffect(() => {
+    // Handle scroll to portfolio section from navigation state
+    if (showContent && location.state && (location.state as any).scrollTo === 'portfolio') {
+      const timer = setTimeout(() => {
+        document.getElementById('portfolio')?.scrollIntoView({ behavior: 'smooth' });
+      }, 100);
+      return () => clearTimeout(timer);
+    }
+  }, [showContent, location.state]);
+
+  useEffect(() => {
     // Add smooth scroll behavior and parallax effects
     const handleScroll = () => {
       const scrollY = window.scrollY;
       const parallaxElements = document.querySelectorAll('.parallax');
-      
+
       parallaxElements.forEach((element) => {
         const speed = element.getAttribute('data-speed') || '0.5';
         const yPos = -(scrollY * parseFloat(speed));
