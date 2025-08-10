@@ -1,4 +1,5 @@
 import { GraduationCap, Code, Briefcase, Heart } from 'lucide-react';
+import Card3D from './Card3D';
 
 export default function About() {
   return (
@@ -36,6 +37,7 @@ export default function About() {
             title="Education"
             description="BS Computer Science, Punjab University of Information Technology, Lahore (2024-2028)"
             color="skill-c"
+            isEducation={true}
           />
           <AboutCard
             icon={<Code className="w-8 h-8" />}
@@ -93,9 +95,10 @@ interface AboutCardProps {
   description: string;
   color: string;
   delay?: string;
+  isEducation?: boolean;
 }
 
-function AboutCard({ icon, title, description, color, delay = '' }: AboutCardProps) {
+function AboutCard({ icon, title, description, color, delay = '', isEducation = false }: AboutCardProps) {
   return (
     <div className={`group p-6 bg-card rounded-xl border border-border hover:border-opacity-50 transition-all duration-500 hover:scale-105 transform hover:neon-glow animate-slide-up ${delay}`}>
       <div className="space-y-4">
@@ -109,7 +112,21 @@ function AboutCard({ icon, title, description, color, delay = '' }: AboutCardPro
         </div>
         <div>
           <h3 className="font-semibold text-foreground mb-2">{title}</h3>
-          <p className="text-sm text-muted-foreground leading-relaxed">{description}</p>
+          <p className={`text-sm leading-relaxed ${
+            isEducation
+              ? 'text-primary font-medium'
+              : 'text-muted-foreground'
+          }`}>
+            {isEducation ? (
+              <>
+                <span className="neon-text font-semibold">BS Computer Science</span><br />
+                <span className="neon-text">Punjab University of Information Technology</span><br />
+                <span className="text-muted-foreground">Lahore (2024-2028)</span>
+              </>
+            ) : (
+              description
+            )}
+          </p>
         </div>
       </div>
       <div className="absolute inset-0 bg-gradient-to-r from-primary/5 to-accent/5 opacity-0 group-hover:opacity-100 rounded-xl transition-all duration-500"></div>

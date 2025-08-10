@@ -54,17 +54,19 @@ export default function Contact() {
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
             {/* Profile Image */}
             <div className="text-center">
-              <div className="relative mx-auto w-48 h-48 mb-6">
-                <div className="absolute inset-0 bg-gradient-to-r from-primary to-accent rounded-full blur-xl opacity-30 animate-pulse"></div>
-                <div className="relative w-full h-full rounded-full overflow-hidden border-4 border-gradient-to-r from-primary to-accent shadow-2xl">
+              <div className="relative mx-auto w-40 h-40 mb-6">
+                <div className="absolute inset-0 bg-gradient-to-r from-primary to-accent rounded-full blur-xl opacity-40 animate-pulse"></div>
+                <div className="relative w-full h-full rounded-full overflow-hidden border-4 border-primary circle-neon">
                   <img
                     src="https://cdn.builder.io/api/v1/image/assets%2F78bb8a2b1dce448185f7c0a17bacab1d%2Fac654d34f824415f8143e76e544ce856?format=webp&width=800"
                     alt="Javeria Akram Logo"
-                    className="w-full h-full object-contain p-8"
+                    className="w-full h-full object-contain p-6"
                   />
                 </div>
               </div>
-              <h3 className="text-2xl font-bold mb-2">Javeria Akram</h3>
+              <h3 className="text-2xl font-bold mb-2">
+                <span className="gradient-text">Javeria Akram</span>
+              </h3>
               <p className="text-muted-foreground mb-6">Computer Science Student & Freelancer</p>
               <button
                 onClick={handleEmailClick}

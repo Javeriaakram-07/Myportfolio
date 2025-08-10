@@ -117,6 +117,14 @@
       inset 0 0 10px hsla(var(--primary), 0.2);
   }
 
+  .neon-text {
+    color: hsl(var(--primary));
+    text-shadow:
+      0 0 5px hsla(var(--primary), 0.8),
+      0 0 10px hsla(var(--primary), 0.6),
+      0 0 15px hsla(var(--primary), 0.4);
+  }
+
   .parallax {
     transform-style: preserve-3d;
   }
