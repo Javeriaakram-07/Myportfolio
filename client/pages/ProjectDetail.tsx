@@ -95,6 +95,7 @@ Built entirely in C++, this project showcases the power of object-oriented progr
 
 export default function ProjectDetail() {
   const { id } = useParams<{ id: string }>();
+  const navigate = useNavigate();
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
   const [isLoading, setIsLoading] = useState(true);
   
