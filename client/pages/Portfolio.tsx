@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import { useLocation } from 'react-router-dom';
 import AnimatedLogo from '../components/AnimatedLogo';
 import Navigation from '../components/Navigation';
 import Hero from '../components/Hero';
