@@ -17,15 +17,27 @@ export default function Navigation() {
   }, []);
 
   return (
-    <nav className={`fixed top-0 left-0 right-0 z-40 transition-all duration-300 ${
+    <nav className={`fixed top-0 left-0 right-0 z-[1000] transition-all duration-300 ${
       isScrolled ? 'bg-background/80 backdrop-blur-md border-b border-border' : 'bg-transparent'
     }`}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-16">
-          <Link to="/" className="flex items-center">
-            <AnimatedLogo />
+        <div className="flex items-center justify-between h-16 relative">
+          {/* Logo */}
+          <Link to="/" className="flex items-center flex-shrink-0 z-10">
+            <div className="w-10 h-10 sm:w-12 sm:h-12 md:w-16 md:h-16">
+              <AnimatedLogo />
+            </div>
           </Link>
 
+          {/* Name/Title - Responsive positioning */}
+          <div className="hidden sm:flex absolute left-1/2 transform -translate-x-1/2 md:relative md:left-auto md:transform-none flex-1 justify-center md:justify-start md:ml-4">
+            <h1 className="text-lg sm:text-xl md:text-2xl font-bold gradient-text whitespace-nowrap">
+              <span className="hidden md:inline">Javeria Akram</span>
+              <span className="md:hidden">J. Akram</span>
+            </h1>
+          </div>
+
+          {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-8">
             <a
               href="#about"
@@ -69,6 +81,7 @@ export default function Navigation() {
             </a>
           </div>
 
+          {/* Desktop Social Links & Mobile Menu Button */}
           <div className="flex items-center space-x-4">
             {/* Desktop Social Links */}
             <div className="hidden sm:flex items-center space-x-4">
@@ -101,7 +114,8 @@ export default function Navigation() {
             {/* Mobile Menu Button */}
             <button
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-              className="md:hidden p-2 rounded-lg hover:bg-muted transition-colors"
+              className="md:hidden p-2 rounded-lg hover:bg-muted transition-colors relative z-10 min-w-[48px] min-h-[48px] flex items-center justify-center"
+              aria-label="Toggle mobile menu"
             >
               {isMobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
             </button>
@@ -110,82 +124,91 @@ export default function Navigation() {
 
         {/* Mobile Menu */}
         {isMobileMenuOpen && (
-          <div className="md:hidden border-t border-border bg-background/95 backdrop-blur-md">
-            <div className="px-4 py-4 space-y-4">
-              <a
-                href="#about"
-                className="block text-foreground hover:text-primary transition-colors"
-                onClick={(e) => {
-                  e.preventDefault();
-                  setIsMobileMenuOpen(false);
-                  document.getElementById('about')?.scrollIntoView({ behavior: 'smooth' });
-                }}
-              >
-                About
-              </a>
-              <a
-                href="#skills"
-                className="block text-foreground hover:text-primary transition-colors"
-                onClick={(e) => {
-                  e.preventDefault();
-                  setIsMobileMenuOpen(false);
-                  document.getElementById('skills')?.scrollIntoView({ behavior: 'smooth' });
-                }}
-              >
-                Skills
-              </a>
-              <a
-                href="#portfolio"
-                className="block text-foreground hover:text-primary transition-colors"
-                onClick={(e) => {
-                  e.preventDefault();
-                  setIsMobileMenuOpen(false);
-                  document.getElementById('portfolio')?.scrollIntoView({ behavior: 'smooth' });
-                }}
-              >
-                Projects
-              </a>
-              <a
-                href="#contact"
-                className="block text-foreground hover:text-primary transition-colors"
-                onClick={(e) => {
-                  e.preventDefault();
-                  setIsMobileMenuOpen(false);
-                  document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' });
-                }}
-              >
-                Contact
-              </a>
-              
-              {/* Mobile Social Links */}
-              <div className="flex items-center space-x-4 pt-4 border-t border-border">
-                <SocialLink
-                  href="https://www.instagram.com/javeriyayayya.07?igsh=NzF3ZGlsczE3MXph"
-                  icon={<Instagram className="w-5 h-5" />}
-                  label="Instagram"
-                  color="instagram"
-                />
-                <SocialLink
-                  href="https://www.linkedin.com/in/javeria-akram-10b607334?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
-                  icon={<Linkedin className="w-5 h-5" />}
-                  label="LinkedIn"
-                  color="linkedin"
-                />
-                <SocialLink
-                  href="https://www.freelancer.com/u/Javeriaakram77?frm=Javeriaakram77&sb=t"
-                  icon={<Globe className="w-5 h-5" />}
-                  label="Freelancer"
-                  color="freelancer"
-                />
-                <SocialLink
-                  href="mailto:javeriaakram259@gmail.com"
-                  icon={<Mail className="w-5 h-5" />}
-                  label="Email"
-                  color="email"
-                />
+          <>
+            {/* Backdrop */}
+            <div 
+              className="fixed inset-0 bg-black/20 backdrop-blur-sm z-[900] md:hidden"
+              onClick={() => setIsMobileMenuOpen(false)}
+            />
+            
+            {/* Menu Content */}
+            <div className="md:hidden absolute top-full left-0 right-0 border-t border-border bg-background/95 backdrop-blur-md z-[950] animate-slide-down">
+              <div className="px-4 py-4 space-y-4">
+                <a
+                  href="#about"
+                  className="block text-foreground hover:text-primary transition-colors"
+                  onClick={(e) => {
+                    e.preventDefault();
+                    setIsMobileMenuOpen(false);
+                    document.getElementById('about')?.scrollIntoView({ behavior: 'smooth' });
+                  }}
+                >
+                  About
+                </a>
+                <a
+                  href="#skills"
+                  className="block text-foreground hover:text-primary transition-colors"
+                  onClick={(e) => {
+                    e.preventDefault();
+                    setIsMobileMenuOpen(false);
+                    document.getElementById('skills')?.scrollIntoView({ behavior: 'smooth' });
+                  }}
+                >
+                  Skills
+                </a>
+                <a
+                  href="#portfolio"
+                  className="block text-foreground hover:text-primary transition-colors"
+                  onClick={(e) => {
+                    e.preventDefault();
+                    setIsMobileMenuOpen(false);
+                    document.getElementById('portfolio')?.scrollIntoView({ behavior: 'smooth' });
+                  }}
+                >
+                  Projects
+                </a>
+                <a
+                  href="#contact"
+                  className="block text-foreground hover:text-primary transition-colors"
+                  onClick={(e) => {
+                    e.preventDefault();
+                    setIsMobileMenuOpen(false);
+                    document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' });
+                  }}
+                >
+                  Contact
+                </a>
+                
+                {/* Mobile Social Links */}
+                <div className="flex items-center space-x-4 pt-4 border-t border-border">
+                  <SocialLink
+                    href="https://www.instagram.com/javeriyayayya.07?igsh=NzF3ZGlsczE3MXph"
+                    icon={<Instagram className="w-5 h-5" />}
+                    label="Instagram"
+                    color="instagram"
+                  />
+                  <SocialLink
+                    href="https://www.linkedin.com/in/javeria-akram-10b607334?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
+                    icon={<Linkedin className="w-5 h-5" />}
+                    label="LinkedIn"
+                    color="linkedin"
+                  />
+                  <SocialLink
+                    href="https://www.freelancer.com/u/Javeriaakram77?frm=Javeriaakram77&sb=t"
+                    icon={<Globe className="w-5 h-5" />}
+                    label="Freelancer"
+                    color="freelancer"
+                  />
+                  <SocialLink
+                    href="mailto:javeriaakram259@gmail.com"
+                    icon={<Mail className="w-5 h-5" />}
+                    label="Email"
+                    color="email"
+                  />
+                </div>
               </div>
             </div>
-          </div>
+          </>
         )}
       </div>
     </nav>
