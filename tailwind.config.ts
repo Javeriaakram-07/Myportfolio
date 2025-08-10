@@ -176,6 +176,7 @@ export default {
         "scale-in": "scale-in 0.5s ease-out",
         "text-glow": "text-glow 2s ease-in-out infinite",
         "3d-rotate": "3d-rotate 2s ease-in-out",
+        "sphere-rotate": "sphere-rotate 20s linear infinite",
       },
     },
   },
