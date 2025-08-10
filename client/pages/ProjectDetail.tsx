@@ -299,11 +299,10 @@ export default function ProjectDetail() {
 
             <div>
               <h3 className="text-xl font-semibold mb-4">Technical Implementation</h3>
-              <ul className="space-y-3">
+              <ul className="space-y-3 custom-bullets">
                 {project.technicalDetails.map((detail, index) => (
-                  <li key={index} className="flex items-start gap-3">
-                    <span className="w-2 h-2 bg-accent rounded-full mt-2 flex-shrink-0"></span>
-                    <span className="text-muted-foreground text-sm">{detail}</span>
+                  <li key={index} className="text-muted-foreground text-sm">
+                    {detail}
                   </li>
                 ))}
               </ul>
