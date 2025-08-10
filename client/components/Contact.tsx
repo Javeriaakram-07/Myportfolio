@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Mail, Phone, MapPin, Send } from 'lucide-react';
+import { Mail, Phone, MapPin } from 'lucide-react';
 
 export default function Contact() {
   const [formData, setFormData] = useState({
@@ -21,15 +21,9 @@ export default function Contact() {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
-    
-    // Simulate form submission
-    await new Promise(resolve => setTimeout(resolve, 1000));
-    
-    // Reset form
+    await new Promise((resolve) => setTimeout(resolve, 1000));
     setFormData({ name: '', email: '', subject: '', message: '' });
     setIsSubmitting(false);
-    
-    // Show success message (you can implement a proper toast here)
     alert('Message sent successfully!');
   };
 
@@ -49,10 +43,10 @@ export default function Contact() {
           </p>
         </div>
 
-        {/* Contact Info - Full Width */}
-        <div className="max-w-4xl mx-auto">
-          <div className="grid md:grid-cols-3 gap-8">
-            {/* Profile Image */}
+        {/* Two-column: left avatar, right stacked items */}
+        <div className="max-w-6xl mx-auto">
+          <div className="grid md:grid-cols-2 gap-10 items-start">
+            {/* Profile */}
             <div className="text-center">
               <div className="relative mx-auto w-48 h-48 mb-6">
                 <div className="absolute inset-0 bg-gradient-to-r from-primary to-accent rounded-full blur-xl opacity-30 animate-pulse"></div>
@@ -77,24 +71,26 @@ export default function Contact() {
               </button>
             </div>
 
-            {/* Contact Items */}
-            <ContactItem
-              icon={<Mail className="w-6 h-6" />}
-              title="Email"
-              value="javeriaakram259@gmail.com"
-              action={handleEmailClick}
-            />
-            <ContactItem
-              icon={<Phone className="w-6 h-6" />}
-              title="Phone"
-              value="+92 123 456 7890"
-              action={() => window.open('tel:+921234567890')}
-            />
-            <ContactItem
-              icon={<MapPin className="w-6 h-6" />}
-              title="Location"
-              value="Lahore, Pakistan"
-            />
+            {/* Right column: stacked contact boxes */}
+            <div className="grid gap-6 content-start">
+              <ContactItem
+                icon={<Mail className="w-6 h-6" />}
+                title="Email"
+                value="javeriaakram259@gmail.com"
+                action={handleEmailClick}
+              />
+              <ContactItem
+                icon={<Phone className="w-6 h-6" />}
+                title="Phone"
+                value="+92 123 456 7890"
+                action={() => window.open('tel:+921234567890')}
+              />
+              <ContactItem
+                icon={<MapPin className="w-6 h-6" />}
+                title="Location"
+                value="Lahore, Pakistan"
+              />
+            </div>
           </div>
         </div>
       </div>
@@ -111,8 +107,8 @@ interface ContactItemProps {
 
 function ContactItem({ icon, title, value, action }: ContactItemProps) {
   return (
-    <div 
-      className={`flex items-center gap-4 p-4 rounded-lg border border-border bg-card ${
+    <div
+      className={`flex items-center gap-4 p-5 rounded-lg border border-border bg-card ${
         action ? 'cursor-pointer hover:border-primary/50 transition-colors duration-300' : ''
       }`}
       onClick={action}
