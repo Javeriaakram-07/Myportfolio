@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { ExternalLink, Github } from 'lucide-react';
 import ProjectModal from './ProjectModal';
+import Card3D from './Card3D';
 
 interface Project {
   id: number;
