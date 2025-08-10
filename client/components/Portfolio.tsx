@@ -62,7 +62,7 @@ const projects: Project[] = [
     title: 'Sweet Shop Website',
     description: 'A vibrant sweet shop website featuring refreshing cocktails and beverages. Built with responsive design, interactive elements, and beautiful gradients.',
     technologies: ['HTML', 'CSS', 'Responsive Design', 'UI/UX'],
-    image: '/placeholder.svg',
+    image: 'https://images.unsplash.com/photo-1551024506-0bccd828d307?w=800&h=600&fit=crop',
     liveUrl: '',
     githubUrl: '',
     category: 'Frontend',
@@ -91,7 +91,7 @@ const projects: Project[] = [
     title: 'Sweet Shop Blog',
     description: 'A modern blog platform for Sweet Shop featuring articles, product reviews, and user engagement. Clean design with responsive grid layout and smooth animations.',
     technologies: ['HTML', 'CSS', 'Blog System', 'Responsive Design'],
-    image: '/placeholder.svg',
+    image: 'https://images.unsplash.com/photo-1551024506-0bccd828d307?w=800&h=600&fit=crop',
     liveUrl: 'https://webull.w3spaces.com',
     githubUrl: '',
     category: 'Frontend',
@@ -179,7 +179,7 @@ export default function Portfolio() {
               <button
                 key={category}
                 onClick={() => setSelectedCategory(category)}
-                className={`px-6 py-2 rounded-full transition-all duration-300 ${
+                className={`px-4 py-2 rounded-full transition-all duration-500 text-sm ${
                   selectedCategory === category
                     ? 'bg-gradient-to-r from-primary to-accent text-white shadow-glow'
                     : 'bg-muted text-muted-foreground hover:bg-primary/20 hover:text-primary'

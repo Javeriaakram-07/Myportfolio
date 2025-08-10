@@ -112,31 +112,47 @@ export default function Navigation() {
         {isMobileMenuOpen && (
           <div className="md:hidden border-t border-border bg-background/95 backdrop-blur-md">
             <div className="px-4 py-4 space-y-4">
-              <a 
-                href="#about" 
+              <a
+                href="#about"
                 className="block text-foreground hover:text-primary transition-colors"
-                onClick={() => setIsMobileMenuOpen(false)}
+                onClick={(e) => {
+                  e.preventDefault();
+                  setIsMobileMenuOpen(false);
+                  document.getElementById('about')?.scrollIntoView({ behavior: 'smooth' });
+                }}
               >
                 About
               </a>
-              <a 
-                href="#skills" 
+              <a
+                href="#skills"
                 className="block text-foreground hover:text-primary transition-colors"
-                onClick={() => setIsMobileMenuOpen(false)}
+                onClick={(e) => {
+                  e.preventDefault();
+                  setIsMobileMenuOpen(false);
+                  document.getElementById('skills')?.scrollIntoView({ behavior: 'smooth' });
+                }}
               >
                 Skills
               </a>
-              <a 
-                href="#portfolio" 
+              <a
+                href="#portfolio"
                 className="block text-foreground hover:text-primary transition-colors"
-                onClick={() => setIsMobileMenuOpen(false)}
+                onClick={(e) => {
+                  e.preventDefault();
+                  setIsMobileMenuOpen(false);
+                  document.getElementById('portfolio')?.scrollIntoView({ behavior: 'smooth' });
+                }}
               >
-                Portfolio
+                Projects
               </a>
-              <a 
-                href="#contact" 
+              <a
+                href="#contact"
                 className="block text-foreground hover:text-primary transition-colors"
-                onClick={() => setIsMobileMenuOpen(false)}
+                onClick={(e) => {
+                  e.preventDefault();
+                  setIsMobileMenuOpen(false);
+                  document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' });
+                }}
               >
                 Contact
               </a>
