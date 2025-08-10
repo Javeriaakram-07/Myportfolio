@@ -164,6 +164,24 @@
     }
   }
 
+  @keyframes sphereRotate {
+    0% {
+      transform: rotateY(0deg) rotateX(0deg);
+    }
+    25% {
+      transform: rotateY(90deg) rotateX(15deg);
+    }
+    50% {
+      transform: rotateY(180deg) rotateX(0deg);
+    }
+    75% {
+      transform: rotateY(270deg) rotateX(-15deg);
+    }
+    100% {
+      transform: rotateY(360deg) rotateX(0deg);
+    }
+  }
+
   .animate-slide-down {
     animation: slideDown 0.3s ease-out forwards;
   }
