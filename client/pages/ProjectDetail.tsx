@@ -288,11 +288,10 @@ export default function ProjectDetail() {
               </div>
 
               <h3 className="text-xl font-semibold mt-8 mb-4">Key Features</h3>
-              <ul className="space-y-3">
+              <ul className="space-y-3 custom-bullets">
                 {project.features.map((feature, index) => (
-                  <li key={index} className="flex items-start gap-3">
-                    <span className="w-2 h-2 bg-primary rounded-full mt-2 flex-shrink-0"></span>
-                    <span className="text-muted-foreground">{feature}</span>
+                  <li key={index} className="text-muted-foreground">
+                    {feature}
                   </li>
                 ))}
               </ul>
