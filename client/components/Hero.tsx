@@ -1,13 +1,21 @@
 import { useEffect, useState } from 'react';
 import { ChevronDown } from 'lucide-react';
 import TypingAnimation from './TypingAnimation';
-import { useParallax } from '../hooks/useParallax';
+import { useParallax, useParallaxMulti } from '../hooks/useParallax';
 
 export default function Hero() {
   const [isVisible, setIsVisible] = useState(false);
   const parallaxRef1 = useParallax(0.3);
   const parallaxRef2 = useParallax(0.5);
   const parallaxRef3 = useParallax(0.2);
+  const parallaxRef4 = useParallax(0.4);
+  const parallaxRef5 = useParallax(0.6);
+
+  useParallaxMulti([
+    { speed: 0.2, selector: '.parallax-bg-1' },
+    { speed: 0.4, selector: '.parallax-bg-2' },
+    { speed: 0.6, selector: '.parallax-bg-3' }
+  ]);
 
   useEffect(() => {
     const timer = setTimeout(() => setIsVisible(true), 500);

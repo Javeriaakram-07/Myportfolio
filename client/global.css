@@ -48,6 +48,10 @@
     --skill-js: 50 100% 60%;
     --skill-logic: 240 80% 55%;
     --skill-web: 200 90% 55%;
+    --skill-react: 190 100% 60%;
+    --skill-vibe: 280 80% 60%;
+    --skill-oop-silver: 0 0% 70%;
+    --skill-uiux-pink: 330 60% 75%;
   }
 }
 
@@ -62,8 +66,10 @@
 
   body {
     @apply bg-background text-foreground overflow-x-hidden;
-    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
+    font-family: 'Poppins', 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
   }
+
+  @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
 
   /* Custom scrollbar */
   ::-webkit-scrollbar {

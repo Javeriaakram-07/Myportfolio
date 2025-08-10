@@ -62,10 +62,10 @@ const projects: Project[] = [
     title: 'Sweet Shop Website',
     description: 'A vibrant sweet shop website featuring refreshing cocktails and beverages. Built with responsive design, interactive elements, and beautiful gradients.',
     technologies: ['HTML', 'CSS', 'Responsive Design', 'UI/UX'],
-    image: 'https://cdn.builder.io/api/v1/image/assets%2F78bb8a2b1dce448185f7c0a17bacab1d%2Fd3d7322df3854d3780bb63a3f2f64c5b?format=webp&width=800',
+    image: '/placeholder.svg',
     liveUrl: '',
     githubUrl: '',
-    category: 'Web Development',
+    category: 'Frontend',
     detailedDescription: `A beautifully designed sweet shop website showcasing cocktail recipes and beverages:
 
     🎨 **Design Features**
@@ -91,10 +91,10 @@ const projects: Project[] = [
     title: 'Sweet Shop Blog',
     description: 'A modern blog platform for Sweet Shop featuring articles, product reviews, and user engagement. Clean design with responsive grid layout and smooth animations.',
     technologies: ['HTML', 'CSS', 'Blog System', 'Responsive Design'],
-    image: 'https://cdn.builder.io/api/v1/image/assets%2F78bb8a2b1dce448185f7c0a17bacab1d%2Fd6ea10eda1624cef86175af07fade245?format=webp&width=800',
+    image: '/placeholder.svg',
     liveUrl: 'https://webull.w3spaces.com',
     githubUrl: '',
-    category: 'Web Development',
+    category: 'Frontend',
     detailedDescription: `A comprehensive blog platform designed for content sharing and user engagement:
 
     📝 **Blog Features**
@@ -146,7 +146,7 @@ const projects: Project[] = [
   }
 ];
 
-const categories = ['All', 'Web Development', 'C++ Development', 'Frontend'];
+const categories = ['All', 'C++ Development', 'Frontend', 'Web Development'];
 
 export default function Portfolio() {
   const navigate = useNavigate();
@@ -167,7 +167,7 @@ export default function Portfolio() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
           <h2 className="text-4xl md:text-5xl font-bold mb-4">
-            My <span className="gradient-text">Portfolio</span>
+            My <span className="gradient-text">Projects</span>
           </h2>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto mb-6">
             A collection of projects showcasing my skills in web development, C++ programming, and problem-solving

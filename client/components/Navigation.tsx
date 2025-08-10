@@ -27,16 +27,44 @@ export default function Navigation() {
           </Link>
 
           <div className="hidden md:flex items-center space-x-8">
-            <a href="#about" className="text-foreground hover:text-primary transition-colors">
+            <a
+              href="#about"
+              className="text-foreground hover:text-primary transition-colors"
+              onClick={(e) => {
+                e.preventDefault();
+                document.getElementById('about')?.scrollIntoView({ behavior: 'smooth' });
+              }}
+            >
               About
             </a>
-            <a href="#skills" className="text-foreground hover:text-primary transition-colors">
+            <a
+              href="#skills"
+              className="text-foreground hover:text-primary transition-colors"
+              onClick={(e) => {
+                e.preventDefault();
+                document.getElementById('skills')?.scrollIntoView({ behavior: 'smooth' });
+              }}
+            >
               Skills
             </a>
-            <a href="#portfolio" className="text-foreground hover:text-primary transition-colors">
-              Portfolio
+            <a
+              href="#portfolio"
+              className="text-foreground hover:text-primary transition-colors"
+              onClick={(e) => {
+                e.preventDefault();
+                document.getElementById('portfolio')?.scrollIntoView({ behavior: 'smooth' });
+              }}
+            >
+              Projects
             </a>
-            <a href="#contact" className="text-foreground hover:text-primary transition-colors">
+            <a
+              href="#contact"
+              className="text-foreground hover:text-primary transition-colors"
+              onClick={(e) => {
+                e.preventDefault();
+                document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' });
+              }}
+            >
               Contact
             </a>
           </div>

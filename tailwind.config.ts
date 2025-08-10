@@ -56,6 +56,10 @@ export default {
         'skill-js': "hsl(var(--skill-js))",
         'skill-logic': "hsl(var(--skill-logic))",
         'skill-web': "hsl(var(--skill-web))",
+        'skill-react': "hsl(var(--skill-react))",
+        'skill-vibe': "hsl(var(--skill-vibe))",
+        'skill-oop-silver': "hsl(var(--skill-oop-silver))",
+        'skill-uiux-pink': "hsl(var(--skill-uiux-pink))",
       },
       borderRadius: {
         lg: "var(--radius)",
@@ -133,6 +137,17 @@ export default {
             textShadow: "0 0 10px hsl(var(--primary)), 0 0 20px hsl(var(--primary)), 0 0 30px hsl(var(--primary))",
           },
         },
+        "3d-rotate": {
+          "0%": {
+            transform: "scale(0.3) rotateY(0deg) rotateX(0deg)",
+          },
+          "50%": {
+            transform: "scale(1.1) rotateY(180deg) rotateX(10deg)",
+          },
+          "100%": {
+            transform: "scale(1) rotateY(360deg) rotateX(0deg)",
+          },
+        },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
@@ -143,6 +158,7 @@ export default {
         "fade-in": "fade-in 1s ease-out",
         "scale-in": "scale-in 0.5s ease-out",
         "text-glow": "text-glow 2s ease-in-out infinite",
+        "3d-rotate": "3d-rotate 2s ease-in-out",
       },
     },
   },

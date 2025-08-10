@@ -41,7 +41,7 @@ const skills: Skill[] = [
   {
     name: 'OOP',
     icon: '⚙️',
-    color: 'skill-cpp',
+    color: 'skill-oop-silver',
     description: 'Object-oriented programming principles'
   },
   {
@@ -53,7 +53,7 @@ const skills: Skill[] = [
   {
     name: 'UI/UX Design',
     icon: '🎨',
-    color: 'skill-logic',
+    color: 'skill-uiux-pink',
     description: 'User interface and experience design'
   },
   {
@@ -61,6 +61,18 @@ const skills: Skill[] = [
     icon: '🖼️',
     color: 'skill-web',
     description: 'Visual design for websites and applications'
+  },
+  {
+    name: 'React.js',
+    icon: '⚛️',
+    color: 'skill-react',
+    description: 'Modern React development with hooks'
+  },
+  {
+    name: 'Vibe Coding',
+    icon: '✨',
+    color: 'skill-vibe',
+    description: 'Creative coding and innovative solutions'
   }
 ];
 

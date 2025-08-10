@@ -51,7 +51,7 @@ export default function Contact() {
 
         {/* Contact Info - Full Width */}
         <div className="max-w-4xl mx-auto">
-          <div className="grid md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
             {/* Profile Image */}
             <div className="text-center">
               <div className="relative mx-auto w-48 h-48 mb-6">
