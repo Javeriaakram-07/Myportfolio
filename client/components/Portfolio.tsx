@@ -23,7 +23,7 @@ const projects: Project[] = [
     title: 'Cyber Management System',
     description: 'A console-based cyber management system built in C++ using Object-Oriented Programming principles. Features user management, session tracking, website blocking, and comprehensive reporting system.',
     technologies: ['C++', 'OOP', 'Vectors', 'Classes', 'Encapsulation', 'Console Application'],
-    image: 'https://cdn.builder.io/api/v1/image/assets%2F78bb8a2b1dce448185f7c0a17bacab1d%2Fff9e1714402f4ac899eef45c5cbc00d6?format=webp&width=800',
+    image: 'https://cdn.builder.io/api/v1/image/assets%2F78bb8a2b1dce448185f7c0a17bacab1d%2Ff75cb49c484f4ff0a9d7585deebf3a92?format=webp&width=800',
     liveUrl: '',
     githubUrl: '',
     category: 'C++ Development',
