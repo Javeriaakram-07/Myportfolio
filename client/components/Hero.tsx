@@ -93,10 +93,7 @@ export default function Hero() {
         {/* 3D Rotating Cube */}
         <div className={`relative transition-all duration-1000 delay-300 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
           <div className="relative mx-auto w-56 h-56 lg:w-72 lg:h-72 flex items-center justify-center">
-            {/* Reduced glow effect - only corner shadows */}
-            <div className="absolute inset-0 bg-gradient-to-r from-primary to-accent rounded-lg blur-lg opacity-20"></div>
-
-            {/* 3D Rotating Cube with logo on each face */}
+            {/* 3D Rotating Cube with logo on each face - no background shadow */}
             <div className="relative z-10">
               <RotatingCube size="w-32 h-32 lg:w-40 lg:h-40" />
             </div>
