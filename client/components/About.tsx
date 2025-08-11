@@ -66,32 +66,32 @@ export default function About() {
           />
         </div>
 
-        {/* What I Do - Full Width */}
+        {/* What I Do - 2x2 Grid */}
         <div>
           <h3 className="text-2xl font-bold text-foreground mb-6 text-center">What I Do</h3>
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto">
             <Card3D>
-              <div className="flex items-start gap-3 p-4 bg-primary/5 rounded-lg border border-primary/20 hover:scale-105 transition-all duration-500 h-full">
-                <span className="text-primary mt-1 text-sm">▶</span>
-                <span className="text-sm">Build console-based applications with advanced C++ concepts</span>
+              <div className="flex items-start gap-3 p-6 bg-primary/5 rounded-lg border border-primary/20 hover:scale-105 transition-all duration-500 h-full">
+                <span className="text-primary mt-1 text-lg">▶</span>
+                <span className="text-base">Build console-based applications with advanced C++ concepts</span>
               </div>
             </Card3D>
             <Card3D>
-              <div className="flex items-start gap-3 p-4 bg-primary/5 rounded-lg border border-primary/20 hover:scale-105 transition-all duration-500 h-full">
-                <span className="text-primary mt-1 text-sm">▶</span>
-                <span className="text-sm">Create responsive websites with modern design principles</span>
+              <div className="flex items-start gap-3 p-6 bg-primary/5 rounded-lg border border-primary/20 hover:scale-105 transition-all duration-500 h-full">
+                <span className="text-primary mt-1 text-lg">▶</span>
+                <span className="text-base">Create responsive websites with modern design principles</span>
               </div>
             </Card3D>
             <Card3D>
-              <div className="flex items-start gap-3 p-4 bg-primary/5 rounded-lg border border-primary/20 hover:scale-105 transition-all duration-500 h-full">
-                <span className="text-primary mt-1 text-sm">▶</span>
-                <span className="text-sm">Freelance development delivering custom client solutions</span>
+              <div className="flex items-start gap-3 p-6 bg-primary/5 rounded-lg border border-primary/20 hover:scale-105 transition-all duration-500 h-full">
+                <span className="text-primary mt-1 text-lg">▶</span>
+                <span className="text-base">Freelance development delivering custom client solutions</span>
               </div>
             </Card3D>
             <Card3D>
-              <div className="flex items-start gap-3 p-4 bg-primary/5 rounded-lg border border-primary/20 hover:scale-105 transition-all duration-500 h-full">
-                <span className="text-primary mt-1 text-sm">▶</span>
-                <span className="text-sm">Focus on clean code and efficient problem-solving</span>
+              <div className="flex items-start gap-3 p-6 bg-primary/5 rounded-lg border border-primary/20 hover:scale-105 transition-all duration-500 h-full">
+                <span className="text-primary mt-1 text-lg">▶</span>
+                <span className="text-base">Focus on clean code and efficient problem-solving</span>
               </div>
             </Card3D>
           </div>
