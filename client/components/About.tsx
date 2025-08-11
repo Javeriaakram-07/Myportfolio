@@ -3,7 +3,7 @@ import Card3D from './Card3D';
 
 export default function About() {
   return (
-    <section id="about" className="py-16 bg-muted/30">
+    <section id="about" className="py-16 bg-muted/30 mt-32">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
           <h2 className="text-4xl md:text-5xl font-bold mb-4">
