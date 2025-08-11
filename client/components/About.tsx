@@ -115,8 +115,8 @@ interface AboutCardProps {
 function AboutCard({ icon, title, description, color, delay = '', isEducation = false }: AboutCardProps) {
   return (
     <Card3D className="h-full">
-      <div className={`group p-6 bg-card rounded-xl border border-border hover:border-opacity-50 transition-all duration-500 hover:scale-105 transform hover:neon-glow animate-slide-up ${delay} h-full relative`}>
-        <div className="space-y-4">
+      <div className={`group p-6 bg-card rounded-xl border border-border hover:border-opacity-50 transition-all duration-500 hover:scale-105 transform hover:neon-glow animate-slide-up ${delay} h-full relative flex flex-col`}>
+        <div className="space-y-4 flex-grow">
           <div
             className="w-fit p-3 rounded-lg transition-all duration-500"
             style={{ backgroundColor: `hsla(var(--${color}), 0.1)` }}
@@ -125,17 +125,17 @@ function AboutCard({ icon, title, description, color, delay = '', isEducation = 
               {icon}
             </div>
           </div>
-          <div>
-            <h3 className="font-semibold text-foreground mb-2">{title}</h3>
+          <div className="flex-grow">
+            <h3 className="font-semibold gradient-text mb-2">{title}</h3>
             <p className={`text-sm leading-relaxed ${
-              isEducation 
-                ? 'text-primary font-medium' 
+              isEducation
+                ? 'text-primary font-medium'
                 : 'text-muted-foreground'
             }`}>
               {isEducation ? (
                 <>
-                  <span className="neon-text font-semibold">BS Computer Science</span><br />
-                  <span className="neon-text">Punjab University of Information Technology</span><br />
+                  <span className="gradient-text font-semibold">BS Computer Science</span><br />
+                  <span className="gradient-text">Punjab University of Information Technology</span><br />
                   <span className="text-muted-foreground">Lahore (2024-2028)</span>
                 </>
               ) : (
