@@ -35,6 +35,7 @@ export default function RotatingCube({ size = 'w-20 h-20' }: RotatingCubeProps) 
           className="absolute inset-0 bg-gradient-to-br from-primary/80 to-accent/60 border border-primary/70 flex items-center justify-center p-2"
           style={{
             transform: 'rotateY(180deg) translateZ(40px)',
+            backfaceVisibility: 'hidden',
             boxShadow: '-4px 0 12px rgba(0,106,255,0.4), 0 4px 12px rgba(0,106,255,0.3)'
           }}
         >
@@ -50,6 +51,7 @@ export default function RotatingCube({ size = 'w-20 h-20' }: RotatingCubeProps) 
           className="absolute inset-0 bg-gradient-to-br from-primary/85 to-accent/65 border border-primary/75 flex items-center justify-center p-2"
           style={{
             transform: 'rotateY(90deg) translateZ(40px)',
+            backfaceVisibility: 'hidden',
             boxShadow: '4px 0 12px rgba(0,106,255,0.5), 0 4px 12px rgba(0,106,255,0.4)'
           }}
         >
@@ -65,6 +67,7 @@ export default function RotatingCube({ size = 'w-20 h-20' }: RotatingCubeProps) 
           className="absolute inset-0 bg-gradient-to-br from-primary/75 to-accent/55 border border-primary/65 flex items-center justify-center p-2"
           style={{
             transform: 'rotateY(-90deg) translateZ(40px)',
+            backfaceVisibility: 'hidden',
             boxShadow: '-4px 0 12px rgba(0,106,255,0.5), 0 4px 12px rgba(0,106,255,0.4)'
           }}
         >
@@ -80,6 +83,7 @@ export default function RotatingCube({ size = 'w-20 h-20' }: RotatingCubeProps) 
           className="absolute inset-0 bg-gradient-to-br from-primary/95 to-accent/75 border border-primary/85 flex items-center justify-center p-2"
           style={{
             transform: 'rotateX(90deg) translateZ(40px)',
+            backfaceVisibility: 'hidden',
             boxShadow: '0 -4px 12px rgba(0,106,255,0.5), 4px 0 8px rgba(0,106,255,0.3)'
           }}
         >
@@ -95,6 +99,7 @@ export default function RotatingCube({ size = 'w-20 h-20' }: RotatingCubeProps) 
           className="absolute inset-0 bg-gradient-to-br from-primary/70 to-accent/50 border border-primary/60 flex items-center justify-center p-2"
           style={{
             transform: 'rotateX(-90deg) translateZ(40px)',
+            backfaceVisibility: 'hidden',
             boxShadow: '0 4px 12px rgba(0,106,255,0.6), 4px 4px 8px rgba(0,106,255,0.4)'
           }}
         >
