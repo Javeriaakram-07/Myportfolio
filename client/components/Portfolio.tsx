@@ -60,78 +60,24 @@ const projects: Project[] = [
   },
   {
     id: 2,
-    title: 'Bakery E-Commerce',
-    description: 'A vibrant sweet shop website featuring refreshing cocktails and beverages. Built with responsive design, interactive elements, and beautiful gradients.',
-    technologies: ['React', 'Node.js', 'MongoDB', 'HTML', 'CSS'],
-    image: 'https://images.unsplash.com/photo-1551024506-0bccd828d307?w=800&h=600&fit=crop',
-    liveUrl: '',
-    githubUrl: '',
-    category: 'Web Development',
-    detailedDescription: `A beautifully designed sweet shop website showcasing cocktail recipes and beverages:
-
-    🎨 **Design Features**
-    • Vibrant gradient backgrounds with cyan to purple color schemes
-    • Responsive grid layout adapting to all screen sizes
-    • Clean typography with Google Fonts integration
-    • Interactive hover effects and smooth transitions
-
-    💻 **Technical Implementation**
-    • Pure HTML5 semantic structure
-    • CSS3 with Flexbox and Grid layouts
-    • Custom CSS animations and transitions
-    • Mobile-first responsive design approach
-
-    🍹 **Content Highlights**
-    • Featured cocktail recipes with ingredients
-    • Step-by-step preparation instructions
-    • Attractive product imagery and styling
-    • Professional navigation and footer sections`
-  },
-  {
-    id: 3,
-    title: 'Interactive Blog Card',
-    description: 'A modern blog card component featuring animated effects and responsive design. Built with pure CSS animations and smooth transitions.',
-    technologies: ['CSS3', 'Animations', 'HTML', 'Responsive Design'],
-    image: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&h=600&fit=crop',
-    liveUrl: 'https://webull.w3spaces.com',
-    githubUrl: '',
-    category: 'Web Development',
-    detailedDescription: `A comprehensive blog platform designed for content sharing and user engagement:
-
-    📝 **Blog Features**
-    • Article grid layout with responsive design
-    • Author profiles with avatar integration
-    • Category-based content organization
-    • Date-based article sorting and filtering
-
-    🎯 **User Experience**
-    • Clean card-based design for easy reading
-    • Hover effects and smooth transitions
-    • Optimized typography for readability
-    • Mobile-friendly responsive layout
-
-    🚀 **Deployment**
-    • Successfully deployed on W3Spaces platform
-    • Fast loading times and optimized assets
-    • Cross-browser compatibility testing
-    • SEO-friendly structure and meta tags`
-  },
-  {
-    id: 4,
     title: 'Interactive Payment Card',
     description: 'A sleek payment card interface with dark theme, neon effects, and animated background elements. Features order summary, pricing, and payment integration.',
     technologies: ['HTML', 'CSS', 'UI/UX', 'Animations', 'Responsive Design'],
-    image: 'https://cdn.builder.io/api/v1/image/assets%2F78bb8a2b1dce448185f7c0a17bacab1d%2Fd397edceac6449d5a79d3f6e1da819e5?format=webp&width=800',
-    liveUrl: '',
+    image: 'https://cdn.builder.io/api/v1/image/assets%2F78bb8a2b1dce448185f7c0a17bacab1d%2Fbcabbbbdeca941d581396b967e310da7?format=webp&width=800',
+    liveUrl: 'https://card-jeeya.vercel.app/',
     githubUrl: '',
-    category: 'Frontend',
-    detailedDescription: `An engaging payment interface with modern design principles:
+    category: 'Web Development',
+    detailImages: [
+      'https://cdn.builder.io/api/v1/image/assets%2F78bb8a2b1dce448185f7c0a17bacab1d%2Fbcabbbbdeca941d581396b967e310da7?format=webp&width=800',
+      'https://cdn.builder.io/api/v1/image/assets%2F78bb8a2b1dce448185f7c0a17bacab1d%2F5a523603a28f4043a6f3e0affeeb8d6b?format=webp&width=800'
+    ],
+    detailedDescription: `An engaging payment interface with modern design principles and advanced CSS animations:
 
     🌟 **Visual Design**
     • Dark theme with blue neon accent colors
     • Animated rotating circles in background
     • Glass-morphism effects and backdrop blur
-    • Premium card styling with shadows
+    • Premium card styling with shadows and gradients
 
     ⚡ **Interactive Elements**
     • Smooth CSS animations and keyframes
@@ -142,12 +88,98 @@ const projects: Project[] = [
     💳 **Payment Features**
     • Order summary with pricing breakdown
     • Plan selection with change options
-    • Payment processing simulation
-    • Cancel order functionality`
+    • Payment processing simulation interface
+    • Cancel order functionality
+
+    🎨 **Technical Implementation**
+    • Pure CSS animations without JavaScript dependencies
+    • Responsive design adapting to all screen sizes
+    • Clean HTML5 semantic structure
+    • Modern CSS features including transforms and transitions`
+  },
+  {
+    id: 3,
+    title: 'Sweet Shop Website',
+    description: 'A vibrant sweet shop website featuring refreshing cocktails and beverages. Built with responsive design, interactive elements, and beautiful gradients showcasing Pina Colada, Blue Lagoon, and Pink Paradise recipes.',
+    technologies: ['HTML', 'CSS', 'Responsive Design', 'UI/UX', 'Google Fonts'],
+    image: 'https://cdn.builder.io/api/v1/image/assets%2F78bb8a2b1dce448185f7c0a17bacab1d%2Fb9c8f085ebd7489eb9a5ca9aa320348b?format=webp&width=800',
+    liveUrl: 'https://sweetshop-jeeya.vercel.app/',
+    githubUrl: '',
+    category: 'Web Development',
+    detailImages: [
+      'https://cdn.builder.io/api/v1/image/assets%2F78bb8a2b1dce448185f7c0a17bacab1d%2Fb9c8f085ebd7489eb9a5ca9aa320348b?format=webp&width=800',
+      'https://cdn.builder.io/api/v1/image/assets%2F78bb8a2b1dce448185f7c0a17bacab1d%2F19239819a67c46ad9de395812a75bbf9?format=webp&width=800',
+      'https://cdn.builder.io/api/v1/image/assets%2F78bb8a2b1dce448185f7c0a17bacab1d%2F250354a438e84f97b713529a29428f2e?format=webp&width=800',
+      'https://cdn.builder.io/api/v1/image/assets%2F78bb8a2b1dce448185f7c0a17bacab1d%2F0ac747d4255d485b9d7c71de59752c53?format=webp&width=800'
+    ],
+    detailedDescription: `A beautifully designed sweet shop website showcasing cocktail recipes and beverages with stunning visual appeal:
+
+    🎨 **Design Features**
+    • Vibrant gradient backgrounds with cyan to purple color schemes
+    • Professional recipe cards with ingredient lists and instructions
+    • Clean typography with Google Fonts integration
+    • Interactive hover effects and smooth transitions
+
+    🍹 **Featured Cocktails**
+    • Pina Colada with pineapple juice and coconut cream
+    • Blue Lagoon with Blue Curaçao syrup and lemonade
+    • Pink Paradise with strawberry juice and coconut water
+    • Professional drink photography and styling
+
+    💻 **Technical Implementation**
+    • Pure HTML5 semantic structure with proper navigation
+    • CSS3 with Flexbox and Grid layouts for responsive design
+    • Custom CSS animations and transitions
+    • Mobile-first responsive design approach
+
+    🌟 **User Experience**
+    • Clear navigation between different cocktail recipes
+    • Easy-to-read ingredient lists and preparation steps
+    • Attractive product imagery and professional styling
+    • Responsive layout adapting to all device sizes`
+  },
+  {
+    id: 4,
+    title: 'Sweet Shop Blog',
+    description: 'A modern blog platform for Sweet Shop featuring articles, product reviews, and user engagement. Clean design with responsive grid layout and smooth animations showcasing the latest gadgets and technology.',
+    technologies: ['HTML', 'CSS', 'Blog System', 'Responsive Design', 'Grid Layout'],
+    image: 'https://cdn.builder.io/api/v1/image/assets%2F78bb8a2b1dce448185f7c0a17bacab1d%2F07a81a3847ea40f19dcd75d126f13e5d?format=webp&width=800',
+    liveUrl: '',
+    githubUrl: '',
+    category: 'Web Development',
+    detailImages: [
+      'https://cdn.builder.io/api/v1/image/assets%2F78bb8a2b1dce448185f7c0a17bacab1d%2F07a81a3847ea40f19dcd75d126f13e5d?format=webp&width=800',
+      'https://cdn.builder.io/api/v1/image/assets%2F78bb8a2b1dce448185f7c0a17bacab1d%2F286ad25d2a1e4ce1bbb7ccb8aa01e26c?format=webp&width=800'
+    ],
+    detailedDescription: `A comprehensive blog platform designed for content sharing and user engagement with modern web standards:
+
+    📝 **Blog Features**
+    • Article grid layout with responsive card design
+    • Author profiles with avatar integration and professional styling
+    • Category-based content organization for easy navigation
+    • Featured articles showcasing new gadgets and technology
+
+    🎯 **User Experience**
+    • Clean card-based design for easy reading and navigation
+    • Hover effects and smooth CSS transitions
+    • Optimized typography for enhanced readability
+    • Mobile-friendly responsive layout adapting to all devices
+
+    🚀 **Technical Implementation**
+    • Semantic HTML5 structure with proper meta tags
+    • CSS Grid and Flexbox for responsive layouts
+    • Modern font integration and color schemes
+    • Cross-browser compatibility and performance optimization
+
+    📱 **Content Management**
+    • Blog post preview cards with author information
+    • Article categorization by topic (Arts, Acoustic, Headphones)
+    • Professional imagery and consistent styling
+    • Scalable layout supporting multiple content types`
   }
 ];
 
-const categories = ['All', 'C++ Development', 'Frontend', 'Web Development'];
+const categories = ['All', 'C++ Development', 'Web Development'];
 
 export default function Portfolio() {
   const navigate = useNavigate();
