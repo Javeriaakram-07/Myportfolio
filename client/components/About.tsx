@@ -20,14 +20,18 @@ export default function About() {
 
         {/* Statistics */}
         <div className="grid grid-cols-2 gap-6 max-w-md mx-auto mb-12">
-          <div className="text-center p-4 bg-card rounded-lg border border-border">
-            <div className="text-3xl font-bold gradient-text">10+</div>
-            <div className="text-sm text-muted-foreground">Projects Completed</div>
-          </div>
-          <div className="text-center p-4 bg-card rounded-lg border border-border">
-            <div className="text-3xl font-bold gradient-text">1</div>
-            <div className="text-sm text-muted-foreground">Year Experience</div>
-          </div>
+          <Card3D>
+            <div className="text-center p-4 bg-card rounded-lg border border-border transition-all duration-500 hover:scale-105 hover:neon-glow">
+              <div className="text-3xl font-bold gradient-text">10+</div>
+              <div className="text-sm text-muted-foreground">Projects Completed</div>
+            </div>
+          </Card3D>
+          <Card3D>
+            <div className="text-center p-4 bg-card rounded-lg border border-border transition-all duration-500 hover:scale-105 hover:neon-glow">
+              <div className="text-3xl font-bold gradient-text">1</div>
+              <div className="text-sm text-muted-foreground">Year Experience</div>
+            </div>
+          </Card3D>
         </div>
 
         {/* Four Boxes: Education, Development, Passion, Freelancing */}
