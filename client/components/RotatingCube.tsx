@@ -19,6 +19,7 @@ export default function RotatingCube({ size = 'w-20 h-20' }: RotatingCubeProps) 
           className="absolute inset-0 bg-gradient-to-br from-primary/90 to-accent/70 border border-primary/80 flex items-center justify-center p-2"
           style={{
             transform: 'rotateY(0deg) translateZ(40px)',
+            backfaceVisibility: 'hidden',
             boxShadow: '4px 0 12px rgba(0,106,255,0.4), 0 4px 12px rgba(0,106,255,0.3)'
           }}
         >
