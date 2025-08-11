@@ -93,9 +93,8 @@ export default function Hero() {
         {/* 3D Rotating Cube */}
         <div className={`relative transition-all duration-1000 delay-300 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
           <div className="relative mx-auto w-56 h-56 lg:w-72 lg:h-72 flex items-center justify-center">
-            {/* Enhanced multi-layer glow effect */}
-            <div className="absolute inset-0 bg-gradient-to-r from-primary to-accent rounded-lg blur-2xl opacity-40 animate-pulse"></div>
-            <div className="absolute inset-0 bg-gradient-to-r from-primary to-accent rounded-lg blur-xl opacity-50 animate-pulse scale-95"></div>
+            {/* Reduced glow effect - only corner shadows */}
+            <div className="absolute inset-0 bg-gradient-to-r from-primary to-accent rounded-lg blur-lg opacity-20"></div>
 
             {/* 3D Rotating Cube with logo on each face */}
             <div className="relative z-10">
