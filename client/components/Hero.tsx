@@ -90,12 +90,36 @@ export default function Hero() {
           </div>
         </div>
 
-        {/* 3D Rotating Cube */}
+        {/* Profile Image */}
         <div className={`relative transition-all duration-1000 delay-300 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
-          <div className="relative mx-auto w-56 h-56 lg:w-72 lg:h-72 flex items-center justify-center overflow-visible">
-            {/* 3D Rotating Cube with logo on each face - no background shadow */}
-            <div className="relative z-10 overflow-hidden rounded-lg" style={{ perspective: '1200px' }}>
-              <RotatingCube size="w-32 h-32 lg:w-40 lg:h-40" />
+          <div className="relative mx-auto w-56 h-56 lg:w-72 lg:h-72">
+            {/* Enhanced multi-layer glow effect */}
+            <div className="absolute inset-0 bg-gradient-to-r from-primary to-accent rounded-full blur-2xl opacity-40 animate-pulse"></div>
+            <div className="absolute inset-0 bg-gradient-to-r from-primary to-accent rounded-full blur-xl opacity-50 animate-pulse scale-95"></div>
+
+            {/* Profile logo circle with neon border and 3D sphere */}
+            <div className="relative w-full h-full rounded-full overflow-hidden border-4 border-primary circle-neon">
+              {/* 3D Rotating Sphere Background */}
+              <div className="absolute inset-0 animate-sphere-rotate opacity-20">
+                <div className="w-full h-full rounded-full bg-gradient-to-r from-primary/30 to-accent/30 transform-gpu"
+                     style={{
+                       background: `
+                         radial-gradient(circle at 30% 30%, rgba(66, 128, 255, 0.4) 0%, transparent 50%),
+                         radial-gradient(circle at 70% 70%, rgba(0, 200, 255, 0.3) 0%, transparent 50%),
+                         conic-gradient(from 0deg, rgba(66, 128, 255, 0.2), rgba(0, 200, 255, 0.2), rgba(66, 128, 255, 0.2))
+                       `
+                     }}>
+                </div>
+              </div>
+
+              {/* Content */}
+              <div className="relative w-full h-full bg-gradient-to-br from-primary/5 to-accent/5 flex items-center justify-center p-12">
+                <img
+                  src="https://cdn.builder.io/api/v1/image/assets%2F78bb8a2b1dce448185f7c0a17bacab1d%2Fac654d34f824415f8143e76e544ce856?format=webp&width=800"
+                  alt="Javeria Akram Logo"
+                  className="w-full h-full object-contain animate-logo-pulse drop-shadow-2xl relative z-10"
+                />
+              </div>
             </div>
 
             {/* Enhanced floating elements with neon glow */}
