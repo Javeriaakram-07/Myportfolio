@@ -139,7 +139,9 @@ function AboutCard({ icon, title, description, color, delay = '', isEducation = 
                   <span className="text-muted-foreground">Lahore (2024-2028)</span>
                 </>
               ) : (
-                description
+                <span dangerouslySetInnerHTML={{
+                  __html: description.replace(/C\+\+/g, '<span class="gradient-text font-semibold">C++</span>')
+                }} />
               )}
             </p>
           </div>
