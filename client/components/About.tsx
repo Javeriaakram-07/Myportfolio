@@ -75,7 +75,7 @@ export default function About() {
             <Card3D>
               <div className="flex items-start gap-3 p-6 bg-primary/5 rounded-lg border border-primary/20 hover:scale-105 transition-all duration-500 h-full">
                 <span className="text-primary mt-1 text-lg">▶</span>
-                <span className="text-base">Build console-based applications with advanced C++ concepts</span>
+                <span className="text-base">Build console-based applications with advanced <span className="gradient-text font-semibold">C++</span> concepts</span>
               </div>
             </Card3D>
             <Card3D>
