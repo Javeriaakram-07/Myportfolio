@@ -94,6 +94,22 @@ const skills: Skill[] = [
     icon: '✨',
     color: 'skill-vibe',
     description: 'Creative coding and innovative solutions'
+  },
+  {
+    name: 'Framer',
+    icon: (
+      <svg viewBox="0 0 24 24" className="w-12 h-12">
+        <path fill="currentColor" d="M4 0h16v8h-8zm0 8h8l8 8H4zm0 8h8v8z"/>
+      </svg>
+    ),
+    color: 'skill-react',
+    description: 'Interactive prototyping and design systems'
+  },
+  {
+    name: 'Social Media Marketing',
+    icon: '📱',
+    color: 'skill-uiux-pink',
+    description: 'Digital marketing and social media strategies'
   }
 ];
 
