@@ -185,6 +185,7 @@ export default {
         "text-glow": "text-glow 2s ease-in-out infinite",
         "3d-rotate": "3d-rotate 2s ease-in-out",
         "sphere-rotate": "sphere-rotate 20s linear infinite",
+        "cube-rotate": "cube-rotate 10s linear infinite",
       },
     },
   },
