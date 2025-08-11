@@ -68,7 +68,9 @@ export default function About() {
 
         {/* What I Do - 2x2 Grid */}
         <div>
-          <h3 className="text-2xl font-bold text-foreground mb-6 text-center">What I Do</h3>
+          <h3 className="text-2xl font-bold text-foreground mb-6 text-center">
+            What <span className="gradient-text">I</span> Do
+          </h3>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto">
             <Card3D>
               <div className="flex items-start gap-3 p-6 bg-primary/5 rounded-lg border border-primary/20 hover:scale-105 transition-all duration-500 h-full">
