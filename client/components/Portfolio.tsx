@@ -25,7 +25,7 @@ const projects: Project[] = [
     technologies: ['C++', 'OOP', 'Vectors', 'Classes', 'Encapsulation', 'Console Application'],
     image: 'https://cdn.builder.io/api/v1/image/assets%2F78bb8a2b1dce448185f7c0a17bacab1d%2Ff75cb49c484f4ff0a9d7585deebf3a92?format=webp&width=800',
     liveUrl: '',
-    githubUrl: '',
+    githubUrl: 'https://github.com/Javeriaakram-07/Myportfolio.git',
     category: 'C++ Development',
     detailImages: [
       'https://cdn.builder.io/api/v1/image/assets%2F78bb8a2b1dce448185f7c0a17bacab1d%2Fff9e1714402f4ac899eef45c5cbc00d6?format=webp&width=800',
@@ -34,7 +34,7 @@ const projects: Project[] = [
     ],
     detailedDescription: `This console-based Cyber Management System demonstrates advanced C++ programming concepts:
 
-    🏗️ **Object-Oriented Design**
+    🏗�� **Object-Oriented Design**
     • User class with private data members and public methods
     • Encapsulation of user data (username, sessions, violations)
     • Static members for user numbering
@@ -123,7 +123,7 @@ const projects: Project[] = [
     🍹 **Featured Cocktails**
     • Pina Colada with pineapple juice and coconut cream
     • Blue Lagoon with Blue Curaçao syrup and lemonade
-    • Pink Paradise with strawberry juice and coconut water
+    �� Pink Paradise with strawberry juice and coconut water
     • Professional drink photography and styling
 
     💻 **Technical Implementation**
