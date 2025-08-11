@@ -227,14 +227,8 @@ export default function ProjectDetail() {
 
   const handleBackClick = (e: React.MouseEvent) => {
     e.preventDefault();
-    // Check if we're already on the main page
-    if (window.location.pathname === '/') {
-      // Just scroll to portfolio section
-      document.getElementById('portfolio')?.scrollIntoView({ behavior: 'smooth' });
-    } else {
-      // Navigate to main page and then scroll
-      navigate('/', { state: { scrollTo: 'portfolio' } });
-    }
+    // Navigate back to main page with replace to avoid adding to history
+    navigate('/', { replace: true, state: { scrollTo: 'portfolio' } });
   };
 
   const nextImage = () => {
