@@ -263,7 +263,7 @@ export default function ProjectDetail() {
               className="inline-flex items-center gap-2 px-6 py-3 bg-primary text-white rounded-lg hover:bg-primary/90 transition-colors"
             >
               <ChevronLeft className="w-4 h-4" />
-              Back to Portfolio
+              Back to Projects
             </button>
           </div>
         </div>
@@ -284,7 +284,7 @@ export default function ProjectDetail() {
               className="inline-flex items-center gap-2 text-primary hover:text-accent transition-colors mb-6"
             >
               <ChevronLeft className="w-4 h-4" />
-              Back to Portfolio
+              Back to Projects
             </button>
             
             <div className="flex items-center gap-4 mb-4">
