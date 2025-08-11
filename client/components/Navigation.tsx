@@ -29,14 +29,6 @@ export default function Navigation() {
             </div>
           </Link>
 
-          {/* Name/Title - Responsive positioning */}
-          <div className="hidden sm:flex absolute left-1/2 transform -translate-x-1/2 md:relative md:left-auto md:transform-none flex-1 justify-center md:justify-start md:ml-4">
-            <h1 className="text-lg sm:text-xl md:text-2xl font-bold gradient-text whitespace-nowrap">
-              <span className="hidden md:inline">Javeria Akram</span>
-              <span className="md:hidden">J. Akram</span>
-            </h1>
-          </div>
-
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-8">
             <a
