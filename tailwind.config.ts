@@ -165,6 +165,14 @@ export default {
             transform: "rotateY(360deg) rotateX(0deg)",
           },
         },
+        "cube-rotate": {
+          "0%": {
+            transform: "rotateX(0deg) rotateY(0deg)",
+          },
+          "100%": {
+            transform: "rotateX(360deg) rotateY(360deg)",
+          },
+        },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
