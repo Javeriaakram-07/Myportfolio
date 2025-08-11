@@ -13,7 +13,7 @@ export default function About() {
             Computer Science Student & Passionate Developer
           </p>
           <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
-            I'm Javeria Akram, a dedicated Computer Science student with a passion for 
+            I'm <span className="gradient-text font-semibold">Javeria Akram</span>, a dedicated Computer Science student with a passion for
             transforming complex problems into elegant solutions through code and design.
           </p>
         </div>
