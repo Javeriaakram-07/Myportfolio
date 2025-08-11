@@ -1,26 +1,33 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useState } from "react";
 
 interface RotatingCubeProps {
   size?: string;
 }
 
-export default function RotatingCube({ size = 'w-20 h-20' }: RotatingCubeProps) {
+export default function RotatingCube({
+  size = "w-20 h-20",
+}: RotatingCubeProps) {
   return (
-    <div className={`${size} relative transform-gpu overflow-hidden`} style={{ perspective: '1000px' }}>
+    <div
+      className={`${size} relative transform-gpu overflow-hidden`}
+      style={{ perspective: "1000px" }}
+    >
       <div
         className="w-full h-full relative animate-cube-rotate"
         style={{
-          transformStyle: 'preserve-3d',
-          filter: 'drop-shadow(0 0 8px rgba(0,106,255,0.4)) drop-shadow(0 0 16px rgba(0,106,255,0.2))'
+          transformStyle: "preserve-3d",
+          filter:
+            "drop-shadow(0 0 8px rgba(0,106,255,0.4)) drop-shadow(0 0 16px rgba(0,106,255,0.2))",
         }}
       >
         {/* Front face */}
         <div
           className="absolute inset-0 bg-gradient-to-br from-primary/90 to-accent/70 border border-primary/80 flex items-center justify-center p-2"
           style={{
-            transform: 'rotateY(0deg) translateZ(40px)',
-            backfaceVisibility: 'hidden',
-            boxShadow: '4px 0 12px rgba(0,106,255,0.4), 0 4px 12px rgba(0,106,255,0.3)'
+            transform: "rotateY(0deg) translateZ(40px)",
+            backfaceVisibility: "hidden",
+            boxShadow:
+              "4px 0 12px rgba(0,106,255,0.4), 0 4px 12px rgba(0,106,255,0.3)",
           }}
         >
           <img
@@ -34,9 +41,10 @@ export default function RotatingCube({ size = 'w-20 h-20' }: RotatingCubeProps) 
         <div
           className="absolute inset-0 bg-gradient-to-br from-primary/80 to-accent/60 border border-primary/70 flex items-center justify-center p-2"
           style={{
-            transform: 'rotateY(180deg) translateZ(40px)',
-            backfaceVisibility: 'hidden',
-            boxShadow: '-4px 0 12px rgba(0,106,255,0.4), 0 4px 12px rgba(0,106,255,0.3)'
+            transform: "rotateY(180deg) translateZ(40px)",
+            backfaceVisibility: "hidden",
+            boxShadow:
+              "-4px 0 12px rgba(0,106,255,0.4), 0 4px 12px rgba(0,106,255,0.3)",
           }}
         >
           <img
@@ -50,9 +58,10 @@ export default function RotatingCube({ size = 'w-20 h-20' }: RotatingCubeProps) 
         <div
           className="absolute inset-0 bg-gradient-to-br from-primary/85 to-accent/65 border border-primary/75 flex items-center justify-center p-2"
           style={{
-            transform: 'rotateY(90deg) translateZ(40px)',
-            backfaceVisibility: 'hidden',
-            boxShadow: '4px 0 12px rgba(0,106,255,0.5), 0 4px 12px rgba(0,106,255,0.4)'
+            transform: "rotateY(90deg) translateZ(40px)",
+            backfaceVisibility: "hidden",
+            boxShadow:
+              "4px 0 12px rgba(0,106,255,0.5), 0 4px 12px rgba(0,106,255,0.4)",
           }}
         >
           <img
@@ -66,9 +75,10 @@ export default function RotatingCube({ size = 'w-20 h-20' }: RotatingCubeProps) 
         <div
           className="absolute inset-0 bg-gradient-to-br from-primary/75 to-accent/55 border border-primary/65 flex items-center justify-center p-2"
           style={{
-            transform: 'rotateY(-90deg) translateZ(40px)',
-            backfaceVisibility: 'hidden',
-            boxShadow: '-4px 0 12px rgba(0,106,255,0.5), 0 4px 12px rgba(0,106,255,0.4)'
+            transform: "rotateY(-90deg) translateZ(40px)",
+            backfaceVisibility: "hidden",
+            boxShadow:
+              "-4px 0 12px rgba(0,106,255,0.5), 0 4px 12px rgba(0,106,255,0.4)",
           }}
         >
           <img
@@ -82,9 +92,10 @@ export default function RotatingCube({ size = 'w-20 h-20' }: RotatingCubeProps) 
         <div
           className="absolute inset-0 bg-gradient-to-br from-primary/95 to-accent/75 border border-primary/85 flex items-center justify-center p-2"
           style={{
-            transform: 'rotateX(90deg) translateZ(40px)',
-            backfaceVisibility: 'hidden',
-            boxShadow: '0 -4px 12px rgba(0,106,255,0.5), 4px 0 8px rgba(0,106,255,0.3)'
+            transform: "rotateX(90deg) translateZ(40px)",
+            backfaceVisibility: "hidden",
+            boxShadow:
+              "0 -4px 12px rgba(0,106,255,0.5), 4px 0 8px rgba(0,106,255,0.3)",
           }}
         >
           <img
@@ -98,9 +109,10 @@ export default function RotatingCube({ size = 'w-20 h-20' }: RotatingCubeProps) 
         <div
           className="absolute inset-0 bg-gradient-to-br from-primary/70 to-accent/50 border border-primary/60 flex items-center justify-center p-2"
           style={{
-            transform: 'rotateX(-90deg) translateZ(40px)',
-            backfaceVisibility: 'hidden',
-            boxShadow: '0 4px 12px rgba(0,106,255,0.6), 4px 4px 8px rgba(0,106,255,0.4)'
+            transform: "rotateX(-90deg) translateZ(40px)",
+            backfaceVisibility: "hidden",
+            boxShadow:
+              "0 4px 12px rgba(0,106,255,0.6), 4px 4px 8px rgba(0,106,255,0.4)",
           }}
         >
           <img

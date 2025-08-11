@@ -47,19 +47,19 @@ export default {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))",
         },
-        'gradient-start': "hsl(var(--gradient-start))",
-        'gradient-end': "hsl(var(--gradient-end))",
-        'skill-c': "hsl(var(--skill-c))",
-        'skill-cpp': "hsl(var(--skill-cpp))",
-        'skill-html': "hsl(var(--skill-html))",
-        'skill-css': "hsl(var(--skill-css))",
-        'skill-js': "hsl(var(--skill-js))",
-        'skill-logic': "hsl(var(--skill-logic))",
-        'skill-web': "hsl(var(--skill-web))",
-        'skill-react': "hsl(var(--skill-react))",
-        'skill-vibe': "hsl(var(--skill-vibe))",
-        'skill-oop-silver': "hsl(var(--skill-oop-silver))",
-        'skill-uiux-pink': "hsl(var(--skill-uiux-pink))",
+        "gradient-start": "hsl(var(--gradient-start))",
+        "gradient-end": "hsl(var(--gradient-end))",
+        "skill-c": "hsl(var(--skill-c))",
+        "skill-cpp": "hsl(var(--skill-cpp))",
+        "skill-html": "hsl(var(--skill-html))",
+        "skill-css": "hsl(var(--skill-css))",
+        "skill-js": "hsl(var(--skill-js))",
+        "skill-logic": "hsl(var(--skill-logic))",
+        "skill-web": "hsl(var(--skill-web))",
+        "skill-react": "hsl(var(--skill-react))",
+        "skill-vibe": "hsl(var(--skill-vibe))",
+        "skill-oop-silver": "hsl(var(--skill-oop-silver))",
+        "skill-uiux-pink": "hsl(var(--skill-uiux-pink))",
       },
       borderRadius: {
         lg: "var(--radius)",
@@ -93,7 +93,7 @@ export default {
             filter: "drop-shadow(0 0 30px hsl(var(--primary)))",
           },
         },
-        "float": {
+        float: {
           "0%, 100%": {
             transform: "translateY(0px)",
           },
@@ -131,10 +131,12 @@ export default {
         },
         "text-glow": {
           "0%, 100%": {
-            textShadow: "0 0 5px hsl(var(--primary)), 0 0 10px hsl(var(--primary)), 0 0 15px hsl(var(--primary))",
+            textShadow:
+              "0 0 5px hsl(var(--primary)), 0 0 10px hsl(var(--primary)), 0 0 15px hsl(var(--primary))",
           },
           "50%": {
-            textShadow: "0 0 10px hsl(var(--primary)), 0 0 20px hsl(var(--primary)), 0 0 30px hsl(var(--primary))",
+            textShadow:
+              "0 0 10px hsl(var(--primary)), 0 0 20px hsl(var(--primary)), 0 0 30px hsl(var(--primary))",
           },
         },
         "3d-rotate": {
@@ -178,7 +180,7 @@ export default {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
         "logo-pulse": "logo-pulse 3s ease-in-out infinite",
-        "float": "float 3s ease-in-out infinite",
+        float: "float 3s ease-in-out infinite",
         "slide-up": "slide-up 0.6s ease-out",
         "fade-in": "fade-in 1s ease-out",
         "scale-in": "scale-in 0.5s ease-out",

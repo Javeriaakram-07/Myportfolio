@@ -1,7 +1,7 @@
-import { useEffect, useState } from 'react';
-import { ChevronDown } from 'lucide-react';
-import TypingAnimation from './TypingAnimation';
-import { useParallax, useParallaxMulti } from '../hooks/useParallax';
+import { useEffect, useState } from "react";
+import { ChevronDown } from "lucide-react";
+import TypingAnimation from "./TypingAnimation";
+import { useParallax, useParallaxMulti } from "../hooks/useParallax";
 
 export default function Hero() {
   const [isVisible, setIsVisible] = useState(false);
@@ -12,9 +12,9 @@ export default function Hero() {
   const parallaxRef5 = useParallax(0.6);
 
   useParallaxMulti([
-    { speed: 0.2, selector: '.parallax-bg-1' },
-    { speed: 0.4, selector: '.parallax-bg-2' },
-    { speed: 0.6, selector: '.parallax-bg-3' }
+    { speed: 0.2, selector: ".parallax-bg-1" },
+    { speed: 0.4, selector: ".parallax-bg-2" },
+    { speed: 0.6, selector: ".parallax-bg-3" },
   ]);
 
   useEffect(() => {
@@ -26,7 +26,7 @@ export default function Hero() {
     <section className="min-h-screen relative flex items-center justify-center overflow-hidden">
       {/* Background gradient */}
       <div className="absolute inset-0 bg-gradient-to-br from-background via-background/95 to-background/90"></div>
-      
+
       {/* Animated background elements with parallax */}
       <div className="absolute inset-0 overflow-hidden">
         <div
@@ -50,7 +50,9 @@ export default function Hero() {
 
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid lg:grid-cols-2 gap-12 items-center">
         {/* Content */}
-        <div className={`space-y-8 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
+        <div
+          className={`space-y-8 transition-all duration-1000 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}`}
+        >
           <div className="space-y-8 mt-32 sm:mt-28 md:mt-20 lg:mt-8">
             <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold min-h-[2.5em]">
               <TypingAnimation
@@ -67,8 +69,10 @@ export default function Hero() {
 
           <div className="space-y-4">
             <p className="text-lg text-muted-foreground leading-relaxed">
-              Passionate about logic building, <span className="gradient-text font-semibold">C++</span> development, and creating stunning web experiences.
-              I bring ideas to life through code and design.
+              Passionate about logic building,{" "}
+              <span className="gradient-text font-semibold">C++</span>{" "}
+              development, and creating stunning web experiences. I bring ideas
+              to life through code and design.
             </p>
           </div>
 
@@ -90,7 +94,9 @@ export default function Hero() {
         </div>
 
         {/* Profile Image */}
-        <div className={`relative transition-all duration-1000 delay-300 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
+        <div
+          className={`relative transition-all duration-1000 delay-300 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}`}
+        >
           <div className="relative mx-auto w-56 h-56 lg:w-72 lg:h-72">
             {/* Enhanced multi-layer glow effect */}
             <div className="absolute inset-0 bg-gradient-to-r from-primary to-accent rounded-full blur-2xl opacity-40 animate-pulse"></div>
@@ -100,15 +106,16 @@ export default function Hero() {
             <div className="relative w-full h-full rounded-full overflow-hidden border-4 border-primary circle-neon">
               {/* 3D Rotating Sphere Background */}
               <div className="absolute inset-0 animate-sphere-rotate opacity-20">
-                <div className="w-full h-full rounded-full bg-gradient-to-r from-primary/30 to-accent/30 transform-gpu"
-                     style={{
-                       background: `
+                <div
+                  className="w-full h-full rounded-full bg-gradient-to-r from-primary/30 to-accent/30 transform-gpu"
+                  style={{
+                    background: `
                          radial-gradient(circle at 30% 30%, rgba(66, 128, 255, 0.4) 0%, transparent 50%),
                          radial-gradient(circle at 70% 70%, rgba(0, 200, 255, 0.3) 0%, transparent 50%),
                          conic-gradient(from 0deg, rgba(66, 128, 255, 0.2), rgba(0, 200, 255, 0.2), rgba(66, 128, 255, 0.2))
-                       `
-                     }}>
-                </div>
+                       `,
+                  }}
+                ></div>
               </div>
 
               {/* Content */}

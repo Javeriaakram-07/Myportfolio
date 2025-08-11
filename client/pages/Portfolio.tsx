@@ -1,12 +1,12 @@
-import { useState, useEffect } from 'react';
-import { useLocation } from 'react-router-dom';
-import AnimatedLogo from '../components/AnimatedLogo';
-import Navigation from '../components/Navigation';
-import Hero from '../components/Hero';
-import About from '../components/About';
-import Skills from '../components/Skills';
-import PortfolioSection from '../components/Portfolio';
-import Contact from '../components/Contact';
+import { useState, useEffect } from "react";
+import { useLocation } from "react-router-dom";
+import AnimatedLogo from "../components/AnimatedLogo";
+import Navigation from "../components/Navigation";
+import Hero from "../components/Hero";
+import About from "../components/About";
+import Skills from "../components/Skills";
+import PortfolioSection from "../components/Portfolio";
+import Contact from "../components/Contact";
 
 export default function Portfolio() {
   const location = useLocation();
@@ -26,9 +26,15 @@ export default function Portfolio() {
 
   useEffect(() => {
     // Handle scroll to portfolio section from navigation state
-    if (showContent && location.state && (location.state as any).scrollTo === 'portfolio') {
+    if (
+      showContent &&
+      location.state &&
+      (location.state as any).scrollTo === "portfolio"
+    ) {
       const timer = setTimeout(() => {
-        document.getElementById('portfolio')?.scrollIntoView({ behavior: 'smooth' });
+        document
+          .getElementById("portfolio")
+          ?.scrollIntoView({ behavior: "smooth" });
       }, 100);
       return () => clearTimeout(timer);
     }
@@ -38,18 +44,18 @@ export default function Portfolio() {
     // Add smooth scroll behavior and parallax effects
     const handleScroll = () => {
       const scrollY = window.scrollY;
-      const parallaxElements = document.querySelectorAll('.parallax');
+      const parallaxElements = document.querySelectorAll(".parallax");
 
       parallaxElements.forEach((element) => {
-        const speed = element.getAttribute('data-speed') || '0.5';
+        const speed = element.getAttribute("data-speed") || "0.5";
         const yPos = -(scrollY * parseFloat(speed));
         (element as HTMLElement).style.transform = `translateY(${yPos}px)`;
       });
     };
 
     if (showContent) {
-      window.addEventListener('scroll', handleScroll);
-      return () => window.removeEventListener('scroll', handleScroll);
+      window.addEventListener("scroll", handleScroll);
+      return () => window.removeEventListener("scroll", handleScroll);
     }
   }, [showContent]);
 
@@ -57,16 +63,18 @@ export default function Portfolio() {
     <div className="min-h-screen bg-background text-foreground">
       {/* Fullscreen Logo Animation */}
       {showIntro && (
-        <AnimatedLogo 
-          isFullscreen={true} 
-          onAnimationComplete={() => setShowIntro(false)} 
+        <AnimatedLogo
+          isFullscreen={true}
+          onAnimationComplete={() => setShowIntro(false)}
         />
       )}
 
       {/* Main Content */}
-      <div className={`transition-all duration-1000 ${showContent ? 'opacity-100' : 'opacity-0'}`}>
+      <div
+        className={`transition-all duration-1000 ${showContent ? "opacity-100" : "opacity-0"}`}
+      >
         <Navigation />
-        
+
         <main>
           <Hero />
           <About />

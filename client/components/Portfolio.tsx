@@ -1,8 +1,8 @@
-import { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
-import { ExternalLink, Github } from 'lucide-react';
-import ProjectModal from './ProjectModal';
-import Card3D from './Card3D';
+import { useState } from "react";
+import { useNavigate } from "react-router-dom";
+import { ExternalLink, Github } from "lucide-react";
+import ProjectModal from "./ProjectModal";
+import Card3D from "./Card3D";
 
 interface Project {
   id: number;
@@ -20,17 +20,26 @@ interface Project {
 const projects: Project[] = [
   {
     id: 1,
-    title: 'Cyber Management System',
-    description: 'A console-based cyber management system built in C++ using Object-Oriented Programming principles. Features user management, session tracking, website blocking, and comprehensive reporting system.',
-    technologies: ['C++', 'OOP', 'Vectors', 'Classes', 'Encapsulation', 'Console Application'],
-    image: 'https://cdn.builder.io/api/v1/image/assets%2F78bb8a2b1dce448185f7c0a17bacab1d%2Ff75cb49c484f4ff0a9d7585deebf3a92?format=webp&width=800',
-    liveUrl: '',
-    githubUrl: 'https://github.com/Javeriaakram-07/Myportfolio.git',
-    category: 'C++ Development',
+    title: "Cyber Management System",
+    description:
+      "A console-based cyber management system built in C++ using Object-Oriented Programming principles. Features user management, session tracking, website blocking, and comprehensive reporting system.",
+    technologies: [
+      "C++",
+      "OOP",
+      "Vectors",
+      "Classes",
+      "Encapsulation",
+      "Console Application",
+    ],
+    image:
+      "https://cdn.builder.io/api/v1/image/assets%2F78bb8a2b1dce448185f7c0a17bacab1d%2Ff75cb49c484f4ff0a9d7585deebf3a92?format=webp&width=800",
+    liveUrl: "",
+    githubUrl: "https://github.com/Javeriaakram-07/Myportfolio.git",
+    category: "C++ Development",
     detailImages: [
-      'https://cdn.builder.io/api/v1/image/assets%2F78bb8a2b1dce448185f7c0a17bacab1d%2Fff9e1714402f4ac899eef45c5cbc00d6?format=webp&width=800',
-      'https://cdn.builder.io/api/v1/image/assets%2F78bb8a2b1dce448185f7c0a17bacab1d%2F71451d57e3e14ee5be181a75251d4e1f?format=webp&width=800',
-      'https://cdn.builder.io/api/v1/image/assets%2F78bb8a2b1dce448185f7c0a17bacab1d%2Fb892793cbb874d0284d3e47311d921e4?format=webp&width=800'
+      "https://cdn.builder.io/api/v1/image/assets%2F78bb8a2b1dce448185f7c0a17bacab1d%2Fff9e1714402f4ac899eef45c5cbc00d6?format=webp&width=800",
+      "https://cdn.builder.io/api/v1/image/assets%2F78bb8a2b1dce448185f7c0a17bacab1d%2F71451d57e3e14ee5be181a75251d4e1f?format=webp&width=800",
+      "https://cdn.builder.io/api/v1/image/assets%2F78bb8a2b1dce448185f7c0a17bacab1d%2Fb892793cbb874d0284d3e47311d921e4?format=webp&width=800",
     ],
     detailedDescription: `This console-based Cyber Management System demonstrates advanced C++ programming concepts:
 
@@ -56,20 +65,22 @@ const projects: Project[] = [
     • Member function definitions for data access
     • Input/output stream operations
     • Control structures and loops for menu navigation
-    • ANSI color codes for enhanced console display`
+    • ANSI color codes for enhanced console display`,
   },
   {
     id: 2,
-    title: 'Interactive Payment Card',
-    description: 'A sleek payment card interface with dark theme, neon effects, and animated background elements. Features order summary, pricing, and payment integration.',
-    technologies: ['HTML', 'CSS', 'UI/UX', 'Animations', 'Responsive Design'],
-    image: 'https://cdn.builder.io/api/v1/image/assets%2F78bb8a2b1dce448185f7c0a17bacab1d%2Fbcabbbbdeca941d581396b967e310da7?format=webp&width=800',
-    liveUrl: 'https://card-jeeya.vercel.app/',
-    githubUrl: '',
-    category: 'Web Development',
+    title: "Interactive Payment Card",
+    description:
+      "A sleek payment card interface with dark theme, neon effects, and animated background elements. Features order summary, pricing, and payment integration.",
+    technologies: ["HTML", "CSS", "UI/UX", "Animations", "Responsive Design"],
+    image:
+      "https://cdn.builder.io/api/v1/image/assets%2F78bb8a2b1dce448185f7c0a17bacab1d%2Fbcabbbbdeca941d581396b967e310da7?format=webp&width=800",
+    liveUrl: "https://card-jeeya.vercel.app/",
+    githubUrl: "",
+    category: "Web Development",
     detailImages: [
-      'https://cdn.builder.io/api/v1/image/assets%2F78bb8a2b1dce448185f7c0a17bacab1d%2Fbcabbbbdeca941d581396b967e310da7?format=webp&width=800',
-      'https://cdn.builder.io/api/v1/image/assets%2F78bb8a2b1dce448185f7c0a17bacab1d%2F5a523603a28f4043a6f3e0affeeb8d6b?format=webp&width=800'
+      "https://cdn.builder.io/api/v1/image/assets%2F78bb8a2b1dce448185f7c0a17bacab1d%2Fbcabbbbdeca941d581396b967e310da7?format=webp&width=800",
+      "https://cdn.builder.io/api/v1/image/assets%2F78bb8a2b1dce448185f7c0a17bacab1d%2F5a523603a28f4043a6f3e0affeeb8d6b?format=webp&width=800",
     ],
     detailedDescription: `An engaging payment interface with modern design principles and advanced CSS animations:
 
@@ -95,22 +106,24 @@ const projects: Project[] = [
     • Pure CSS animations without JavaScript dependencies
     • Responsive design adapting to all screen sizes
     • Clean HTML5 semantic structure
-    • Modern CSS features including transforms and transitions`
+    • Modern CSS features including transforms and transitions`,
   },
   {
     id: 3,
-    title: 'Sweet Shop Website',
-    description: 'A vibrant sweet shop website featuring refreshing cocktails and beverages. Built with responsive design, interactive elements, and beautiful gradients showcasing Pina Colada, Blue Lagoon, and Pink Paradise recipes.',
-    technologies: ['HTML', 'CSS', 'Responsive Design', 'UI/UX', 'Google Fonts'],
-    image: 'https://cdn.builder.io/api/v1/image/assets%2F78bb8a2b1dce448185f7c0a17bacab1d%2Fb9c8f085ebd7489eb9a5ca9aa320348b?format=webp&width=800',
-    liveUrl: 'https://sweetshop-jeeya.vercel.app/',
-    githubUrl: '',
-    category: 'Web Development',
+    title: "Sweet Shop Website",
+    description:
+      "A vibrant sweet shop website featuring refreshing cocktails and beverages. Built with responsive design, interactive elements, and beautiful gradients showcasing Pina Colada, Blue Lagoon, and Pink Paradise recipes.",
+    technologies: ["HTML", "CSS", "Responsive Design", "UI/UX", "Google Fonts"],
+    image:
+      "https://cdn.builder.io/api/v1/image/assets%2F78bb8a2b1dce448185f7c0a17bacab1d%2Fb9c8f085ebd7489eb9a5ca9aa320348b?format=webp&width=800",
+    liveUrl: "https://sweetshop-jeeya.vercel.app/",
+    githubUrl: "",
+    category: "Web Development",
     detailImages: [
-      'https://cdn.builder.io/api/v1/image/assets%2F78bb8a2b1dce448185f7c0a17bacab1d%2Fb9c8f085ebd7489eb9a5ca9aa320348b?format=webp&width=800',
-      'https://cdn.builder.io/api/v1/image/assets%2F78bb8a2b1dce448185f7c0a17bacab1d%2F19239819a67c46ad9de395812a75bbf9?format=webp&width=800',
-      'https://cdn.builder.io/api/v1/image/assets%2F78bb8a2b1dce448185f7c0a17bacab1d%2F250354a438e84f97b713529a29428f2e?format=webp&width=800',
-      'https://cdn.builder.io/api/v1/image/assets%2F78bb8a2b1dce448185f7c0a17bacab1d%2F0ac747d4255d485b9d7c71de59752c53?format=webp&width=800'
+      "https://cdn.builder.io/api/v1/image/assets%2F78bb8a2b1dce448185f7c0a17bacab1d%2Fb9c8f085ebd7489eb9a5ca9aa320348b?format=webp&width=800",
+      "https://cdn.builder.io/api/v1/image/assets%2F78bb8a2b1dce448185f7c0a17bacab1d%2F19239819a67c46ad9de395812a75bbf9?format=webp&width=800",
+      "https://cdn.builder.io/api/v1/image/assets%2F78bb8a2b1dce448185f7c0a17bacab1d%2F250354a438e84f97b713529a29428f2e?format=webp&width=800",
+      "https://cdn.builder.io/api/v1/image/assets%2F78bb8a2b1dce448185f7c0a17bacab1d%2F0ac747d4255d485b9d7c71de59752c53?format=webp&width=800",
     ],
     detailedDescription: `A beautifully designed sweet shop website showcasing cocktail recipes and beverages with stunning visual appeal:
 
@@ -136,20 +149,28 @@ const projects: Project[] = [
     • Clear navigation between different cocktail recipes
     • Easy-to-read ingredient lists and preparation steps
     • Attractive product imagery and professional styling
-    • Responsive layout adapting to all device sizes`
+    • Responsive layout adapting to all device sizes`,
   },
   {
     id: 4,
-    title: 'Sweet Shop Blog',
-    description: 'A modern blog platform for Sweet Shop featuring articles, product reviews, and user engagement. Clean design with responsive grid layout and smooth animations showcasing the latest gadgets and technology.',
-    technologies: ['HTML', 'CSS', 'Blog System', 'Responsive Design', 'Grid Layout'],
-    image: 'https://cdn.builder.io/api/v1/image/assets%2F78bb8a2b1dce448185f7c0a17bacab1d%2F07a81a3847ea40f19dcd75d126f13e5d?format=webp&width=800',
-    liveUrl: '',
-    githubUrl: '',
-    category: 'Web Development',
+    title: "Sweet Shop Blog",
+    description:
+      "A modern blog platform for Sweet Shop featuring articles, product reviews, and user engagement. Clean design with responsive grid layout and smooth animations showcasing the latest gadgets and technology.",
+    technologies: [
+      "HTML",
+      "CSS",
+      "Blog System",
+      "Responsive Design",
+      "Grid Layout",
+    ],
+    image:
+      "https://cdn.builder.io/api/v1/image/assets%2F78bb8a2b1dce448185f7c0a17bacab1d%2F07a81a3847ea40f19dcd75d126f13e5d?format=webp&width=800",
+    liveUrl: "",
+    githubUrl: "",
+    category: "Web Development",
     detailImages: [
-      'https://cdn.builder.io/api/v1/image/assets%2F78bb8a2b1dce448185f7c0a17bacab1d%2F07a81a3847ea40f19dcd75d126f13e5d?format=webp&width=800',
-      'https://cdn.builder.io/api/v1/image/assets%2F78bb8a2b1dce448185f7c0a17bacab1d%2F286ad25d2a1e4ce1bbb7ccb8aa01e26c?format=webp&width=800'
+      "https://cdn.builder.io/api/v1/image/assets%2F78bb8a2b1dce448185f7c0a17bacab1d%2F07a81a3847ea40f19dcd75d126f13e5d?format=webp&width=800",
+      "https://cdn.builder.io/api/v1/image/assets%2F78bb8a2b1dce448185f7c0a17bacab1d%2F286ad25d2a1e4ce1bbb7ccb8aa01e26c?format=webp&width=800",
     ],
     detailedDescription: `A comprehensive blog platform designed for content sharing and user engagement with modern web standards:
 
@@ -175,21 +196,22 @@ const projects: Project[] = [
     • Blog post preview cards with author information
     • Article categorization by topic (Arts, Acoustic, Headphones)
     • Professional imagery and consistent styling
-    • Scalable layout supporting multiple content types`
-  }
+    • Scalable layout supporting multiple content types`,
+  },
 ];
 
-const categories = ['All', 'C++ Development', 'Web Development'];
+const categories = ["All", "C++ Development", "Web Development"];
 
 export default function Portfolio() {
   const navigate = useNavigate();
-  const [selectedCategory, setSelectedCategory] = useState('All');
+  const [selectedCategory, setSelectedCategory] = useState("All");
   const [hoveredProject, setHoveredProject] = useState<number | null>(null);
   const [selectedProject, setSelectedProject] = useState<Project | null>(null);
 
-  const filteredProjects = selectedCategory === 'All'
-    ? projects
-    : projects.filter(project => project.category === selectedCategory);
+  const filteredProjects =
+    selectedCategory === "All"
+      ? projects
+      : projects.filter((project) => project.category === selectedCategory);
 
   const handleProjectClick = (project: Project) => {
     navigate(`/project/${project.id}`);
@@ -203,7 +225,8 @@ export default function Portfolio() {
             My <span className="gradient-text">Projects</span>
           </h2>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto mb-6">
-            A collection of projects showcasing my skills in web development, C++ programming, and problem-solving
+            A collection of projects showcasing my skills in web development,
+            C++ programming, and problem-solving
           </p>
 
           {/* Category Filter */}
@@ -214,8 +237,8 @@ export default function Portfolio() {
                 onClick={() => setSelectedCategory(category)}
                 className={`px-4 py-2 rounded-full transition-all duration-500 text-sm ${
                   selectedCategory === category
-                    ? 'bg-gradient-to-r from-primary to-accent text-white shadow-glow'
-                    : 'bg-muted text-muted-foreground hover:bg-primary/20 hover:text-primary'
+                    ? "bg-gradient-to-r from-primary to-accent text-white shadow-glow"
+                    : "bg-muted text-muted-foreground hover:bg-primary/20 hover:text-primary"
                 }`}
               >
                 {category}
@@ -258,12 +281,20 @@ interface ProjectCardProps {
   onClick: () => void;
 }
 
-function ProjectCard({ project, isHovered, onHover, onLeave, onClick }: ProjectCardProps) {
+function ProjectCard({
+  project,
+  isHovered,
+  onHover,
+  onLeave,
+  onClick,
+}: ProjectCardProps) {
   return (
     <Card3D className="h-full">
       <div
         className={`group relative bg-card rounded-xl overflow-hidden border border-border transition-all duration-500 transform cursor-pointer h-full ${
-          isHovered ? 'shadow-2xl shadow-primary/25 neon-glow border-primary/50' : 'hover:shadow-lg hover:shadow-primary/15 hover:-translate-y-1'
+          isHovered
+            ? "shadow-2xl shadow-primary/25 neon-glow border-primary/50"
+            : "hover:shadow-lg hover:shadow-primary/15 hover:-translate-y-1"
         }`}
         onMouseEnter={onHover}
         onMouseLeave={onLeave}
@@ -276,9 +307,11 @@ function ProjectCard({ project, isHovered, onHover, onLeave, onClick }: ProjectC
             alt={project.title}
             className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
           />
-          <div className={`absolute inset-0 bg-gradient-to-t from-background/90 to-transparent transition-opacity duration-500 ${
-            isHovered ? 'opacity-100' : 'opacity-0'
-          }`}>
+          <div
+            className={`absolute inset-0 bg-gradient-to-t from-background/90 to-transparent transition-opacity duration-500 ${
+              isHovered ? "opacity-100" : "opacity-0"
+            }`}
+          >
             <div className="absolute bottom-4 left-4 right-4 flex gap-2">
               {project.liveUrl && (
                 <a

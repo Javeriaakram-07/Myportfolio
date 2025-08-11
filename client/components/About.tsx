@@ -1,5 +1,5 @@
-import { GraduationCap, Code, Briefcase, Heart } from 'lucide-react';
-import Card3D from './Card3D';
+import { GraduationCap, Code, Briefcase, Heart } from "lucide-react";
+import Card3D from "./Card3D";
 
 export default function About() {
   return (
@@ -13,8 +13,10 @@ export default function About() {
             Computer Science Student & Passionate Developer
           </p>
           <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
-            I'm <span className="gradient-text font-semibold">Javeria Akram</span>, a dedicated Computer Science student with a passion for
-            transforming complex problems into elegant solutions through code and design.
+            I'm{" "}
+            <span className="gradient-text font-semibold">Javeria Akram</span>,
+            a dedicated Computer Science student with a passion for transforming
+            complex problems into elegant solutions through code and design.
           </p>
         </div>
 
@@ -23,13 +25,17 @@ export default function About() {
           <Card3D>
             <div className="text-center p-4 bg-card rounded-lg border border-border transition-all duration-500 hover:scale-105 neon-glow">
               <div className="text-3xl font-bold gradient-text">10+</div>
-              <div className="text-sm text-muted-foreground">Projects Completed</div>
+              <div className="text-sm text-muted-foreground">
+                Projects Completed
+              </div>
             </div>
           </Card3D>
           <Card3D>
             <div className="text-center p-4 bg-card rounded-lg border border-border transition-all duration-500 hover:scale-105 neon-glow">
               <div className="text-3xl font-bold gradient-text">1</div>
-              <div className="text-sm text-muted-foreground">Year Experience</div>
+              <div className="text-sm text-muted-foreground">
+                Year Experience
+              </div>
             </div>
           </Card3D>
         </div>
@@ -74,26 +80,44 @@ export default function About() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto">
             <Card3D>
               <div className="flex items-start gap-3 p-6 bg-primary/5 rounded-lg border border-primary/20 hover:scale-105 transition-all duration-500 h-full">
-                <span className="text-primary text-lg leading-6 flex-shrink-0">▶</span>
-                <span className="text-base leading-6">Build console-based applications with advanced <span className="gradient-text font-semibold">C++</span> concepts</span>
+                <span className="text-primary text-lg leading-6 flex-shrink-0">
+                  ▶
+                </span>
+                <span className="text-base leading-6">
+                  Build console-based applications with advanced{" "}
+                  <span className="gradient-text font-semibold">C++</span>{" "}
+                  concepts
+                </span>
               </div>
             </Card3D>
             <Card3D>
               <div className="flex items-start gap-3 p-6 bg-primary/5 rounded-lg border border-primary/20 hover:scale-105 transition-all duration-500 h-full">
-                <span className="text-primary text-lg leading-6 flex-shrink-0">▶</span>
-                <span className="text-base leading-6">Create responsive websites with modern design principles</span>
+                <span className="text-primary text-lg leading-6 flex-shrink-0">
+                  ▶
+                </span>
+                <span className="text-base leading-6">
+                  Create responsive websites with modern design principles
+                </span>
               </div>
             </Card3D>
             <Card3D>
               <div className="flex items-start gap-3 p-6 bg-primary/5 rounded-lg border border-primary/20 hover:scale-105 transition-all duration-500 h-full">
-                <span className="text-primary text-lg leading-6 flex-shrink-0">▶</span>
-                <span className="text-base leading-6">Freelance development delivering custom client solutions</span>
+                <span className="text-primary text-lg leading-6 flex-shrink-0">
+                  ▶
+                </span>
+                <span className="text-base leading-6">
+                  Freelance development delivering custom client solutions
+                </span>
               </div>
             </Card3D>
             <Card3D>
               <div className="flex items-start gap-3 p-6 bg-primary/5 rounded-lg border border-primary/20 hover:scale-105 transition-all duration-500 h-full">
-                <span className="text-primary text-lg leading-6 flex-shrink-0">▶</span>
-                <span className="text-base leading-6">Focus on clean code and efficient problem-solving</span>
+                <span className="text-primary text-lg leading-6 flex-shrink-0">
+                  ▶
+                </span>
+                <span className="text-base leading-6">
+                  Focus on clean code and efficient problem-solving
+                </span>
               </div>
             </Card3D>
           </div>
@@ -112,36 +136,58 @@ interface AboutCardProps {
   isEducation?: boolean;
 }
 
-function AboutCard({ icon, title, description, color, delay = '', isEducation = false }: AboutCardProps) {
+function AboutCard({
+  icon,
+  title,
+  description,
+  color,
+  delay = "",
+  isEducation = false,
+}: AboutCardProps) {
   return (
     <Card3D className="h-full">
-      <div className={`group p-6 bg-card rounded-xl border border-border hover:border-opacity-50 transition-all duration-500 hover:scale-105 transform hover:neon-glow animate-slide-up ${delay} h-full relative flex flex-col`}>
+      <div
+        className={`group p-6 bg-card rounded-xl border border-border hover:border-opacity-50 transition-all duration-500 hover:scale-105 transform hover:neon-glow animate-slide-up ${delay} h-full relative flex flex-col`}
+      >
         <div className="space-y-4 flex-grow">
           <div
             className="w-fit p-3 rounded-lg transition-all duration-500"
             style={{ backgroundColor: `hsla(var(--${color}), 0.1)` }}
           >
-            <div style={{ color: `hsl(var(--${color}))` }}>
-              {icon}
-            </div>
+            <div style={{ color: `hsl(var(--${color}))` }}>{icon}</div>
           </div>
           <div className="flex-grow">
             <h3 className="font-semibold gradient-text mb-2">{title}</h3>
-            <p className={`text-sm leading-relaxed ${
-              isEducation
-                ? 'text-primary font-medium'
-                : 'text-muted-foreground'
-            }`}>
+            <p
+              className={`text-sm leading-relaxed ${
+                isEducation
+                  ? "text-primary font-medium"
+                  : "text-muted-foreground"
+              }`}
+            >
               {isEducation ? (
                 <>
-                  <span className="gradient-text font-semibold">BS Computer Science</span><br />
-                  <span className="gradient-text">Punjab University of Information Technology</span><br />
-                  <span className="text-muted-foreground">Lahore (2024-2028)</span>
+                  <span className="gradient-text font-semibold">
+                    BS Computer Science
+                  </span>
+                  <br />
+                  <span className="gradient-text">
+                    Punjab University of Information Technology
+                  </span>
+                  <br />
+                  <span className="text-muted-foreground">
+                    Lahore (2024-2028)
+                  </span>
                 </>
               ) : (
-                <span dangerouslySetInnerHTML={{
-                  __html: description.replace(/C\+\+/g, '<span class="gradient-text font-semibold">C++</span>')
-                }} />
+                <span
+                  dangerouslySetInnerHTML={{
+                    __html: description.replace(
+                      /C\+\+/g,
+                      '<span class="gradient-text font-semibold">C++</span>',
+                    ),
+                  }}
+                />
               )}
             </p>
           </div>

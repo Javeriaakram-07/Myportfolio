@@ -1,14 +1,17 @@
-import { useState } from 'react';
-import { Mail, Phone, MapPin } from 'lucide-react';
-import Card3D from './Card3D';
+import { useState } from "react";
+import { Mail, Phone, MapPin } from "lucide-react";
+import Card3D from "./Card3D";
 
 export default function Contact() {
   const handleEmailClick = () => {
-    window.open('mailto:javeriaakram259@gmail.com?subject=Portfolio Contact', '_blank');
+    window.open(
+      "mailto:javeriaakram259@gmail.com?subject=Portfolio Contact",
+      "_blank",
+    );
   };
 
   const handlePhoneClick = () => {
-    window.open('tel:+923074555435', '_blank');
+    window.open("tel:+923074555435", "_blank");
   };
 
   return (
@@ -19,7 +22,8 @@ export default function Contact() {
             Let's <span className="gradient-text">Connect</span>
           </h2>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-            Have a project in mind or want to collaborate? I'd love to hear from you!
+            Have a project in mind or want to collaborate? I'd love to hear from
+            you!
           </p>
         </div>
 
@@ -40,7 +44,9 @@ export default function Contact() {
             <h3 className="text-2xl font-bold mb-2">
               <span className="gradient-text">Javeria Akram</span>
             </h3>
-            <p className="text-muted-foreground mb-6">Computer Science Student & Freelancer</p>
+            <p className="text-muted-foreground mb-6">
+              Computer Science Student & Freelancer
+            </p>
           </div>
 
           {/* Email Me Button */}
@@ -62,7 +68,7 @@ export default function Contact() {
           <div className="space-y-4">
             {/* Email */}
             <Card3D>
-              <div 
+              <div
                 className="flex items-start gap-4 p-4 rounded-lg border border-border bg-card cursor-pointer hover:border-primary/50 transition-all duration-300"
                 onClick={handleEmailClick}
               >
@@ -70,15 +76,19 @@ export default function Contact() {
                   <Mail className="w-5 h-5" />
                 </div>
                 <div className="min-w-0 flex-1">
-                  <div className="font-medium text-foreground text-sm mb-1">EMAIL</div>
-                  <div className="text-foreground break-all">javeriaakram259@gmail.com</div>
+                  <div className="font-medium text-foreground text-sm mb-1">
+                    EMAIL
+                  </div>
+                  <div className="text-foreground break-all">
+                    javeriaakram259@gmail.com
+                  </div>
                 </div>
               </div>
             </Card3D>
 
             {/* Phone */}
             <Card3D>
-              <div 
+              <div
                 className="flex items-start gap-4 p-4 rounded-lg border border-border bg-card cursor-pointer hover:border-primary/50 transition-all duration-300"
                 onClick={handlePhoneClick}
               >
@@ -86,7 +96,9 @@ export default function Contact() {
                   <Phone className="w-5 h-5" />
                 </div>
                 <div className="min-w-0 flex-1">
-                  <div className="font-medium text-foreground text-sm mb-1">PHONE</div>
+                  <div className="font-medium text-foreground text-sm mb-1">
+                    PHONE
+                  </div>
                   <div className="text-foreground">+923074555435</div>
                 </div>
               </div>
@@ -99,7 +111,9 @@ export default function Contact() {
                   <MapPin className="w-5 h-5" />
                 </div>
                 <div className="min-w-0 flex-1">
-                  <div className="font-medium text-foreground text-sm mb-1">LOCATION</div>
+                  <div className="font-medium text-foreground text-sm mb-1">
+                    LOCATION
+                  </div>
                   <div className="text-foreground">Lahore, Pakistan</div>
                 </div>
               </div>

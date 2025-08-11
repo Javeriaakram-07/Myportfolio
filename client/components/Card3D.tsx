@@ -1,4 +1,4 @@
-import { useState, useRef } from 'react';
+import { useState, useRef } from "react";
 
 interface Card3DProps {
   children: React.ReactNode;
@@ -6,8 +6,12 @@ interface Card3DProps {
   intensity?: number;
 }
 
-export default function Card3D({ children, className = '', intensity = 10 }: Card3DProps) {
-  const [transform, setTransform] = useState('');
+export default function Card3D({
+  children,
+  className = "",
+  intensity = 10,
+}: Card3DProps) {
+  const [transform, setTransform] = useState("");
   const cardRef = useRef<HTMLDivElement>(null);
 
   const handleMouseMove = (e: React.MouseEvent<HTMLDivElement>) => {
@@ -22,11 +26,15 @@ export default function Card3D({ children, className = '', intensity = 10 }: Car
     const rotateX = (y - centerY) / intensity;
     const rotateY = (centerX - x) / intensity;
 
-    setTransform(`perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) translateZ(10px)`);
+    setTransform(
+      `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) translateZ(10px)`,
+    );
   };
 
   const handleMouseLeave = () => {
-    setTransform('perspective(1000px) rotateX(0deg) rotateY(0deg) translateZ(0px)');
+    setTransform(
+      "perspective(1000px) rotateX(0deg) rotateY(0deg) translateZ(0px)",
+    );
   };
 
   return (

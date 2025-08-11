@@ -1,7 +1,7 @@
-import { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
-import { Instagram, Linkedin, Mail, Globe, Menu, X } from 'lucide-react';
-import AnimatedLogo from './AnimatedLogo';
+import { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
+import { Instagram, Linkedin, Mail, Globe, Menu, X } from "lucide-react";
+import AnimatedLogo from "./AnimatedLogo";
 
 export default function Navigation() {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -12,14 +12,18 @@ export default function Navigation() {
       setIsScrolled(window.scrollY > 50);
     };
 
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
   return (
-    <nav className={`fixed top-0 left-0 right-0 z-[1000] transition-all duration-300 ${
-      isScrolled ? 'bg-background/80 backdrop-blur-md border-b border-border' : 'bg-transparent'
-    }`}>
+    <nav
+      className={`fixed top-0 left-0 right-0 z-[1000] transition-all duration-300 ${
+        isScrolled
+          ? "bg-background/80 backdrop-blur-md border-b border-border"
+          : "bg-transparent"
+      }`}
+    >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16 relative">
           {/* Logo */}
@@ -36,7 +40,9 @@ export default function Navigation() {
               className="text-foreground hover:text-primary transition-colors"
               onClick={(e) => {
                 e.preventDefault();
-                document.getElementById('about')?.scrollIntoView({ behavior: 'smooth' });
+                document
+                  .getElementById("about")
+                  ?.scrollIntoView({ behavior: "smooth" });
               }}
             >
               About
@@ -46,7 +52,9 @@ export default function Navigation() {
               className="text-foreground hover:text-primary transition-colors"
               onClick={(e) => {
                 e.preventDefault();
-                document.getElementById('skills')?.scrollIntoView({ behavior: 'smooth' });
+                document
+                  .getElementById("skills")
+                  ?.scrollIntoView({ behavior: "smooth" });
               }}
             >
               Skills
@@ -56,7 +64,9 @@ export default function Navigation() {
               className="text-foreground hover:text-primary transition-colors"
               onClick={(e) => {
                 e.preventDefault();
-                document.getElementById('portfolio')?.scrollIntoView({ behavior: 'smooth' });
+                document
+                  .getElementById("portfolio")
+                  ?.scrollIntoView({ behavior: "smooth" });
               }}
             >
               Projects
@@ -66,7 +76,9 @@ export default function Navigation() {
               className="text-foreground hover:text-primary transition-colors"
               onClick={(e) => {
                 e.preventDefault();
-                document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' });
+                document
+                  .getElementById("contact")
+                  ?.scrollIntoView({ behavior: "smooth" });
               }}
             >
               Contact
@@ -109,7 +121,11 @@ export default function Navigation() {
               className="md:hidden p-2 rounded-lg hover:bg-muted transition-colors relative z-10 min-w-[48px] min-h-[48px] flex items-center justify-center"
               aria-label="Toggle mobile menu"
             >
-              {isMobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+              {isMobileMenuOpen ? (
+                <X className="w-6 h-6" />
+              ) : (
+                <Menu className="w-6 h-6" />
+              )}
             </button>
           </div>
         </div>
@@ -118,11 +134,11 @@ export default function Navigation() {
         {isMobileMenuOpen && (
           <>
             {/* Backdrop */}
-            <div 
+            <div
               className="fixed inset-0 bg-black/20 backdrop-blur-sm z-[900] md:hidden"
               onClick={() => setIsMobileMenuOpen(false)}
             />
-            
+
             {/* Menu Content */}
             <div className="md:hidden absolute top-full left-0 right-0 border-t border-border bg-background/95 backdrop-blur-md z-[950] animate-slide-down">
               <div className="px-4 py-4 space-y-4">
@@ -132,7 +148,9 @@ export default function Navigation() {
                   onClick={(e) => {
                     e.preventDefault();
                     setIsMobileMenuOpen(false);
-                    document.getElementById('about')?.scrollIntoView({ behavior: 'smooth' });
+                    document
+                      .getElementById("about")
+                      ?.scrollIntoView({ behavior: "smooth" });
                   }}
                 >
                   About
@@ -143,7 +161,9 @@ export default function Navigation() {
                   onClick={(e) => {
                     e.preventDefault();
                     setIsMobileMenuOpen(false);
-                    document.getElementById('skills')?.scrollIntoView({ behavior: 'smooth' });
+                    document
+                      .getElementById("skills")
+                      ?.scrollIntoView({ behavior: "smooth" });
                   }}
                 >
                   Skills
@@ -154,7 +174,9 @@ export default function Navigation() {
                   onClick={(e) => {
                     e.preventDefault();
                     setIsMobileMenuOpen(false);
-                    document.getElementById('portfolio')?.scrollIntoView({ behavior: 'smooth' });
+                    document
+                      .getElementById("portfolio")
+                      ?.scrollIntoView({ behavior: "smooth" });
                   }}
                 >
                   Projects
@@ -165,12 +187,14 @@ export default function Navigation() {
                   onClick={(e) => {
                     e.preventDefault();
                     setIsMobileMenuOpen(false);
-                    document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' });
+                    document
+                      .getElementById("contact")
+                      ?.scrollIntoView({ behavior: "smooth" });
                   }}
                 >
                   Contact
                 </a>
-                
+
                 {/* Mobile Social Links */}
                 <div className="flex items-center space-x-4 pt-4 border-t border-border">
                   <SocialLink
@@ -217,31 +241,31 @@ interface SocialLinkProps {
 function SocialLink({ href, icon, label, color }: SocialLinkProps) {
   const getColorClass = (colorType?: string) => {
     switch (colorType) {
-      case 'instagram':
-        return 'group-hover:text-pink-500';
-      case 'linkedin':
-        return 'group-hover:text-blue-600';
-      case 'freelancer':
-        return 'group-hover:text-orange-500';
-      case 'email':
-        return 'group-hover:text-green-500';
+      case "instagram":
+        return "group-hover:text-pink-500";
+      case "linkedin":
+        return "group-hover:text-blue-600";
+      case "freelancer":
+        return "group-hover:text-orange-500";
+      case "email":
+        return "group-hover:text-green-500";
       default:
-        return 'group-hover:text-primary';
+        return "group-hover:text-primary";
     }
   };
 
   const getGlowColor = (colorType?: string) => {
     switch (colorType) {
-      case 'instagram':
-        return 'group-hover:shadow-[0_0_15px_rgba(236,72,153,0.6)]';
-      case 'linkedin':
-        return 'group-hover:shadow-[0_0_15px_rgba(37,99,235,0.6)]';
-      case 'freelancer':
-        return 'group-hover:shadow-[0_0_15px_rgba(249,115,22,0.6)]';
-      case 'email':
-        return 'group-hover:shadow-[0_0_15px_rgba(34,197,94,0.6)]';
+      case "instagram":
+        return "group-hover:shadow-[0_0_15px_rgba(236,72,153,0.6)]";
+      case "linkedin":
+        return "group-hover:shadow-[0_0_15px_rgba(37,99,235,0.6)]";
+      case "freelancer":
+        return "group-hover:shadow-[0_0_15px_rgba(249,115,22,0.6)]";
+      case "email":
+        return "group-hover:shadow-[0_0_15px_rgba(34,197,94,0.6)]";
       default:
-        return 'group-hover:shadow-glow';
+        return "group-hover:shadow-glow";
     }
   };
 
@@ -254,10 +278,14 @@ function SocialLink({ href, icon, label, color }: SocialLinkProps) {
       aria-label={label}
     >
       <div className="absolute inset-0 bg-gradient-to-r from-primary to-accent opacity-0 group-hover:opacity-20 rounded-lg transition-all duration-500"></div>
-      <div className={`relative text-muted-foreground transition-all duration-500 ${getColorClass(color)}`}>
+      <div
+        className={`relative text-muted-foreground transition-all duration-500 ${getColorClass(color)}`}
+      >
         {icon}
       </div>
-      <div className={`absolute inset-0 rounded-lg transition-all duration-500 pointer-events-none ${getGlowColor(color)}`}></div>
+      <div
+        className={`absolute inset-0 rounded-lg transition-all duration-500 pointer-events-none ${getGlowColor(color)}`}
+      ></div>
     </a>
   );
 }
