@@ -68,7 +68,7 @@ export default function Hero() {
 
           <div className="space-y-4">
             <p className="text-lg text-muted-foreground leading-relaxed">
-              Passionate about logic building, C++ development, and creating stunning web experiences. 
+              Passionate about logic building, <span className="gradient-text font-semibold">C++</span> development, and creating stunning web experiences.
               I bring ideas to life through code and design.
             </p>
           </div>
