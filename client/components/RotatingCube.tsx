@@ -6,8 +6,14 @@ interface RotatingCubeProps {
 
 export default function RotatingCube({ size = 'w-20 h-20' }: RotatingCubeProps) {
   return (
-    <div className={`${size} relative transform-gpu`} style={{ perspective: '1000px' }}>
-      <div className="w-full h-full relative animate-cube-rotate" style={{ transformStyle: 'preserve-3d' }}>
+    <div className={`${size} relative transform-gpu overflow-hidden`} style={{ perspective: '1000px' }}>
+      <div
+        className="w-full h-full relative animate-cube-rotate"
+        style={{
+          transformStyle: 'preserve-3d',
+          filter: 'drop-shadow(0 0 8px rgba(0,106,255,0.4)) drop-shadow(0 0 16px rgba(0,106,255,0.2))'
+        }}
+      >
         {/* Front face */}
         <div
           className="absolute inset-0 bg-gradient-to-br from-primary/90 to-accent/70 border border-primary/80 flex items-center justify-center p-2"
