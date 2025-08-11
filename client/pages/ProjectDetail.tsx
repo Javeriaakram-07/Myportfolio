@@ -30,21 +30,42 @@ const projectsData: { [key: string]: ProjectDetailData } = {
     description: 'A comprehensive console-based cyber management system built in C++ using Object-Oriented Programming principles.',
     technologies: ['C++', 'OOP', 'Vectors', 'Classes', 'Encapsulation', 'Console Application'],
     category: 'C++ Development',
+    githubUrl: 'https://github.com/Javeriaakram-07/Myportfolio.git',
     images: [
       {
-        url: 'https://cdn.builder.io/api/v1/image/assets%2F78bb8a2b1dce448185f7c0a17bacab1d%2Fff9e1714402f4ac899eef45c5cbc00d6?format=webp&width=800',
-        title: 'Main Menu Interface',
-        description: 'The main admin dashboard showing login system and menu options for system management.'
+        url: 'https://cdn.builder.io/api/v1/image/assets%2F78bb8a2b1dce448185f7c0a17bacab1d%2F109d41b098274c6385bde5b63ba6104f?format=webp&width=800',
+        title: 'Admin Login & Main Dashboard',
+        description: 'The main admin login interface and dashboard showing menu options for cyber management system operations.'
       },
       {
-        url: 'https://cdn.builder.io/api/v1/image/assets%2F78bb8a2b1dce448185f7c0a17bacab1d%2Faeda88c221504e5781de41718c5563cd?format=webp&width=800',
-        title: 'User Management',
-        description: 'User registration and management interface showing successful user addition with feedback messages.'
+        url: 'https://cdn.builder.io/api/v1/image/assets%2F78bb8a2b1dce448185f7c0a17bacab1d%2Fde656d449fda4c1086fc6006d3fd5bd4?format=webp&width=800',
+        title: 'User Registration System',
+        description: 'User addition functionality showing successful user registration with feedback messages and admin dashboard access.'
       },
       {
-        url: 'https://cdn.builder.io/api/v1/image/assets%2F78bb8a2b1dce448185f7c0a17bacab1d%2F61db59bf716d4e06b3dafc91b32dab2f?format=webp&width=800',
-        title: 'Session Tracking',
-        description: 'Session management system tracking user activities, websites visited, and violation monitoring.'
+        url: 'https://cdn.builder.io/api/v1/image/assets%2F78bb8a2b1dce448185f7c0a17bacab1d%2Fff0a3af774694c5b893c053ec853bec8?format=webp&width=800',
+        title: 'Session Management & Tracking',
+        description: 'Session tracking system showing user activities, websites visited, violation monitoring, and session statistics.'
+      },
+      {
+        url: 'https://cdn.builder.io/api/v1/image/assets%2F78bb8a2b1dce448185f7c0a17bacab1d%2F8a0b06a8455b441b9177e36182a45195?format=webp&width=800',
+        title: 'User Registry & Management',
+        description: 'Complete user registry displaying all registered users with their associated data and management capabilities.'
+      },
+      {
+        url: 'https://cdn.builder.io/api/v1/image/assets%2F78bb8a2b1dce448185f7c0a17bacab1d%2F99af755cccfc4b288c52df519a5bd267?format=webp&width=800',
+        title: 'Website Blocking System',
+        description: 'Website blocking functionality showing blocked sites list including security management for inappropriate content.'
+      },
+      {
+        url: 'https://cdn.builder.io/api/v1/image/assets%2F78bb8a2b1dce448185f7c0a17bacab1d%2Fa1445a00e3b940df938b962bba21ff97?format=webp&width=800',
+        title: 'C++ Class Implementation',
+        description: 'Advanced C++ code showing User class implementation with OOP concepts, member functions, and data management.'
+      },
+      {
+        url: 'https://cdn.builder.io/api/v1/image/assets%2F78bb8a2b1dce448185f7c0a17bacab1d%2Fea11eb6bdc8c489a97bee2eca42a55cb?format=webp&width=800',
+        title: 'Complete Source Code Structure',
+        description: 'Full C++ implementation showing headers, class definitions, vector operations, and complete program structure.'
       }
     ],
     fullDescription: `The Cyber Management System is a sophisticated console-based application that demonstrates advanced C++ programming concepts and cybersecurity management principles. This system provides comprehensive user management, session tracking, and website monitoring capabilities.
