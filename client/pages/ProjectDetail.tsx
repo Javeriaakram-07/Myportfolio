@@ -227,8 +227,8 @@ export default function ProjectDetail() {
 
   const handleBackClick = (e: React.MouseEvent) => {
     e.preventDefault();
-    // Navigate back to main page with replace to avoid adding to history
-    navigate('/', { replace: true, state: { scrollTo: 'portfolio' } });
+    // Use history.back() for proper back navigation
+    window.history.back();
   };
 
   const nextImage = () => {
