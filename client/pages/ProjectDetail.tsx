@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { useParams, Link, useNavigate } from 'react-router-dom';
+import { useParams, useNavigate } from 'react-router-dom';
 import { ChevronLeft, ExternalLink, Github, ChevronRight } from 'lucide-react';
 import Navigation from '../components/Navigation';
 
@@ -45,26 +45,6 @@ const projectsData: { [key: string]: ProjectDetailData } = {
         url: 'https://cdn.builder.io/api/v1/image/assets%2F78bb8a2b1dce448185f7c0a17bacab1d%2F61db59bf716d4e06b3dafc91b32dab2f?format=webp&width=800',
         title: 'Session Tracking',
         description: 'Session management system tracking user activities, websites visited, and violation monitoring.'
-      },
-      {
-        url: 'https://cdn.builder.io/api/v1/image/assets%2F78bb8a2b1dce448185f7c0a17bacab1d%2Fd958b5effbdb4a7db8d213ddf1934901?format=webp&width=800',
-        title: 'User Registry',
-        description: 'Complete user registry showing all registered users and their associated data management.'
-      },
-      {
-        url: 'https://cdn.builder.io/api/v1/image/assets%2F78bb8a2b1dce448185f7c0a17bacab1d%2Faef5991f4ae9470baf10b3d546806689?format=webp&width=800',
-        title: 'Website Blocking',
-        description: 'Website blocking functionality displaying blocked sites and security management features.'
-      },
-      {
-        url: 'https://cdn.builder.io/api/v1/image/assets%2F78bb8a2b1dce448185f7c0a17bacab1d%2F65c60c2a0ffa4fa1bd2bd688664e08a8?format=webp&width=800',
-        title: 'Code Implementation - Class Structure',
-        description: 'C++ code showing the User class implementation with OOP concepts, constructors, and member functions.'
-      },
-      {
-        url: 'https://cdn.builder.io/api/v1/image/assets%2F78bb8a2b1dce448185f7c0a17bacab1d%2F862d982036e2458aa7a00ce04ec6ee9b?format=webp&width=800',
-        title: 'Code Implementation - Methods',
-        description: 'Advanced C++ implementation showing member functions, vector operations, and control structures.'
       }
     ],
     fullDescription: `The Cyber Management System is a sophisticated console-based application that demonstrates advanced C++ programming concepts and cybersecurity management principles. This system provides comprehensive user management, session tracking, and website monitoring capabilities.
@@ -90,6 +70,144 @@ Built entirely in C++, this project showcases the power of object-oriented progr
       'Error Handling: Robust exception handling and input validation',
       'Modular Design: Separated concerns with multiple classes and functions'
     ]
+  },
+  '2': {
+    id: 2,
+    title: 'Interactive Payment Card',
+    description: 'A sleek payment card interface with dark theme, neon effects, and animated background elements.',
+    technologies: ['HTML', 'CSS', 'UI/UX', 'Animations', 'Responsive Design'],
+    category: 'Web Development',
+    liveUrl: 'https://card-jeeya.vercel.app/',
+    images: [
+      {
+        url: 'https://cdn.builder.io/api/v1/image/assets%2F78bb8a2b1dce448185f7c0a17bacab1d%2Fbcabbbbdeca941d581396b967e310da7?format=webp&width=800',
+        title: 'Payment Card Interface',
+        description: 'Main payment card interface with dark theme, neon effects, and order summary display.'
+      },
+      {
+        url: 'https://cdn.builder.io/api/v1/image/assets%2F78bb8a2b1dce448185f7c0a17bacab1d%2F5a523603a28f4043a6f3e0affeeb8d6b?format=webp&width=800',
+        title: 'Code Implementation',
+        description: 'CSS and HTML code structure showing the implementation of the payment card with container styling and animations.'
+      }
+    ],
+    fullDescription: `An engaging payment interface with modern design principles and advanced CSS animations. This project demonstrates professional UI/UX design skills with a focus on user experience and visual appeal.
+
+The payment card features a sophisticated dark theme with blue neon accents, creating a premium feel that enhances user trust and engagement. The interface includes animated background elements and smooth transitions that provide excellent visual feedback.`,
+    features: [
+      'Dark Theme UI with Premium Styling',
+      'Animated Rotating Background Circles',
+      'Glass-morphism Effects and Backdrop Blur',
+      'Order Summary with Pricing Breakdown',
+      'Interactive Payment Processing Interface',
+      'Responsive Design for All Devices',
+      'Smooth CSS Animations and Transitions',
+      'Professional Form Styling and Layout'
+    ],
+    technicalDetails: [
+      'Pure CSS Animations: No JavaScript dependencies for smooth performance',
+      'Responsive Design: Adapts seamlessly to all screen sizes',
+      'Modern CSS Features: Utilizes transforms, transitions, and gradients',
+      'Semantic HTML5: Clean structure with proper accessibility',
+      'Glass-morphism Effects: Advanced backdrop-filter implementation',
+      'Color Psychology: Strategic use of blue neon for trust and premium feel',
+      'Performance Optimized: Efficient animations using GPU acceleration',
+      'Cross-browser Compatibility: Tested across all major browsers'
+    ]
+  },
+  '3': {
+    id: 3,
+    title: 'Sweet Shop Website',
+    description: 'A vibrant sweet shop website featuring refreshing cocktails and beverages with beautiful gradients.',
+    technologies: ['HTML', 'CSS', 'Responsive Design', 'UI/UX', 'Google Fonts'],
+    category: 'Web Development',
+    liveUrl: 'https://sweetshop-jeeya.vercel.app/',
+    images: [
+      {
+        url: 'https://cdn.builder.io/api/v1/image/assets%2F78bb8a2b1dce448185f7c0a17bacab1d%2Fb9c8f085ebd7489eb9a5ca9aa320348b?format=webp&width=800',
+        title: 'Homepage - Pina Colada Recipe',
+        description: 'Main homepage featuring the Pina Colada cocktail recipe with vibrant gradients and professional styling.'
+      },
+      {
+        url: 'https://cdn.builder.io/api/v1/image/assets%2F78bb8a2b1dce448185f7c0a17bacab1d%2F19239819a67c46ad9de395812a75bbf9?format=webp&width=800',
+        title: 'Blue Lagoon Recipe Page',
+        description: 'Blue-themed page showcasing the Blue Lagoon cocktail with ingredients list and preparation steps.'
+      },
+      {
+        url: 'https://cdn.builder.io/api/v1/image/assets%2F78bb8a2b1dce448185f7c0a17bacab1d%2F250354a438e84f97b713529a29428f2e?format=webp&width=800',
+        title: 'Pink Paradise Recipe Page',
+        description: 'Pink-themed page featuring the Pink Paradise cocktail with strawberry juice and coconut water recipe.'
+      },
+      {
+        url: 'https://cdn.builder.io/api/v1/image/assets%2F78bb8a2b1dce448185f7c0a17bacab1d%2F0ac747d4255d485b9d7c71de59752c53?format=webp&width=800',
+        title: 'HTML Code Structure',
+        description: 'Clean HTML5 code implementation showing semantic structure and navigation setup for the sweet shop website.'
+      }
+    ],
+    fullDescription: `A beautifully designed sweet shop website showcasing cocktail recipes and beverages with stunning visual appeal. This project demonstrates mastery of CSS gradients, responsive design, and modern web development practices.
+
+The website features three distinct cocktail recipes - Pina Colada, Blue Lagoon, and Pink Paradise - each with its own unique color theme and styling. The design emphasizes visual hierarchy and user experience with clear typography and intuitive navigation.`,
+    features: [
+      'Three Featured Cocktail Recipes with Detailed Instructions',
+      'Vibrant Gradient Backgrounds Matching Each Cocktail Theme',
+      'Professional Recipe Cards with Ingredient Lists',
+      'Responsive Navigation Bar with Clean Design',
+      'Google Fonts Integration for Enhanced Typography',
+      'Mobile-First Responsive Design Approach',
+      'High-Quality Product Photography Integration',
+      'Smooth Hover Effects and Interactive Elements'
+    ],
+    technicalDetails: [
+      'Semantic HTML5: Proper document structure with navigation elements',
+      'CSS3 Gradients: Advanced gradient implementations for visual appeal',
+      'Flexbox Layout: Modern layout system for responsive design',
+      'Google Fonts API: Professional typography integration',
+      'Cross-browser Compatibility: Tested across all major browsers',
+      'Performance Optimization: Optimized images and CSS for fast loading',
+      'Mobile-First Design: Responsive breakpoints for all device sizes',
+      'Color Theory Application: Strategic color choices for each cocktail theme'
+    ]
+  },
+  '4': {
+    id: 4,
+    title: 'Sweet Shop Blog',
+    description: 'A modern blog platform featuring articles, product reviews, and user engagement with responsive design.',
+    technologies: ['HTML', 'CSS', 'Blog System', 'Responsive Design', 'Grid Layout'],
+    category: 'Web Development',
+    images: [
+      {
+        url: 'https://cdn.builder.io/api/v1/image/assets%2F78bb8a2b1dce448185f7c0a17bacab1d%2F07a81a3847ea40f19dcd75d126f13e5d?format=webp&width=800',
+        title: 'Blog Homepage',
+        description: 'Main blog page featuring article grid layout with author profiles and category organization.'
+      },
+      {
+        url: 'https://cdn.builder.io/api/v1/image/assets%2F78bb8a2b1dce448185f7c0a17bacab1d%2F286ad25d2a1e4ce1bbb7ccb8aa01e26c?format=webp&width=800',
+        title: 'HTML Code Implementation',
+        description: 'Clean HTML5 code structure showing the blog implementation with proper semantic markup and styling.'
+      }
+    ],
+    fullDescription: `A comprehensive blog platform designed for content sharing and user engagement with modern web standards. This project showcases advanced layout techniques using CSS Grid and responsive design principles.
+
+The blog features a clean, professional design with article cards displaying author information, publication dates, and category tags. The layout is optimized for readability and user engagement across all device types.`,
+    features: [
+      'Responsive Article Grid Layout with Card Design',
+      'Author Profile Integration with Avatar Display',
+      'Category-Based Content Organization System',
+      'Professional Typography and Readability Focus',
+      'Mobile-Friendly Responsive Design',
+      'Clean Card-Based Article Previews',
+      'Hover Effects and Interactive Elements',
+      'Scalable Layout Supporting Multiple Content Types'
+    ],
+    technicalDetails: [
+      'CSS Grid Layout: Advanced grid system for responsive article display',
+      'Semantic HTML5: Proper document structure with article and section tags',
+      'Responsive Typography: Scalable text sizing for all devices',
+      'Modern CSS Features: Flexbox and Grid combinations for optimal layouts',
+      'Performance Optimization: Efficient CSS and image loading strategies',
+      'Accessibility Features: Proper heading hierarchy and alt text implementation',
+      'Cross-browser Testing: Verified compatibility across major browsers',
+      'Scalable Architecture: Designed to accommodate growing content needs'
+    ]
   }
 };
 
@@ -106,6 +224,19 @@ export default function ProjectDetail() {
     const timer = setTimeout(() => setIsLoading(false), 800);
     return () => clearTimeout(timer);
   }, []);
+
+  const handleBackClick = (e: React.MouseEvent) => {
+    e.preventDefault();
+    navigate('/', { state: { scrollTo: 'portfolio' } });
+  };
+
+  const nextImage = () => {
+    setCurrentImageIndex((prev) => (prev + 1) % project!.images.length);
+  };
+
+  const prevImage = () => {
+    setCurrentImageIndex((prev) => (prev - 1 + project!.images.length) % project!.images.length);
+  };
 
   if (isLoading) {
     return (
@@ -126,31 +257,18 @@ export default function ProjectDetail() {
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <h1 className="text-4xl font-bold mb-4">Project Not Found</h1>
             <p className="text-muted-foreground mb-8">The project you're looking for doesn't exist.</p>
-            <Link
-              to="/"
+            <button
+              onClick={handleBackClick}
               className="inline-flex items-center gap-2 px-6 py-3 bg-primary text-white rounded-lg hover:bg-primary/90 transition-colors"
             >
               <ChevronLeft className="w-4 h-4" />
               Back to Portfolio
-            </Link>
+            </button>
           </div>
         </div>
       </div>
     );
   }
-
-  const handleBackClick = (e: React.MouseEvent) => {
-    e.preventDefault();
-    navigate('/', { state: { scrollTo: 'portfolio' } });
-  };
-
-  const nextImage = () => {
-    setCurrentImageIndex((prev) => (prev + 1) % project.images.length);
-  };
-
-  const prevImage = () => {
-    setCurrentImageIndex((prev) => (prev - 1 + project.images.length) % project.images.length);
-  };
 
   return (
     <div className="min-h-screen bg-background text-foreground">
@@ -256,7 +374,7 @@ export default function ProjectDetail() {
             </div>
 
             {/* Thumbnail grid */}
-            <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-7 gap-4">
+            <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-4">
               {project.images.map((image, index) => (
                 <button
                   key={index}
@@ -277,8 +395,8 @@ export default function ProjectDetail() {
             </div>
           </div>
 
-          {/* Project Details */}
-          <div className="grid lg:grid-cols-2 gap-12">
+          {/* Project Details - Separate Rows */}
+          <div className="space-y-12">
             <div>
               <h2 className="text-2xl font-bold mb-6">Project Overview</h2>
               <div className="prose prose-sm max-w-none text-muted-foreground">
@@ -286,8 +404,10 @@ export default function ProjectDetail() {
                   {project.fullDescription}
                 </p>
               </div>
+            </div>
 
-              <h3 className="text-xl font-semibold mt-8 mb-4">Key Features</h3>
+            <div>
+              <h3 className="text-xl font-semibold mb-4">Key Features</h3>
               <ul className="space-y-3 custom-bullets">
                 {project.features.map((feature, index) => (
                   <li key={index} className="text-muted-foreground">
