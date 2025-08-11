@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
 import { ChevronDown } from 'lucide-react';
 import TypingAnimation from './TypingAnimation';
+import RotatingCube from './RotatingCube';
 import { useParallax, useParallaxMulti } from '../hooks/useParallax';
 
 export default function Hero() {
