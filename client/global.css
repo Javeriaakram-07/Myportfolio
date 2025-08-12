@@ -164,6 +164,7 @@
     }
   }
 
+<<<<<<< HEAD
   @keyframes slideDown {
     from {
       transform: translateY(-100%);
@@ -227,4 +228,20 @@
     top: 0;
     line-height: 1.5;
   }
+=======
+  /* Equal-height card helper */
+  .card-equal {
+    @apply h-full flex flex-col;
+  }
+
+  /* Reduce motion preference */
+  @media (prefers-reduced-motion: reduce) {
+    * {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+      scroll-behavior: auto !important;
+    }
+  }
+>>>>>>> 66d4b35e19e8c63541017c9e5db46595b1f915dd
 }
