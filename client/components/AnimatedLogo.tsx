@@ -1,11 +1,14 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useState } from "react";
 
 interface AnimatedLogoProps {
   isFullscreen?: boolean;
   onAnimationComplete?: () => void;
 }
 
-export default function AnimatedLogo({ isFullscreen = false, onAnimationComplete }: AnimatedLogoProps) {
+export default function AnimatedLogo({
+  isFullscreen = false,
+  onAnimationComplete,
+}: AnimatedLogoProps) {
   const [isVisible, setIsVisible] = useState(true);
 
   useEffect(() => {
@@ -20,13 +23,13 @@ export default function AnimatedLogo({ isFullscreen = false, onAnimationComplete
 
   const logoClasses = isFullscreen
     ? `fixed inset-0 z-50 flex items-center justify-center bg-gradient-to-br from-background via-background/95 to-background/90 backdrop-blur-sm transition-all duration-1000 ${
-        isVisible ? 'opacity-100' : 'opacity-0 pointer-events-none'
+        isVisible ? "opacity-100" : "opacity-0 pointer-events-none"
       }`
-    : 'relative';
+    : "relative";
 
   const logoSize = isFullscreen
-    ? 'w-[80vw] h-[80vh] max-w-[400px] max-h-[400px]'
-    : 'w-16 h-16';
+    ? "w-[80vw] h-[80vh] max-w-[400px] max-h-[400px]"
+    : "w-16 h-16";
 
   return (
     <div className={logoClasses}>
@@ -37,12 +40,12 @@ export default function AnimatedLogo({ isFullscreen = false, onAnimationComplete
           alt="Javeria Akram Logo"
           className={`${logoSize} object-contain transition-all duration-1000 drop-shadow-2xl ${
             isFullscreen
-              ? 'filter drop-shadow-[0_0_50px_rgba(66,128,255,0.6)] animate-3d-rotate'
-              : 'animate-logo-pulse'
+              ? "filter drop-shadow-[0_0_50px_rgba(66,128,255,0.6)] animate-3d-rotate"
+              : "animate-logo-pulse"
           }`}
           style={{
-            transformStyle: 'preserve-3d',
-            perspective: '1000px'
+            transformStyle: "preserve-3d",
+            perspective: "1000px",
           }}
         />
 

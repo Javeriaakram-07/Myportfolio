@@ -26,14 +26,16 @@ export default function PortfolioPage() {
     <div className="min-h-screen bg-background text-foreground">
       {/* Fullscreen animated logo on initial load */}
       {showFullscreen && (
-        <AnimatedLogo 
-          isFullscreen={true} 
+        <AnimatedLogo
+          isFullscreen={true}
           onAnimationComplete={handleAnimationComplete}
         />
       )}
-      
+
       {/* Main content */}
-      <div className={`transition-opacity duration-1000 ${showFullscreen ? 'opacity-0' : 'opacity-100'}`}>
+      <div
+        className={`transition-opacity duration-1000 ${showFullscreen ? "opacity-0" : "opacity-100"}`}
+      >
         <Navigation />
         <Hero />
         <About />

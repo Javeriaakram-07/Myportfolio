@@ -29,9 +29,18 @@ export default function Hero() {
 
       {/* Animated background elements with parallax */}
       <div className="absolute inset-0 overflow-hidden">
-        <div ref={parallaxRef1 as any} className="absolute top-20 left-10 w-2 h-2 bg-primary rounded-full animate-pulse shadow-glow"></div>
-        <div ref={parallaxRef2 as any} className="absolute top-40 right-20 w-3 h-3 bg-accent rounded-full animate-pulse delay-300 shadow-glow"></div>
-        <div ref={parallaxRef3 as any} className="absolute bottom-40 left-1/4 w-1 h-1 bg-primary rounded-full animate-pulse delay-700 shadow-glow"></div>
+        <div
+          ref={parallaxRef1 as any}
+          className="absolute top-20 left-10 w-2 h-2 bg-primary rounded-full animate-pulse shadow-glow"
+        ></div>
+        <div
+          ref={parallaxRef2 as any}
+          className="absolute top-40 right-20 w-3 h-3 bg-accent rounded-full animate-pulse delay-300 shadow-glow"
+        ></div>
+        <div
+          ref={parallaxRef3 as any}
+          className="absolute bottom-40 left-1/4 w-1 h-1 bg-primary rounded-full animate-pulse delay-700 shadow-glow"
+        ></div>
         <div className="absolute bottom-20 right-1/3 w-2 h-2 bg-accent rounded-full animate-pulse delay-1000 shadow-glow"></div>
 
         {/* Additional parallax elements */}
@@ -68,11 +77,17 @@ export default function Hero() {
           </div>
 
           <div className="flex flex-wrap gap-4">
-            <a href="#portfolio" className="group relative px-8 py-3 bg-gradient-to-r from-primary to-accent rounded-lg font-semibold text-white transition-all duration-500 hover:scale-105 transform hover:neon-glow">
+            <a
+              href="#portfolio"
+              className="group relative px-8 py-3 bg-gradient-to-r from-primary to-accent rounded-lg font-semibold text-white transition-all duration-500 hover:scale-105 transform hover:neon-glow"
+            >
               <div className="absolute inset-0 bg-gradient-to-r from-accent to-primary opacity-0 group-hover:opacity-100 rounded-lg transition-all duration-500"></div>
               <span className="relative z-10">View My Work</span>
             </a>
-            <a href="#contact" className="px-8 py-3 border-2 border-primary rounded-lg font-semibold text-primary hover:bg-primary hover:text-white transition-all duration-500 hover:scale-105 transform hover:neon-glow">
+            <a
+              href="#contact"
+              className="px-8 py-3 border-2 border-primary rounded-lg font-semibold text-primary hover:bg-primary hover:text-white transition-all duration-500 hover:scale-105 transform hover:neon-glow"
+            >
               Get In Touch
             </a>
           </div>
