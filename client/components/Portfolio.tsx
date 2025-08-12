@@ -43,7 +43,7 @@ const projects: Project[] = [
     ],
     detailedDescription: `This console-based Cyber Management System demonstrates advanced C++ programming concepts:
 
-    🏗�� **Object-Oriented Design**
+    🏗️ **Object-Oriented Design**
     • User class with private data members and public methods
     • Encapsulation of user data (username, sessions, violations)
     • Static members for user numbering
@@ -136,7 +136,7 @@ const projects: Project[] = [
     🍹 **Featured Cocktails**
     • Pina Colada with pineapple juice and coconut cream
     • Blue Lagoon with Blue Curaçao syrup and lemonade
-    �� Pink Paradise with strawberry juice and coconut water
+    • Pink Paradise with strawberry juice and coconut water
     • Professional drink photography and styling
 
     💻 **Technical Implementation**
@@ -165,7 +165,7 @@ const projects: Project[] = [
     ],
     image:
       "https://cdn.builder.io/api/v1/image/assets%2F78bb8a2b1dce448185f7c0a17bacab1d%2F07a81a3847ea40f19dcd75d126f13e5d?format=webp&width=800",
-    liveUrl: "",
+    liveUrl: "https://sweetshop-blog.vercel.app/",
     githubUrl: "",
     category: "Web Development",
     detailImages: [
@@ -247,7 +247,7 @@ export default function Portfolio() {
           </div>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 items-stretch">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {filteredProjects.map((project) => (
             <ProjectCard
               key={project.id}
@@ -289,7 +289,6 @@ function ProjectCard({
   onClick,
 }: ProjectCardProps) {
   return (
-<<<<<<< HEAD
     <Card3D className="h-full">
       <div
         className={`group relative bg-card rounded-xl overflow-hidden border border-border transition-all duration-500 transform cursor-pointer h-full ${
@@ -358,33 +357,6 @@ function ProjectCard({
               <span
                 key={tech}
                 className="text-xs px-2 py-1 bg-accent/10 text-accent rounded-md"
-=======
-    <div
-      className={`group relative bg-card rounded-xl overflow-hidden border border-border transition-all duration-500 transform cursor-pointer ${
-        isHovered ? 'scale-105 shadow-2xl shadow-primary/20 neon-glow' : 'hover:shadow-lg'
-      } h-full flex flex-col`}
-      onMouseEnter={onHover}
-      onMouseLeave={onLeave}
-      onClick={onClick}
-    >
-      {/* Project Image */}
-      <div className="relative h-48 overflow-hidden">
-        <img
-          src={project.image}
-          alt={project.title}
-          className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
-        />
-        <div className={`absolute inset-0 bg-gradient-to-t from-background/90 to-transparent transition-opacity duration-500 ${
-          isHovered ? 'opacity-100' : 'opacity-0'
-        }`}>
-          <div className="absolute bottom-4 left-4 right-4 flex gap-2">
-            {project.liveUrl && (
-              <a
-                href={project.liveUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex items-center gap-2 px-3 py-1 bg-primary text-white rounded-lg text-sm hover:bg-primary/90 transition-all duration-300 hover:scale-105"
->>>>>>> 66d4b35e19e8c63541017c9e5db46595b1f915dd
               >
                 {tech}
               </span>
@@ -392,33 +364,6 @@ function ProjectCard({
           </div>
         </div>
       </div>
-<<<<<<< HEAD
     </Card3D>
-=======
-
-      {/* Project Content */}
-      <div className="p-6 flex-1 flex flex-col">
-        <div className="mb-2">
-          <span className="text-xs font-semibold text-primary bg-primary/10 px-2 py-1 rounded-full">
-            {project.category}
-          </span>
-        </div>
-        <h3 className="text-xl font-bold mb-2">{project.title}</h3>
-        <p className="text-muted-foreground text-sm mb-4 leading-relaxed">
-          {project.description}
-        </p>
-        <div className="mt-auto flex flex-wrap gap-2">
-          {project.technologies.map((tech) => (
-            <span
-              key={tech}
-              className="text-xs px-2 py-1 bg-accent/10 text-accent rounded-md"
-            >
-              {tech}
-            </span>
-          ))}
-        </div>
-      </div>
-    </div>
->>>>>>> 66d4b35e19e8c63541017c9e5db46595b1f915dd
   );
 }
