@@ -41,7 +41,6 @@ export default function Hero() {
 
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid lg:grid-cols-2 gap-12 items-center">
         {/* Content */}
-<<<<<<< HEAD
         <div
           className={`space-y-8 transition-all duration-1000 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}`}
         >
@@ -57,14 +56,6 @@ export default function Hero() {
             <p className="text-lg sm:text-xl md:text-2xl text-muted-foreground mt-8">
               Computer Science Student & Freelancer
             </p>
-=======
-        <div className={`space-y-8 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
-          <div className="space-y-4">
-            <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold min-h-[2.5em]">
-              <TypingAnimation text="Javeria Akram" delay={400} speed={90} className="gradient-text block" />
-            </h1>
-            <p className="text-xl md:text-2xl text-muted-foreground">Computer Science Student & Freelancer</p>
->>>>>>> 66d4b35e19e8c63541017c9e5db46595b1f915dd
           </div>
 
           <div className="space-y-4">

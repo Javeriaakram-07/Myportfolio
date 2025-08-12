@@ -1,40 +1,8 @@
-<<<<<<< HEAD
 import { useState } from "react";
 import { Mail, Phone, MapPin } from "lucide-react";
 import Card3D from "./Card3D";
 
 export default function Contact() {
-=======
-import { useState } from 'react';
-import { Mail, Phone, MapPin } from 'lucide-react';
-
-export default function Contact() {
-  const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    subject: '',
-    message: ''
-  });
-
-  const [isSubmitting, setIsSubmitting] = useState(false);
-
-  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-    setFormData({
-      ...formData,
-      [e.target.name]: e.target.value
-    });
-  };
-
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-    setIsSubmitting(true);
-    await new Promise((resolve) => setTimeout(resolve, 1000));
-    setFormData({ name: '', email: '', subject: '', message: '' });
-    setIsSubmitting(false);
-    alert('Message sent successfully!');
-  };
-
->>>>>>> 66d4b35e19e8c63541017c9e5db46595b1f915dd
   const handleEmailClick = () => {
     window.open(
       "mailto:javeriaakram259@gmail.com?subject=Portfolio Contact",
@@ -59,7 +27,6 @@ export default function Contact() {
           </p>
         </div>
 
-<<<<<<< HEAD
         {/* Contact Layout */}
         <div className="max-w-2xl mx-auto">
           {/* Profile Section */}
@@ -72,22 +39,6 @@ export default function Contact() {
                   alt="Javeria Akram Logo"
                   className="w-full h-full object-contain p-4"
                 />
-=======
-        {/* Two-column: left avatar, right stacked items */}
-        <div className="max-w-6xl mx-auto">
-          <div className="grid md:grid-cols-2 gap-10 items-start">
-            {/* Profile */}
-            <div className="text-center">
-              <div className="relative mx-auto w-48 h-48 mb-6">
-                <div className="absolute inset-0 bg-gradient-to-r from-primary to-accent rounded-full blur-xl opacity-30 animate-pulse"></div>
-                <div className="relative w-full h-full rounded-full overflow-hidden border-4 border-gradient-to-r from-primary to-accent shadow-2xl">
-                  <img
-                    src="https://cdn.builder.io/api/v1/image/assets%2F78bb8a2b1dce448185f7c0a17bacab1d%2Fac654d34f824415f8143e76e544ce856?format=webp&width=800"
-                    alt="Javeria Akram Logo"
-                    className="w-full h-full object-contain p-8"
-                  />
-                </div>
->>>>>>> 66d4b35e19e8c63541017c9e5db46595b1f915dd
               </div>
             </div>
             <h3 className="text-2xl font-bold mb-2">
@@ -113,7 +64,6 @@ export default function Contact() {
             </Card3D>
           </div>
 
-<<<<<<< HEAD
           {/* Contact Information */}
           <div className="space-y-4">
             {/* Email */}
@@ -168,58 +118,9 @@ export default function Contact() {
                 </div>
               </div>
             </Card3D>
-=======
-            {/* Right column: stacked contact boxes */}
-            <div className="grid gap-6 content-start">
-              <ContactItem
-                icon={<Mail className="w-6 h-6" />}
-                title="Email"
-                value="javeriaakram259@gmail.com"
-                action={handleEmailClick}
-              />
-              <ContactItem
-                icon={<Phone className="w-6 h-6" />}
-                title="Phone"
-                value="+92 123 456 7890"
-                action={() => window.open('tel:+921234567890')}
-              />
-              <ContactItem
-                icon={<MapPin className="w-6 h-6" />}
-                title="Location"
-                value="Lahore, Pakistan"
-              />
-            </div>
->>>>>>> 66d4b35e19e8c63541017c9e5db46595b1f915dd
           </div>
         </div>
       </div>
     </section>
   );
 }
-<<<<<<< HEAD
-=======
-
-interface ContactItemProps {
-  icon: React.ReactNode;
-  title: string;
-  value: string;
-  action?: () => void;
-}
-
-function ContactItem({ icon, title, value, action }: ContactItemProps) {
-  return (
-    <div
-      className={`flex items-center gap-4 p-5 rounded-lg border border-border bg-card ${
-        action ? 'cursor-pointer hover:border-primary/50 transition-colors duration-300' : ''
-      }`}
-      onClick={action}
-    >
-      <div className="text-primary">{icon}</div>
-      <div>
-        <div className="font-medium text-foreground">{title}</div>
-        <div className="text-sm text-muted-foreground">{value}</div>
-      </div>
-    </div>
-  );
-}
->>>>>>> 66d4b35e19e8c63541017c9e5db46595b1f915dd
