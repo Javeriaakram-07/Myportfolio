@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Mail, Phone, MapPin } from "lucide-react";
+import { Mail, Github, MapPin } from "lucide-react";
 import Card3D from "./Card3D";
 
 export default function Contact() {
@@ -10,8 +10,8 @@ export default function Contact() {
     );
   };
 
-  const handlePhoneClick = () => {
-    window.open("tel:+923074555435", "_blank");
+  const handleGithubClick = () => {
+    window.open("https://github.com/Javeriaakram-07", "_blank");
   };
 
   return (
@@ -86,20 +86,22 @@ export default function Contact() {
               </div>
             </Card3D>
 
-            {/* Phone */}
+            {/* GitHub */}
             <Card3D>
               <div
                 className="flex items-start gap-4 p-4 rounded-lg border border-border bg-card cursor-pointer hover:border-primary/50 transition-all duration-300"
-                onClick={handlePhoneClick}
+                onClick={handleGithubClick}
               >
                 <div className="text-primary flex-shrink-0 mt-1">
-                  <Phone className="w-5 h-5" />
+                  <Github className="w-5 h-5" />
                 </div>
                 <div className="min-w-0 flex-1">
                   <div className="font-medium text-foreground text-sm mb-1">
-                    PHONE
+                    GITHUB
                   </div>
-                  <div className="text-foreground">+923074555435</div>
+                  <div className="text-foreground break-all">
+                    github.com/Javeriaakram-07
+                  </div>
                 </div>
               </div>
             </Card3D>
