@@ -5,6 +5,7 @@ import About from "../components/About";
 import Portfolio from "../components/Portfolio";
 import Contact from "../components/Contact";
 import { useState, useEffect } from "react";
+import Skills from "../components/Skills";
 
 export default function PortfolioPage() {
   const [showFullscreen, setShowFullscreen] = useState(true);
@@ -39,6 +40,7 @@ export default function PortfolioPage() {
         <Navigation />
         <Hero />
         <About />
+        <Skills />
         <Portfolio />
         <Contact />
       </div>
